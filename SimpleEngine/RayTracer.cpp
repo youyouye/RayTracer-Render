@@ -40,11 +40,6 @@ void RayTracer::trace(Ray& ray, int depth, Color& color){
 		Color tempColor;
 		createReflectRay(in.localGeo, reflectRay);
 		trace(reflectRay,depth+1,tempColor);
-		if (tempColor.r>0||tempColor.g>0||tempColor.b>0)
-		{
-			int  sss = 0;
-			int eee = 0;
-		}
 		color = color + brdf.kr*(tempColor);
 		color.r = std::min(color.r, 1.0f);	color.b = std::min(color.b, 1.0f);
 		color.g = std::min(color.g, 1.0f);	color.a = std::min(color.a, 1.0f); 
