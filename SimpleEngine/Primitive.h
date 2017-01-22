@@ -5,6 +5,8 @@
 #include "BRDF.h"
 #include "Shape.h"
 #include "matrix.h"
+#include <vector>
+#include <memory>
 class Ray;
 class Intersection;
 class Material;
@@ -49,6 +51,11 @@ public:
 	bool interset(Ray& ray, float* thit, Intersection* in);
 	bool intersectP(Ray& ray);
 	void getBRDF(LocalGeo& local, BRDF* brdf);
+
+	void setMaterial(const Material& marptr);
+	void addObject(const std::shared_ptr<Shape> shapeptr);
+private:
+	std::vector<std::shared_ptr<Shape>> objects;
 };
 
 #endif

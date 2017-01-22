@@ -194,6 +194,10 @@ void ReadFile::readfile(const char *name){
 						{
 							specular[i] = values[i];
 						}
+						for (int i = 0; i < 3; i++)
+						{
+							mirror[i] = values[i];
+						}
 					}
 				}
 				else if (cmd == "shininess")

@@ -46,9 +46,9 @@ void RayTracer::trace(Ray& ray, int depth, Color& color){
 	}
 }
 Color* RayTracer::shading(LocalGeo local, BRDF brdf, Ray lray, Color lcolor){
+	Vector3 eyedirn = (Vector3(eye[0], eye[1], eye[2]) - Vector3(local.pos)).normalize();
 	float nDotL = Vector3(local.normal).normalize().dot(lray.dir);
 	Color lambert = brdf.kd*lcolor*std::max(nDotL, 0.0f);
-	Vector3 eyedirn =(Vector3(eye[0],eye[1],eye[2]) - Vector3(local.pos)).normalize();
 	Vector3 half = (lray.dir + eyedirn).normalize();
 	float nDotH = Vector3(local.normal).normalize().dot(half);
 	Color phong = brdf.ks*lcolor*std::pow(std::max(nDotH,0.0f),brdf.shininess);
@@ -58,7 +58,7 @@ void RayTracer::createReflectRay(LocalGeo local, Ray& ray){
 	Vector3 d = local.pos - Vector3(eye[0], eye[1], eye[2]);
 	Vector3 r = d - Vector3(local.normal).normalize() * 2 * (d.dot(local.normal.normalize()));
 	ray.dir = r.normalize();
-	ray.pos = local.pos;
+	ray.pos = local.pos+ray.dir*0.0003;
 }
 bool RayTracer::interset(Ray& ray, float* thit, Intersection* in){
 	Intersection* temp;
@@ -68,7 +68,7 @@ bool RayTracer::interset(Ray& ray, float* thit, Intersection* in){
 	{
 		if ((*i)->interset(ray, thit, in))
 		{
-			if (in->localGeo.t >0.0001)
+			if (in->localGeo.t >ray.t_min && in->localGeo.t <ray.t_max)
 			{
 				if (in->localGeo.t<temp->localGeo.t){
 					*temp = *in;
@@ -78,11 +78,7 @@ bool RayTracer::interset(Ray& ray, float* thit, Intersection* in){
 	}
 	if (temp->localGeo.t == 10000){
 		return false;
-	}
-	else if (temp->localGeo.t < 0.0001 || temp->localGeo.t>ray.t_max){
-		return false;
-	}
-	else{
+	}else{
 		*in = *temp;
 		return true;
 	}

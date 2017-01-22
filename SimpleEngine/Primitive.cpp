@@ -32,6 +32,15 @@ AggregatePrimitive::~AggregatePrimitive(){
 }
 
 bool AggregatePrimitive::interset(Ray& ray, float* thit, Intersection* in){
+	float t;
+	Normal normal;
+	Point hitPoint;
+	bool hit = false;
+	int numOfShapes = objects.size();
+	for (int j = 0; j< numOfShapes; j++)
+	{
+		
+	}
 	return false;
 }
 bool AggregatePrimitive::intersectP(Ray& ray){
@@ -39,6 +48,12 @@ bool AggregatePrimitive::intersectP(Ray& ray){
 }
 void AggregatePrimitive::getBRDF(LocalGeo& local, BRDF* brdf){
 	
+}
+void AggregatePrimitive::setMaterial(const Material& marptr){
+	
+}
+void AggregatePrimitive::addObject(const std::shared_ptr<Shape> shapeptr){
+
 }
 
 

@@ -11,8 +11,8 @@ void Camera::generateRay(Sample& sample, Ray* ray){
 	Vector3 axisZ = (eye - target).normalize();
 	Vector3 axisX = up.cross(axisZ).normalize();
 	Vector3 axisY = axisZ.cross(axisX);
-	float a = tanf(fox/2*PI/180)*(width/height)*((sample.x-(width/2))/(width/2));
-	float b = tanf(fox / 2*PI/180)*(((height/2)-sample.y)/(height/2));
+	float a = tanf(fox/2*PI/180)*((float)width/(float)height)*((sample.x+0.5-((float)width/2))/((float)width/2));
+	float b = tanf(fox / 2*PI/180)*((((float)height/2)-sample.y-0.5)/((float)height/2));
 	Vector3 dir = (axisX*a + axisY*b - axisZ).normalize();
 	ray->pos = Point(eye.x,eye.y,eye.z);
 	ray->dir = dir;

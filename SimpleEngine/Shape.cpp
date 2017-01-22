@@ -27,14 +27,18 @@ bool Sphere::intersect(Ray& ray, float* thit, LocalGeo* local){
 		Vector3 ec = Vector3((rayt.pos - center));
 		float criterion = d.dot(ec)*d.dot(ec) - d.dot(d)*(ec.dot(ec) - radius*radius);
 		float t = (-d.dot(ec)-sqrt(criterion))/d.dot(d);
-		local->pos = mat.transform(Vector3(ray.pos + ray.dir*t));
-		Vector3 tempNormal = (local->pos - center) * 2;
+		local->pos = rayt.pos + rayt.dir*t;
+		Vector3 tempNormal = Vector3((local->pos - center) * 2).normalize();
 		local->normal = Normal(mat.inverse().transposition().transform(tempNormal));
-		if (t<ray.t_min)
+		if ((Vector3(eye[0], eye[1], eye[2]) - local->pos).dot(local->normal) < 0)
+		{
+			local->normal = Normal(-local->normal.x, -local->normal.y, -local->normal.z);
+		}
+		if (t<ray.t_min || t>ray.t_max)
 		{
 			return false;
 		}
-		local->t = (local->pos-ray.pos).length();
+		local->t = t;
 		return true;
 	}
 	else
@@ -88,7 +92,10 @@ bool Triangle::intersect(Ray& ray, float* thit, LocalGeo* local){
 	float fInvDet = 1.0f / det;
 	T *= fInvDet;
 	local->pos = ray.pos + ray.dir*T;
-	local->normal = normal;
+	if ((Vector3(eye[0], eye[1], eye[2]) - local->pos).dot(normal) < 0)
+	{
+		local->normal = Normal(-normal.x,-normal.y,-normal.z);
+	}
 	local->t = T;
 //	DP1("%f\n",T);
 	return true;
@@ -97,4 +104,52 @@ bool Triangle::intersectP(Ray& ray){
 	float hi;
 	LocalGeo l;
 	return intersect(ray,&hi,&l);
+}
+bool Box::intersect(Ray& ray, float* thit, LocalGeo* local){
+	return false;
+}
+bool Box::intersectP(Ray& ray){
+	return false;
+}
+void Box::trans(Matrix& matrix){
+
+}
+
+bool Disk::intersect(Ray& ray, float* thit, LocalGeo* local){
+	return false;
+}
+bool Disk::intersectP(Ray& ray){
+	return false;
+}
+void Disk::trans(Matrix& matrix){
+}
+
+bool Rectangle::intersect(Ray& ray, float* thit, LocalGeo* local){
+	return false;
+}
+bool Rectangle::intersectP(Ray& ray){
+	return false;
+}
+void Rectangle::trans(Matrix& matrix){
+
+}
+
+bool Cylinder::intersect(Ray& ray, float* thit, LocalGeo* local){
+	return false;
+}
+bool Cylinder::intersectP(Ray& ray){
+	return false;
+}
+void Cylinder::trans(Matrix& matrix){
+
+}
+
+bool Torus::intersect(Ray& ray, float* thit, LocalGeo* local){
+	return false;
+}
+bool Torus::intersectP(Ray& ray){
+	return false;
+}
+void Torus::trans(Matrix& matrix){
+
 }
