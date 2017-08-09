@@ -22,6 +22,7 @@ public:
 	bool interset(Ray& ray, float* thit, Intersection* in);
 	bool intersectP(Ray &ray);
 public:
+	Vector3 eye;
 	Shape* shape;
 	Primitive* primitive;
 	std::vector<std::shared_ptr<Primitive>> primitives;

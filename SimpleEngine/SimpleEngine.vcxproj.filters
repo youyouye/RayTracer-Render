@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="texture">
+      <UniqueIdentifier>{f419a24f-6e64-439d-ac4a-af7306e2b327}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -82,6 +85,30 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Grid.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Mapping.cpp">
+      <Filter>texture</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageTexture.cpp">
+      <Filter>texture</Filter>
+    </ClCompile>
+    <ClCompile Include="SphericalMap.cpp">
+      <Filter>texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Study\CodeVersion1\CodeVersion1\Utilities\ply.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshTriangle.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FlatMeshTriangle.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -159,6 +186,30 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Grid.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Mapping.h">
+      <Filter>texture</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageTexture.h">
+      <Filter>texture</Filter>
+    </ClInclude>
+    <ClInclude Include="SphericalMap.h">
+      <Filter>texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ply.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshTriangle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FlatMeshTriangle.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

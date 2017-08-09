@@ -7,9 +7,9 @@ class Primitive;
 class Ray
 {
 public:
-	Ray() :t_min(0.00001), t_max(100000){
+	Ray() :t_min(0.0001), t_max(100000){
 	}
-	Ray(Point p) : t_min(0.00001),t_max(100000){
+	Ray(Point p) : t_min(0.0001),t_max(100000){
 		pos = p;
 	}
 	~Ray(){}

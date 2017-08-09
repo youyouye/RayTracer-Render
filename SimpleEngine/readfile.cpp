@@ -6,6 +6,10 @@
 #include "material.h"
 #include "readfile.h"
 #include "variables.h"
+#include "image.h"
+#include "Mapping.h"
+#include "SphericalMap.h"
+#include "ImageTexture.h"
 using namespace std;
 
 void rightmultiply(const Matrix & M, stack<Matrix> &transfstack)
@@ -95,8 +99,14 @@ void ReadFile::readfile(const char *name){
 					if (validinput)
 					{
 						Sphere* sphere = new Sphere(values[3],Point(values[0],values[1],values[2]));
-						Material* mat = new Material(&BRDF(Color(diffuse[0],diffuse[1],diffuse[2],1),
-							Color(specular[0],specular[1],specular[2],1),Color(ambient[0],ambient[1],ambient[2],1),Color(mirror[0],mirror[1],mirror[2],1),Color(emission[0],emission[1],emission[2],1),shiness));
+						auto brdf = new TextureBRDF(Color(diffuse[0], diffuse[1], diffuse[2], 1),
+							Color(specular[0], specular[1], specular[2], 1), Color(ambient[0], ambient[1], ambient[2], 1), Color(mirror[0], mirror[1], mirror[2], 1), Color(emission[0], emission[1], emission[2], 1), shiness);
+						Image* image = new Image("D:\\vs2015\\MyCode\\SimpleEngine\\world.jpg",1);
+						Mapping* mapping = new SphericalMap();
+						auto texture = make_shared<ImageTexture>();
+						texture->imagePtr = image; texture->mappingPtr = mapping;
+						brdf->setTexture(texture);
+						Material* mat = new Material(brdf);
 						primitives.push_back(make_shared<GeometricPrimitive>(sphere, mat, transfstack.top()));
 					}
 				}

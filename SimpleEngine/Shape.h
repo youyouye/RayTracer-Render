@@ -3,12 +3,15 @@
 #include"Ray.h"
 #include "vector.h"
 #include "matrix.h"
+#include "BBox.h"
 class Shape
 {
 public:
 	virtual bool intersect(Ray& ray, float* thit, LocalGeo* local)=0;
 	virtual bool intersectP(Ray& ray)=0;
 	virtual void trans(Matrix& matrix)=0;
+	virtual BBox getBoundingBox() = 0;
+	virtual Vector3 getSpecVec(){ return Vector3(0, 0, 0); }
 private:
 
 };
@@ -23,6 +26,8 @@ public:
 	void trans(Matrix& matrix){
 		this->mat = matrix;
 	}
+	BBox getBoundingBox();
+	virtual Vector3 getSpecVec(){ return center; }
 public:
 	float radius;
 	Point center;
@@ -46,6 +51,7 @@ public:
 		this->p2 = matrix.transform(p2);
 		this->normal = (p2 - p0).cross(p1 - p0).normalize();
 	}
+	BBox getBoundingBox();
 	~Triangle(){}
 public:
 	Vector3 p0, p1, p2;

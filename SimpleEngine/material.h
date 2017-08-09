@@ -7,14 +7,14 @@ class Material
 public:
 	Material();
 	Material(BRDF* brdf){
-		this->constantBRDF = *brdf;
+		this->constantBRDF = brdf;
 	}
 	~Material();
-	BRDF getBRDF(LocalGeo& local,BRDF* bref) const{
+	BRDF* getBRDF(LocalGeo& local,BRDF* bref) const{
 		return constantBRDF;
 	}
 public:
-	BRDF constantBRDF;
+	BRDF* constantBRDF;
 };
 
 

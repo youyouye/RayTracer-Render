@@ -58,6 +58,11 @@ bool Sphere::intersectP(Ray& ray){
 	else
 		return false;
 }
+
+BBox Sphere::getBoundingBox(){
+	return BBox();
+}
+
 bool Triangle::intersect(Ray& ray, float* thit, LocalGeo* local){
 	Vector3 e1 = p1 - p0;
 	Vector3 e2 = p2 - p0;
@@ -105,6 +110,18 @@ bool Triangle::intersectP(Ray& ray){
 	LocalGeo l;
 	return intersect(ray,&hi,&l);
 }
+
+BBox Triangle::getBoundingBox(){
+	float delta = 0.0001;
+	return BBox(min(min(p0.x,p1.x),p2.x)-delta,
+				max(max(p0.x,p1.x),p2.x)+delta,
+				min(min(p0.y,p1.y),p2.y)-delta,
+				max(max(p0.y,p1.y),p2.y)-delta,
+				min(min(p0.z,p1.z),p2.z)-delta,
+				max(max(p0.z,p1.z),p2.z)+delta
+				);
+}
+
 bool Box::intersect(Ray& ray, float* thit, LocalGeo* local){
 	return false;
 }

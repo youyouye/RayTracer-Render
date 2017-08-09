@@ -10,12 +10,15 @@
 class Ray;
 class Intersection;
 class Material;
+class BBox;
 class Primitive
 {
 public:
 	virtual bool interset(Ray& ray,float* thit,Intersection* in) = 0;
 	virtual bool intersectP(Ray& ray) = 0;
-	virtual void getBRDF(LocalGeo& local,BRDF* brdf) = 0;
+	virtual BRDF* getBRDF(LocalGeo& local) { return nullptr; }
+	virtual BBox getBoundingBox();
+	virtual Vector3 getSpecialVec();
 public:
 };
 
@@ -37,7 +40,8 @@ public:
 	~GeometricPrimitive();
 	bool interset(Ray& ray, float* thit, Intersection* in);
 	bool intersectP(Ray& ray);
-	void getBRDF(LocalGeo& local, BRDF* brdf);
+	virtual BRDF* getBRDF(LocalGeo& local);
+	virtual Vector3 getSpecialVec();
 public:
 	Shape* shape;
 	Material* mat;
@@ -48,14 +52,17 @@ class AggregatePrimitive : public Primitive{
 public:
 	AggregatePrimitive();
 	~AggregatePrimitive();
-	bool interset(Ray& ray, float* thit, Intersection* in);
-	bool intersectP(Ray& ray);
-	void getBRDF(LocalGeo& local, BRDF* brdf);
+	virtual bool interset(Ray& ray, float* thit, Intersection* in);
+	virtual bool intersectP(Ray& ray);
+	virtual BRDF* getBRDF(LocalGeo& local);
 
+	inline int getNumOfObjects(){
+		return objects.size();
+	}
 	void setMaterial(const Material& marptr);
-	void addObject(const std::shared_ptr<Shape> shapeptr);
-private:
-	std::vector<std::shared_ptr<Shape>> objects;
+	void addObject(const std::shared_ptr<Primitive> shapeptr);
+protected:
+	std::vector<std::shared_ptr<Primitive>> objects;
 };
 
 #endif

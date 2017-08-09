@@ -24,6 +24,7 @@ void Scene::render(){
 	{
 		camera.generateRay(sam,&ray);
 		Color cr;
+		raytrace.eye = Vector3(eye[0], eye[1], eye[2]);
 		raytrace.trace(ray,1,cr);
 		film.commit(sam,cr*255);
 	}
