@@ -1,4 +1,4 @@
-#include "SDL.h"
+#include <SDL.h>
 #include<string>
 #include"canvas.h"
 #include "image.h"

@@ -7,6 +7,8 @@ public:
 	BBox();
 	~BBox();
 	bool hit(const Ray& ray) const;
+	void expand(BBox bbox);
+	int longestAxis();
 public:
 	float x0, y0, z0, x1, y1, z1;
 };

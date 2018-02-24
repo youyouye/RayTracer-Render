@@ -60,3 +60,13 @@ bool BBox::hit(const Ray& ray) const{
 		t1 = tz_max;
 	return (t0<t1 && t1>0.0001);
 }
+
+void BBox::expand(BBox bbox)
+{
+
+}
+
+int longestAxis() 
+{
+
+}

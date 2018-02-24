@@ -3,6 +3,7 @@
 #include"Ray.h"
 #include "vector.h"
 #include "matrix.h"
+#include "BBox.h"
 class Shape
 {
 public:
@@ -46,6 +47,8 @@ public:
 		this->p2 = matrix.transform(p2);
 		this->normal = (p2 - p0).cross(p1 - p0).normalize();
 	}
+	BBox getBoundingBox();
+	Vector3 getMidPoint();
 	~Triangle(){}
 public:
 	Vector3 p0, p1, p2;

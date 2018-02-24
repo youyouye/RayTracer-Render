@@ -105,6 +105,17 @@ bool Triangle::intersectP(Ray& ray){
 	LocalGeo l;
 	return intersect(ray,&hi,&l);
 }
+
+BBox Triangle::getBoundingBox()
+{
+
+}
+
+Vector3 Triangle::getMidPoint()
+{
+
+}
+
 bool Box::intersect(Ray& ray, float* thit, LocalGeo* local){
 	return false;
 }
