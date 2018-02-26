@@ -98,14 +98,12 @@ bool KDNode::hit(const Ray& ray, float& t, float& tmin, Intersection& intersecti
 		{
 			for (int i = 0;i < triangles.size();i++)
 			{
-				if (triangles[i]->intersect())
-				{
-				}
+//				if (triangles[i]->intersect())
+//				{
+//				}
 			}
 		}
-
 	}
-
 }
 
 

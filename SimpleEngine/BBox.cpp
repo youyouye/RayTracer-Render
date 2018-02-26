@@ -66,7 +66,7 @@ void BBox::expand(BBox bbox)
 
 }
 
-int longestAxis() 
+int BBox::longestAxis()
 {
-
+	return 0;
 }

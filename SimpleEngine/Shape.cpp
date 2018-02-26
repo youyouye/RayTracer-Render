@@ -108,12 +108,12 @@ bool Triangle::intersectP(Ray& ray){
 
 BBox Triangle::getBoundingBox()
 {
-
+	return BBox();
 }
 
 Vector3 Triangle::getMidPoint()
 {
-
+	return Vector3();
 }
 
 bool Box::intersect(Ray& ray, float* thit, LocalGeo* local){

@@ -1,4 +1,4 @@
-#include <SDL.h>
+//#include <SDL.h>
 #include<string>
 #include"canvas.h"
 #include "image.h"
@@ -8,7 +8,7 @@
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
 const int SCREEN_BPP = 32;
-
+/*
 void test()
 {
 	SDL_LoadBMP("");
@@ -60,6 +60,7 @@ void put_pixel32(SDL_Surface *surface,int x,int y,Uint32 pixel)
 	Uint32 *pixels = (Uint32 *)surface->pixels;
 	pixels[(y*surface->w)+x] = pixel;
 }
+*/
 
 /*
 int main(int argc,char* args[])

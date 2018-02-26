@@ -1,4 +1,5 @@
 #include "Log.h"
+#include <fstream>
 
 const char* LogLevelName[Logger::NUM_LOG_LEVELS] =
 {
@@ -65,17 +66,83 @@ void LogStream::formatInteger(T v)
 	}
 }
 
+LogStream& LogStream::operator<<(short v)
+{
+	*this << static_cast<int>(v);
+	return *this;
+}
 
+LogStream& LogStream::operator<<(unsigned short v)
+{
+	*this << static_cast<unsigned int>(v);
+	return *this;
+}
 
+LogStream& LogStream::operator<<(int v)
+{
+	formatInteger(v);
+	return *this;
+}
 
+LogStream& LogStream::operator<<(unsigned int v)
+{
+	formatInteger(v);
+	return *this;
+}
 
+LogStream& LogStream::operator<<(long v)
+{
+	formatInteger(v);
+	return *this;
+}
 
+LogStream& LogStream::operator<<(unsigned long v)
+{
+	formatInteger(v);
+	return *this;
+}
 
+LogStream& LogStream::operator<<(long long v)
+{
+	formatInteger(v);
+	return *this;
+}
 
+LogStream& LogStream::operator<<(unsigned long long v)
+{
+	formatInteger(v);
+	return *this;
+}
+
+LogStream& LogStream::operator<<(const void* p)
+{
+	uintptr_t v = reinterpret_cast<uintptr_t>(p);
+	if (buffer_.avail() >= kMaxNumericSize)
+	{
+		char* buf = buffer_.current();
+		buf[0] = '0';
+		buf[1] = 'x';
+		size_t len = convertHex(buf + 2, v);
+		buffer_.add(len + 2);
+	}
+	return *this;
+}
+
+LogStream& LogStream::operator<<(double v)
+{
+	if (buffer_.avail() >= kMaxNumericSize)
+	{
+		int len = snprintf(buffer_.current(), kMaxNumericSize, "%.12g", v);
+		buffer_.add(len);
+	}
+	return *this;
+}
 
 void LogStream::flush()
 {
-
+	std::ofstream log_file("log/log.txt");
+	log_file << buffer_.toString();
+	log_file.close();
 }
 
 Logger::Logger(SourceFile file, int line, LogLevel level, const char* func)
@@ -94,5 +161,5 @@ Logger::~Logger()
 
 void Logger::flush()
 {
-	stream_ << "_" << basename_ << ":" << line_ << '\n';
+	stream_ << "_" << basename_.data_ << ":" << line_ << '\n';
 }
