@@ -11,7 +11,7 @@
 #include <memory>
 void Scene::render(){
 	ReadFile variables;
-	variables.readfile("D:\\vs2015\\MyCode\\SimpleEngine\\scene.test");
+	variables.readfile("D:\\mywork\\homework_hw3-submissionscenes\\hw3-submissionscenes\\scene7.test");
 	Sampler sample =Sampler(width,height);
 	Film film = Film(width,height);
 	Sample sam;
@@ -20,6 +20,7 @@ void Scene::render(){
 	RayTracer raytrace;
 	raytrace.primitives = variables.primitives;
 	raytrace.lights = variables.lights;
+	raytrace.generateKDTree();
 	while (sample.getSample(sam))
 	{
 		camera.generateRay(sam,&ray);
@@ -29,5 +30,4 @@ void Scene::render(){
 	}
 	float how = raytrace.thit;
 	film.writeImage();
-
 }

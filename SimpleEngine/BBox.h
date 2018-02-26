@@ -1,10 +1,13 @@
 #ifndef _BBOX__H_
 #define  _BBOX__H_
 #include "Ray.h"
+#include "vector.h"
+
 class BBox
 {
 public:
 	BBox();
+	BBox(Vector3 bottom,Vector3 tail);
 	~BBox();
 	bool hit(const Ray& ray) const;
 	void expand(BBox bbox);

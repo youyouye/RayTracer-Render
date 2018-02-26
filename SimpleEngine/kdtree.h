@@ -1,19 +1,20 @@
 #pragma once
 #include <vector>
+#include <memory>
 #include "BBox.h"
-#include "Shape.h"
+#include "Primitive.h"
 #include "Ray.h"
 
 class KDNode 
 {
 public:
 	KDNode() = default;
-	KDNode* build(const std::vector<Triangle*>& tris,int depth);
-	bool hit(const Ray& ray,float& t,float& tmin,Intersection& intersection);
+	KDNode* build(const std::vector<std::shared_ptr<Primitive>>& tris,int depth);
+	bool hit(Ray& ray,float& t,Intersection& intersection);
 public:
 	BBox bbox;
 	KDNode *left;
 	KDNode *right;
-	std::vector<Triangle*> triangles;
+	std::vector<std::shared_ptr<Primitive>> triangles;	//only for triangles
 };
 

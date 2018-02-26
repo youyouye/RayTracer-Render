@@ -108,12 +108,26 @@ bool Triangle::intersectP(Ray& ray){
 
 BBox Triangle::getBoundingBox()
 {
-	return BBox();
+	Vector3 bottom(
+		std::fminf(std::fminf(p0.x,p1.x),p2.x),
+		std::fminf(std::fminf(p0.y, p1.y), p2.y),
+		std::fminf(std::fminf(p0.z, p1.z), p2.z)
+		);
+	Vector3 tail(
+		std::fmaxf(std::fmaxf(p0.x,p1.x),p2.x),
+		std::fmaxf(std::fmaxf(p0.y, p1.y), p2.y),
+		std::fmaxf(std::fmaxf(p0.z, p1.z), p2.z)
+	);
+	return BBox(bottom,tail);
 }
 
 Vector3 Triangle::getMidPoint()
 {
-	return Vector3();
+	return Vector3(
+		(p0.x + p1.x + p2.x) / 3.0,
+		(p0.y + p1.y + p2.y) / 3.0,
+		(p0.z + p1.z + p2.z) / 3.0
+	);
 }
 
 bool Box::intersect(Ray& ray, float* thit, LocalGeo* local){

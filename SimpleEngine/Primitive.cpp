@@ -26,6 +26,16 @@ void GeometricPrimitive::getBRDF(LocalGeo& local, BRDF* brdf){
 	*brdf = mat->constantBRDF;
 }
 
+BBox GeometricPrimitive::getBoundingBox() const
+{
+	return shape->getBoundingBox();
+}
+
+Vector3 GeometricPrimitive::getMidPoint() const
+{
+	return shape->getMidPoint();
+}
+
 AggregatePrimitive::AggregatePrimitive(){
 }
 AggregatePrimitive::~AggregatePrimitive(){

@@ -10,6 +10,8 @@ public:
 	virtual bool intersect(Ray& ray, float* thit, LocalGeo* local)=0;
 	virtual bool intersectP(Ray& ray)=0;
 	virtual void trans(Matrix& matrix)=0;
+	virtual BBox getBoundingBox() { return BBox(); }
+	Vector3 getMidPoint() { return Vector3(); }
 private:
 
 };

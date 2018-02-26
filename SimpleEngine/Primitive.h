@@ -16,6 +16,8 @@ public:
 	virtual bool interset(Ray& ray,float* thit,Intersection* in) = 0;
 	virtual bool intersectP(Ray& ray) = 0;
 	virtual void getBRDF(LocalGeo& local,BRDF* brdf) = 0;
+	virtual BBox getBoundingBox() const { return BBox(); }
+	virtual Vector3 getMidPoint() const { return Vector3(); }
 public:
 };
 
@@ -38,6 +40,8 @@ public:
 	bool interset(Ray& ray, float* thit, Intersection* in);
 	bool intersectP(Ray& ray);
 	void getBRDF(LocalGeo& local, BRDF* brdf);
+	BBox getBoundingBox() const override;
+	Vector3 getMidPoint() const override;
 public:
 	Shape* shape;
 	Material* mat;

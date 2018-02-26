@@ -1,6 +1,6 @@
 #include "kdtree.h"
 
-KDNode* KDNode::build(const std::vector<Triangle*>& tris, int depth) 
+KDNode* KDNode::build(const std::vector<std::shared_ptr<Primitive>>& tris, int depth)
 {
 	KDNode* node = new KDNode();
 	node->triangles = tris;
@@ -15,8 +15,8 @@ KDNode* KDNode::build(const std::vector<Triangle*>& tris, int depth)
 		node->bbox = tris[0]->getBoundingBox();
 		node->left = new KDNode();
 		node->right = new KDNode();
-		node->left->triangles = std::vector<Triangle*>();
-		node->right->triangles = std::vector<Triangle*>();
+		node->left->triangles = std::vector<std::shared_ptr<Primitive>>();
+		node->right->triangles = std::vector<std::shared_ptr<Primitive>>();
 		return node;
 	}
 	node->bbox = tris[0]->getBoundingBox();
@@ -31,8 +31,8 @@ KDNode* KDNode::build(const std::vector<Triangle*>& tris, int depth)
 		midpt = midpt + tris[i]->getMidPoint() * (1.0 / tris.size());
 	}
 
-	std::vector<Triangle*> left_tris;
-	std::vector<Triangle*> right_tris;
+	std::vector<std::shared_ptr<Primitive>> left_tris;
+	std::vector<std::shared_ptr<Primitive>> right_tris;
 	
 	int axis = node->bbox.longestAxis();
 	for (int i = 0;i < tris.size();i++)
@@ -74,55 +74,36 @@ KDNode* KDNode::build(const std::vector<Triangle*>& tris, int depth)
 	{
 		node->left = new KDNode();
 		node->right = new KDNode();
-		node->left->triangles = std::vector<Triangle*>();
-		node->left->triangles = std::vector<Triangle*>();
+		node->left->triangles = std::vector<std::shared_ptr<Primitive>>();
+		node->left->triangles = std::vector<std::shared_ptr<Primitive>>();
 	}
 	return node;
 }
 
-bool KDNode::hit(const Ray& ray, float& t, float& tmin, Intersection& intersection)
+bool KDNode::hit(Ray& ray, float& t, Intersection& in)
 {
 	if (bbox.hit(ray))
 	{
-		Normal normal;
-		bool hit_tri = false;
-		Vector3 hit_pt, local_hit_pt;
-
 		if (left->triangles.size() > 0 || right->triangles.size() > 0)
 		{
-			bool hitleft = left->hit(ray, t, tmin, intersection);
-			bool hitright = right->hit(ray,t,tmin,intersection);
+			bool hitleft = left->hit(ray, t, in);
+			bool hitright = right->hit(ray,t, in);
 			return hitright || hitright;
 		}
 		else 
 		{
 			for (int i = 0;i < triangles.size();i++)
 			{
-//				if (triangles[i]->intersect())
-//				{
-//				}
+				LocalGeo local;
+				if (triangles[i]->interset(ray,&t,&in))
+				{
+					in.localGeo = local;
+					in.primitive = triangles[i].get();	//TODO:数据关系太乱了;
+					return true;
+				}
 			}
 		}
+		return false;
 	}
+	return false;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

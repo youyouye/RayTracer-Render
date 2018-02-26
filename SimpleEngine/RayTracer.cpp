@@ -1,7 +1,14 @@
 #include "RayTracer.h"
 #include "vector.h"
 #include "variables.h"
+#include "kdtree.h"
 #include <algorithm>
+
+RayTracer::~RayTracer()
+{
+	delete kdtree;
+}
+
 void RayTracer::trace(Ray& ray, int depth, Color& color){
 	if (depth > 5)
 	{
@@ -52,14 +59,16 @@ Color* RayTracer::shading(LocalGeo local, BRDF brdf, Ray lray, Color lcolor){
 	Vector3 half = (lray.dir + eyedirn).normalize();
 	float nDotH = Vector3(local.normal).normalize().dot(half);
 	Color phong = brdf.ks*lcolor*std::pow(std::max(nDotH,0.0f),brdf.shininess);
-	return &Color(lambert+phong);
+	return new Color(lambert+phong); //TODO:怎么都不能这么写啊...
 }
+
 void RayTracer::createReflectRay(LocalGeo local, Ray& ray){
 	Vector3 d = local.pos - Vector3(eye[0], eye[1], eye[2]);
 	Vector3 r = d - Vector3(local.normal).normalize() * 2 * (d.dot(local.normal.normalize()));
 	ray.dir = r.normalize();
 	ray.pos = local.pos+ray.dir*0.0003;
 }
+
 bool RayTracer::interset(Ray& ray, float* thit, Intersection* in){
 	Intersection* temp;
 	temp = &Intersection(); temp->localGeo = LocalGeo();
@@ -83,8 +92,47 @@ bool RayTracer::interset(Ray& ray, float* thit, Intersection* in){
 		return true;
 	}
 }
+
 bool RayTracer::intersectP(Ray &ray){
 	float t;
 	Intersection i;
 	return interset(ray,&t,&i);
+}
+
+void RayTracer::generateKDTree()
+{
+	kdtree = new KDNode();
+	kdtree->build(primitives, 0);
+}
+
+//TODO:如果多种方式都这么通用的话,就把这里改掉;
+bool RayTracer::kdTreeInterset(Ray& ray, float* thit, Intersection* in)
+{
+	Intersection* temp;
+	temp = &Intersection(); temp->localGeo = LocalGeo();
+	temp->localGeo.t = 10000;
+	if (kdtree->hit(ray, *thit, *in))	//TODO:use & or *
+	{
+		if (in->localGeo.t > ray.t_min && in->localGeo.t < ray.t_max)
+		{
+			if (in->localGeo.t < temp->localGeo.t) {
+				*temp = *in;
+			}
+		}
+	}
+
+	if (temp->localGeo.t == 10000) {
+		return false;
+	}
+	else {
+		*in = *temp;
+		return true;
+	}
+}
+
+bool RayTracer::kdTreeIntersetP(Ray& ray)
+{
+	float t;
+	Intersection i;
+	return kdTreeInterset(ray, &t, &i);
 }
