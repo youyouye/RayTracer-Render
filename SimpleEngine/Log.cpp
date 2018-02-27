@@ -1,5 +1,6 @@
 #include "Log.h"
 #include <fstream>
+#include <ctime>
 
 const char* LogLevelName[Logger::NUM_LOG_LEVELS] =
 {
@@ -140,8 +141,9 @@ LogStream& LogStream::operator<<(double v)
 
 void LogStream::flush()
 {
-	std::ofstream log_file("log/log.txt");
+	std::ofstream log_file("..//log//log.txt",std::ios::app);
 	log_file << buffer_.toString();
+	log_file << '\n';
 	log_file.close();
 }
 
@@ -151,6 +153,12 @@ Logger::Logger(SourceFile file, int line, LogLevel level, const char* func)
 	line_(line),
 	basename_(file)
 {
+	time_t t = time(0);
+	struct tm * now = localtime(&t);
+	stream_ << (now->tm_year + 1900) << '-'
+		<< (now->tm_mon + 1) << '-'
+		<< now->tm_mday << ' '
+		<< now->tm_hour << ':' << now->tm_min << ':' << now->tm_sec << "  ";
 	stream_ << LogLevelName[level];
 	stream_ << func << ' ';
 }

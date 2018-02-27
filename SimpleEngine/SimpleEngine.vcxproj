@@ -183,6 +183,7 @@
     <ClCompile Include="sampler.cpp" />
     <ClCompile Include="scene.cpp" />
     <ClCompile Include="Shape.cpp" />
+    <ClCompile Include="small_test.cpp" />
     <ClCompile Include="variables.cpp" />
     <ClCompile Include="vector.cpp" />
     <ClCompile Include="vertex.cpp" />
@@ -212,6 +213,7 @@
     <ClInclude Include="sampler.h" />
     <ClInclude Include="scene.h" />
     <ClInclude Include="Shape.h" />
+    <ClInclude Include="small_test.h" />
     <ClInclude Include="variables.h" />
     <ClInclude Include="vector.h" />
     <ClInclude Include="vertex.h" />

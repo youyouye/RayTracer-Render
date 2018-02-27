@@ -1,5 +1,6 @@
 #ifndef SAMPLE_H_
 #define SAMPLE_H_
+#include <string>
 
 class Sample{
 public:
@@ -22,6 +23,7 @@ public:
 	}
 	~Sampler();
 	bool getSample(Sample& sample);
+	std::string getExecPercent();
 public:
 	int h, w;
 	int index;

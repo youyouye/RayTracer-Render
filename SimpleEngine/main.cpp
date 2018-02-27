@@ -1,6 +1,7 @@
 //#include <SDL.h>
 #include<string>
 #include"canvas.h"
+#include "small_test.h"
 #include "image.h"
 #include "scene.h"
 #include "FreeImage.h"
@@ -111,9 +112,17 @@ int main(int argc,char* args[])
 }
 */
 
+void test() 
+{
+	SmallTest test;
+	test.testBBox();
+}
+
 int main(int argc, char* args[]){
+	test();
 	FreeImage_Initialise();
 	Scene::render();
 	FreeImage_DeInitialise();
 	return 0;
 }
+

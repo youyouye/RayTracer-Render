@@ -58,6 +58,19 @@ bool Sphere::intersectP(Ray& ray){
 	else
 		return false;
 }
+
+BBox Sphere::getBoundingBox()
+{
+	return BBox(
+		Vector3(center.x - radius,center.y - radius,center.z -radius),
+		Vector3(center.x + radius,center.y + radius,center.z + radius));
+}
+
+Vector3 Sphere::getMidPoint()
+{
+	return center;
+}
+
 bool Triangle::intersect(Ray& ray, float* thit, LocalGeo* local){
 	Vector3 e1 = p1 - p0;
 	Vector3 e2 = p2 - p0;

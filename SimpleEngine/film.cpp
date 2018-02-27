@@ -29,7 +29,7 @@ void Film::writeImage(){
 			bits += bytespp;
 		}
 	}
-	std::string filename = "D:\\vs2015\\MyCode\\SimpleEngine\\test2.png";
+	std::string filename = "..//test.png";
 	FreeImage_Save(FIF_PNG,bitmap,filename.c_str(),0);
 
 }

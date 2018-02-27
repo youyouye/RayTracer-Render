@@ -34,10 +34,12 @@ private:
 	char* cur_;
 };
 
-
 class LogStream
 {
 public:
+	enum Tag {
+		FLUSH
+	};
 	typedef LogStream self;
 	typedef LogBuffer<4000> Buffer;
 	
@@ -93,7 +95,13 @@ public:
 		buffer_.append(v.c_str(), v.size());
 		return *this;
 	}
-
+	void operator<<(Tag tag) 
+	{
+		if (tag == Tag::FLUSH)
+		{
+			this->flush();
+		}
+	}
 	void append(const char* data, int len) { buffer_.append(data, len); }
 	const Buffer& buffer() const { return buffer_; }
 	void resetBuffer() { buffer_.reset(); }
@@ -110,7 +118,7 @@ private:
 class Logger 
 {
 public:
-	enum LogLevel 
+	enum LogLevel
 	{
 		TRACE,
 		DEBUG,
@@ -120,7 +128,6 @@ public:
 		FATAL,
 		NUM_LOG_LEVELS,
 	};
-
 	class SourceFile 
 	{
 	public:
@@ -168,3 +175,4 @@ private:
 #define LOG_WARN Logger(__FILE__,__LINE__,Logger::WARN,__FUNCTION__).stream()
 #define LOG_ERROR Logger(__FILE__,__LINE__,Logger::ERROR,__FUNCTION__).stream()
 #define LOG_FATAL Logger(__FILE__,__LINE__,Logger::FATAL,__FUNCTION__).stream()
+#define LOG_END LogStream::Tag::FLUSH

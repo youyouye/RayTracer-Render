@@ -7,11 +7,13 @@
 #include "Shape.h"
 #include "material.h"
 #include "readfile.h"
+#include "Log.h"
 #include <stdlib.h>
+#include <iostream>
 #include <memory>
 void Scene::render(){
 	ReadFile variables;
-	variables.readfile("D:\\mywork\\homework_hw3-submissionscenes\\hw3-submissionscenes\\scene7.test");
+	variables.readfile("..//hw3//scene6.test");
 	Sampler sample =Sampler(width,height);
 	Film film = Film(width,height);
 	Sample sam;
@@ -21,8 +23,12 @@ void Scene::render(){
 	raytrace.primitives = variables.primitives;
 	raytrace.lights = variables.lights;
 	raytrace.generateKDTree();
+
+	LOG_INFO << "k-d tree start!" << LOG_END;
+
 	while (sample.getSample(sam))
 	{
+		std::cout << sample.getExecPercent() << std::endl;
 		camera.generateRay(sam,&ray);
 		Color cr;
 		raytrace.trace(ray,1,cr);
@@ -30,4 +36,6 @@ void Scene::render(){
 	}
 	float how = raytrace.thit;
 	film.writeImage();
+
+	LOG_INFO << "k-d tree end!" << LOG_END;
 }

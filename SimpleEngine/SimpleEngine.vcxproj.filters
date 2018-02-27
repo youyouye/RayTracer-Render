@@ -19,6 +19,9 @@
     <Filter Include="log">
       <UniqueIdentifier>{8087c44e-d4eb-4ea8-97fc-2198e52df5fe}</UniqueIdentifier>
     </Filter>
+    <Filter Include="unit_test">
+      <UniqueIdentifier>{82d336e7-d959-44d3-ae15-49750d48d864}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -95,6 +98,9 @@
     </ClCompile>
     <ClCompile Include="Log.cpp">
       <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="small_test.cpp">
+      <Filter>unit_test</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -178,6 +184,9 @@
     </ClInclude>
     <ClInclude Include="Log.h">
       <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="small_test.h">
+      <Filter>unit_test</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

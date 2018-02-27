@@ -19,11 +19,12 @@ public:
 	};
 	~RayTracer();
 	void trace(Ray& ray,int depth,Color& color);
+	void kd_trace(Ray& ray,int depth,Color& color);
 	Color* shading(LocalGeo local, BRDF brdf, Ray lray, Color lcolor);
 	void createReflectRay(LocalGeo local,Ray& ray);
 	bool interset(Ray& ray, float* thit, Intersection* in);
 	bool intersectP(Ray &ray);
-	bool kdTreeInterset(Ray& ray, float* thit, Intersection* in);
+	bool kdTreeInterset(Ray& ray, float* thit, Intersection& in_vec);
 	bool kdTreeIntersetP(Ray& ray);
 	void generateKDTree();
 private:

@@ -12,3 +12,9 @@ bool Sampler::getSample(Sample& sample){
 	index++;
 	return true;
 }
+
+std::string Sampler::getExecPercent()
+{
+	float percent = ((float)index/ (float)((h + 1)*(w + 1)) )*100;
+	return std::to_string(percent) + "%";
+}

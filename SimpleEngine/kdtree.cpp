@@ -28,7 +28,7 @@ KDNode* KDNode::build(const std::vector<std::shared_ptr<Primitive>>& tris, int d
 	Vector3 midpt;
 	for (int i = 0;i < tris.size();i++)
 	{
-		midpt = midpt + tris[i]->getMidPoint() * (1.0 / tris.size());
+		midpt = midpt + tris[i]->getMidPoint() * (double)(1.0 / tris.size());
 	}
 
 	std::vector<std::shared_ptr<Primitive>> left_tris;
@@ -43,9 +43,11 @@ KDNode* KDNode::build(const std::vector<std::shared_ptr<Primitive>>& tris, int d
 			midpt.x >= tris[i]->getMidPoint().x ? right_tris.push_back(tris[i]) : left_tris.push_back(tris[i]);
 			break;
 		case 1:
+			break;
 			midpt.y >= tris[i]->getMidPoint().y ? right_tris.push_back(tris[i]) : left_tris.push_back(tris[i]);
 		case 2:
 			midpt.z >= tris[i]->getMidPoint().z ? right_tris.push_back(tris[i]) : left_tris.push_back(tris[i]);
+			break;
 		}
 	}
 	if (left_tris.size() == 0 && right_tris.size() > 0)
@@ -94,14 +96,39 @@ bool KDNode::hit(Ray& ray, float& t, Intersection& in)
 		{
 			for (int i = 0;i < triangles.size();i++)
 			{
-				LocalGeo local;
 				if (triangles[i]->interset(ray,&t,&in))
-				{
-					in.localGeo = local;
-					in.primitive = triangles[i].get();	//TODO:数据关系太乱了;
 					return true;
+			}
+		}
+		return false;
+	}
+	return false;
+}
+
+bool KDNode::hit(Ray& ray, float& t, std::vector<Intersection>& intersections)
+{
+	if (bbox.hit(ray))
+	{
+		if (left->triangles.size() > 0 || right->triangles.size() > 0)
+		{
+			bool hitleft = left->hit(ray, t, intersections);
+			bool hitright = right->hit(ray, t, intersections);
+			return hitright || hitright;
+		}
+		else
+		{
+			bool hit_flag = false;
+			for (int i = 0; i < triangles.size(); i++)
+			{
+				Intersection temp;
+				if (triangles[i]->interset(ray, &t, &temp))
+				{
+					hit_flag = true;
+					intersections.push_back(temp);
 				}
 			}
+			if (hit_flag)
+				return true;
 		}
 		return false;
 	}
