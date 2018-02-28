@@ -13,7 +13,7 @@
 #include <memory>
 void Scene::render(){
 	ReadFile variables;
-	variables.readfile("..//hw3//scene6.test");
+	variables.readfile("..//hw3//scene4-diffuse.test");
 	Sampler sample =Sampler(width,height);
 	Film film = Film(width,height);
 	Sample sam;

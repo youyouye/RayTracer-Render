@@ -22,6 +22,9 @@
     <Filter Include="unit_test">
       <UniqueIdentifier>{82d336e7-d959-44d3-ae15-49750d48d864}</UniqueIdentifier>
     </Filter>
+    <Filter Include="texture">
+      <UniqueIdentifier>{16bfbb7a-fcba-4675-ba2e-047feef35900}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -101,6 +104,9 @@
     </ClCompile>
     <ClCompile Include="small_test.cpp">
       <Filter>unit_test</Filter>
+    </ClCompile>
+    <ClCompile Include="texture.cpp">
+      <Filter>texture</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -187,6 +193,9 @@
     </ClInclude>
     <ClInclude Include="small_test.h">
       <Filter>unit_test</Filter>
+    </ClInclude>
+    <ClInclude Include="texture.h">
+      <Filter>texture</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

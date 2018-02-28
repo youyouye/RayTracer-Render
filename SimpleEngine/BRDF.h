@@ -1,6 +1,9 @@
 #ifndef BRDF_H_
 #define BRDF_H_
 #include"color.h"
+
+class Texture;
+
 class BRDF
 {
 public:
@@ -28,6 +31,16 @@ public:
 	float shininess;
 	Color emission;
 };
+
+class TextureBRDF : public BRDF
+{
+public:
+private:
+	Texture* texture_;
+};
+
+
+
 
 
 #endif

@@ -4,6 +4,11 @@
 #include "Log.h"
 #include <iostream>
 
+void SmallTest::testAll()
+{
+	testBBox();
+}
+
 void SmallTest::testBBox()
 {
 	BBox bbox(Vector3(-4, -4, -4), Vector3(4, 4, 4));

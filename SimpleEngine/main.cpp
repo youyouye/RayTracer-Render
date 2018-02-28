@@ -119,7 +119,9 @@ void test()
 }
 
 int main(int argc, char* args[]){
+#ifdef DEBUG 
 	test();
+#endif // _DEBUG
 	FreeImage_Initialise();
 	Scene::render();
 	FreeImage_DeInitialise();
