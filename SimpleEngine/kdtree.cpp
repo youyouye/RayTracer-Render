@@ -113,7 +113,7 @@ bool KDNode::hit(Ray& ray, float& t, std::vector<Intersection>& intersections)
 		{
 			bool hitleft = left->hit(ray, t, intersections);
 			bool hitright = right->hit(ray, t, intersections);
-			return hitright || hitright;
+			return hitleft || hitright;
 		}
 		else
 		{

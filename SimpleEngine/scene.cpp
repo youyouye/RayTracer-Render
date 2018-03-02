@@ -31,7 +31,7 @@ void Scene::render(){
 		std::cout << sample.getExecPercent() << std::endl;
 		camera.generateRay(sam,&ray);
 		Color cr;
-		raytrace.trace(ray,1,cr);
+		raytrace.kd_trace(ray,1,cr);
 		film.commit(sam,cr*255);
 	}
 	float how = raytrace.thit;

@@ -19,24 +19,69 @@ BBox::~BBox()
 }
 
 bool BBox::hit(const Ray& ray) const{
-	double tx1 = (x0 - ray.pos.x)*ray.dir.x;
-	double tx2 = (x1 - ray.pos.x)*ray.dir.x;
-	double tmin = std::fmin(tx1,tx2);
-	double tmax = std::fmax(tx1,tx2);
-
-	double ty1 = (y0 - ray.pos.y)*ray.dir.y;
-	double ty2 = (y1 - ray.pos.y)*ray.dir.y;
-
-	tmin = std::fmax(tmin,std::fmin(ty1,ty2));
-	tmax = std::fmin(tmax, std::fmax(ty1, ty2));
-
-	double tz1 = (z0 - ray.pos.z)*ray.dir.z;
-	double tz2 = (z1 - ray.pos.z)*ray.dir.z;
-
-	tmin = std::fmax(tmin, std::fmin(tz1, tz2));
-	tmax = std::fmin(tmax, std::fmax(tz1, tz2));
+	double ox = ray.pos.x; double oy = ray.pos.y; double oz = ray.pos.z;
+	double dx = ray.dir.x; double dy = ray.dir.y; double dz = ray.dir.z;
+	double tx_min, ty_min, tz_min;
+	double tx_max, ty_max, tz_max;
+	if (std::abs(dx) < 0.000001f)
+	{
+		if (ox < x1 || ox > x0)
+			return false;
+	}
+	else 
+	{
+		if (dx >= 0)
+		{
+			tx_min = (x0 - ox) / dx;
+			tx_max = (x1 - ox) / dx;
+		}
+		else
+		{
+			tx_min = (x1 - ox) / dx;
+			tx_max = (x0 - ox) / dx;
+		}
+	}
+	if (std::abs(dy) < 0.000001f)
+	{
+		if (oy < y1 || oy > y0)
+			return false;
+	}
+	else 
+	{
+		if (dy >= 0)
+		{
+			ty_min = (y0 - oy) / dy;
+			ty_max = (y1 - oy) / dy;
+		}
+		else
+		{
+			ty_min = (y1 - oy) / dy;
+			ty_max = (y0 - oy) / dy;
+		}
+	}
+	if (abs(dz) < 0.000001f)
+	{
+		if (oz < z1 || oz > z0)
+			return false;
+	}
+	else 
+	{
+		if (dz >= 0)
+		{
+			tz_min = (z0 - oz) / dz;
+			tz_max = (z1 - oz) / dz;
+		}
+		else
+		{
+			tz_min = (z1 - oz) / dz;
+			tz_max = (z0 - oz) / dz;
+		}
+	}
+	double t0, t1;
+	t0 = std::fmax(tz_min, std::fmax(tx_min, ty_min));
+	t1 = std::fmin(tz_max, std::fmin(tx_max, ty_max));
 	
-	return tmax >= tmin;
+	return t0 < t1;
 }
 
 void BBox::expand(BBox bbox)
