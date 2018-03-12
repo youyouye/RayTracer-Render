@@ -13,7 +13,7 @@
 #include <memory>
 void Scene::render(){
 	ReadFile variables;
-	variables.readfile("..//hw3//scene4-diffuse.test");
+	variables.readfile("..//hw3//scene7.test");
 	Sampler sample =Sampler(width,height);
 	Film film = Film(width,height);
 	Sample sam;
@@ -31,7 +31,7 @@ void Scene::render(){
 		std::cout << sample.getExecPercent() << std::endl;
 		camera.generateRay(sam,&ray);
 		Color cr;
-		raytrace.kd_trace(ray,1,cr);
+		raytrace.trace(ray,1,cr);
 		film.commit(sam,cr*255);
 	}
 	float how = raytrace.thit;

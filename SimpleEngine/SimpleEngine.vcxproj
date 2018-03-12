@@ -76,7 +76,7 @@
     <LinkIncremental>true</LinkIncremental>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <LibraryPath>$(SolutionDir)thirdparty\FreeImage\x64;$(LibraryPath)</LibraryPath>
-    <IncludePath>$(SolutionDir)thirdparty\FreeImage\x64;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)thirdparty\;$(SolutionDir)thirdparty\FreeImage\x64;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -167,7 +167,6 @@
     <ClCompile Include="canvas.cpp" />
     <ClCompile Include="color.cpp" />
     <ClCompile Include="film.cpp" />
-    <ClCompile Include="Grid.cpp" />
     <ClCompile Include="image.cpp" />
     <ClCompile Include="kdtree.cpp" />
     <ClCompile Include="light.cpp" />
@@ -175,6 +174,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="material.cpp" />
     <ClCompile Include="matrix.cpp" />
+    <ClCompile Include="mesh.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="Primitive.cpp" />
     <ClCompile Include="Ray.cpp" />
@@ -198,7 +198,6 @@
     <ClInclude Include="film.h" />
     <ClInclude Include="foundation.h" />
     <ClInclude Include="FreeImage.h" />
-    <ClInclude Include="Grid.h" />
     <ClInclude Include="image.h" />
     <ClInclude Include="kdtree.h" />
     <ClInclude Include="light.h" />
@@ -206,6 +205,7 @@
     <ClInclude Include="material.h" />
     <ClInclude Include="math.h" />
     <ClInclude Include="matrix.h" />
+    <ClInclude Include="mesh.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Primitive.h" />
     <ClInclude Include="Ray.h" />

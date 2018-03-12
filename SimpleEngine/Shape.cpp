@@ -62,8 +62,8 @@ bool Sphere::intersectP(Ray& ray){
 BBox Sphere::getBoundingBox()
 {
 	return BBox(
-		Vector3(center.x - radius,center.y - radius,center.z -radius),
-		Vector3(center.x + radius,center.y + radius,center.z + radius));
+		mat.transform(Vector3(center.x - radius,center.y - radius,center.z -radius)),
+		mat.transform(Vector3(center.x + radius,center.y + radius,center.z + radius)));
 }
 
 Vector3 Sphere::getMidPoint()

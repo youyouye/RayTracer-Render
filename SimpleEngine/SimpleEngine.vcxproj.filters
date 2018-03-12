@@ -25,6 +25,9 @@
     <Filter Include="texture">
       <UniqueIdentifier>{16bfbb7a-fcba-4675-ba2e-047feef35900}</UniqueIdentifier>
     </Filter>
+    <Filter Include="mesh">
+      <UniqueIdentifier>{d073ad94-2de8-4390-998f-55e3d43e7dea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -93,9 +96,6 @@
     <ClCompile Include="BBox.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Grid.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="kdtree.cpp">
       <Filter>kdtree</Filter>
     </ClCompile>
@@ -107,6 +107,9 @@
     </ClCompile>
     <ClCompile Include="texture.cpp">
       <Filter>texture</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh.cpp">
+      <Filter>mesh</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -182,9 +185,6 @@
     <ClInclude Include="BBox.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Grid.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="kdtree.h">
       <Filter>kdtree</Filter>
     </ClInclude>
@@ -196,6 +196,9 @@
     </ClInclude>
     <ClInclude Include="texture.h">
       <Filter>texture</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh.h">
+      <Filter>mesh</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

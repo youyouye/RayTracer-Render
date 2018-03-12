@@ -1,7 +1,6 @@
 #include "texture.h"
 
 ImageTexture::ImageTexture()
-	:image_("")
 {
 	//TODO:改成加个库或者怎么样;
 }
@@ -18,8 +17,11 @@ Color ImageTexture::getColor(Vector3 &point)
 
 Color ImageTexture::getColor(double u, double v)
 {
-	int x = std::fmod(std::fabs(u), 1.0) * (image_.width - 1);
-	int y = std::fmod(std::fabs(v), 1.0) * (image_.height -1);
-
-	return Color();
+	int x = (fmod(fabs(u), 1.0)) * (width - 1);
+	int y = (1. - fmod(fabs(v), 1.0)) * (height - 1);
+	double r, g, b;
+	r = (double)image.at(y*width * 4 + x * 4) / 255.;
+	g = (double)image.at(y*width * 4 + x * 4 + 1) / 255.;
+	b = (double)image.at(y*width * 4 + x * 4 + 2) / 255.;
+	return Color(r, g, b);
 }

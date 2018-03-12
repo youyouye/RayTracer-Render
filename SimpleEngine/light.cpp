@@ -5,7 +5,7 @@ void PLight::generateLightRay(LocalGeo& local, Ray* lray, Color* lcolor){
 	(*lray).t_max = std::fabs((local.pos - point).length());
 	(*lray).pos = local.pos;
 	(*lray).dir = Vector3((point - local.pos)).normalize();
-	(*lray).pos = (*lray).pos + (*lray).dir*0.0003f;
+	(*lray).pos = (*lray).pos + (*lray).dir*0.035;
 	(*lcolor) = lc;
 }
 
@@ -17,7 +17,7 @@ void DLight::generateLightRay(LocalGeo& local, Ray* lray, Color* lcolor){
 	}else{
 		(*lray).dir = Vector3(-direction.x,-direction.y,-direction.z).normalize();	}
 
-	(*lray).pos = (*lray).pos + (*lray).dir*0.0003f;
+	(*lray).pos = (*lray).pos + (*lray).dir*0.035;
 	(*lcolor) = lc;
 }
 
