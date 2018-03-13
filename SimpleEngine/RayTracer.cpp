@@ -53,7 +53,7 @@ void RayTracer::trace(Ray& ray, int depth, Color& color){
 	}
 }
 
-void RayTracer::kd_trace(Ray& ray, int depth, Color& color)
+void RayTracer::kd_trace(Ray& ray, int depth, Color& color,unsigned short*X)
 {
 	if (depth > 5)
 	{
@@ -82,16 +82,27 @@ void RayTracer::kd_trace(Ray& ray, int depth, Color& color)
 			finalcolor = finalcolor + (*shading(in.localGeo, brdf, lray, lcolor));
 		}
 	}
-	color = color + brdf.ka + brdf.emission + finalcolor;
+	color = color + in.primitive->getColor(in.localGeo.pos) + finalcolor;	
 	color.r = std::min(color.r, 1.0f);	color.b = std::min(color.b, 1.0f);
 	color.g = std::min(color.g, 1.0f);	color.a = std::min(color.a, 1.0f);
+	double p = color.r > color.g && color.r > color.b ? color.r : color.g > color.b ? color.g : color.b;
+
+	double random = erand48(X);
+	if (random < p *0.9)
+	{
+		color = color*(0.9 / p);
+	}
+	else
+	{
+		//get emission?
+	}
 
 	if ((brdf.kr.r > 0) || (brdf.kr.g > 0) || (brdf.kr.b > 0))
 	{
 		Ray reflectRay;
 		Color tempColor;
 		createReflectRay(in.localGeo, reflectRay);
-		kd_trace(reflectRay, depth + 1, tempColor);
+		kd_trace(reflectRay, depth + 1, tempColor,X);
 		color = color + brdf.kr*(tempColor);
 		color.r = std::min(color.r, 1.0f);	color.b = std::min(color.b, 1.0f);
 		color.g = std::min(color.g, 1.0f);	color.a = std::min(color.a, 1.0f);

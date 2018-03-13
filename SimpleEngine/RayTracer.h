@@ -19,7 +19,7 @@ public:
 	};
 	~RayTracer();
 	void trace(Ray& ray,int depth,Color& color);
-	void kd_trace(Ray& ray,int depth,Color& color);
+	void kd_trace(Ray& ray, int depth, Color& color, unsigned short*X);
 	Color* shading(LocalGeo local, BRDF brdf, Ray lray, Color lcolor);
 	void createReflectRay(LocalGeo local,Ray& ray);
 	bool interset(Ray& ray, float* thit, Intersection* in);
