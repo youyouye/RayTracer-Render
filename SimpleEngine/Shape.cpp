@@ -71,19 +71,24 @@ Vector3 Sphere::getMidPoint()
 	return center;
 }
 
+void Sphere::GetTexturePosition(const Vector3& point,float& u, float& v)
+{
+
+}
+
 bool Triangle::intersect(Ray& ray, float* thit, LocalGeo* local){
-	Vector3 e1 = p1 - p0;
-	Vector3 e2 = p2 - p0;
+	Vector3 e1 = p1_ - p0_;
+	Vector3 e2 = p2_ - p0_;
 	Vector3 p = ray.dir.cross(e2);
 	float det = e1.dot(p);
 	Vector3 t;
 	if (det > 0)
 	{
-		t = Vector3(ray.pos) - p0;
+		t = Vector3(ray.pos) - p0_;
 	}
 	else
 	{
-		t = p0 - Vector3(ray.pos);
+		t = p0_ - Vector3(ray.pos);
 		det = -det;
 	}
 	if (det < 0.0001f)
@@ -122,14 +127,14 @@ bool Triangle::intersectP(Ray& ray){
 BBox Triangle::getBoundingBox()
 {
 	Vector3 bottom(
-		std::fminf(std::fminf(p0.x,p1.x),p2.x),
-		std::fminf(std::fminf(p0.y, p1.y), p2.y),
-		std::fminf(std::fminf(p0.z, p1.z), p2.z)
+		std::fminf(std::fminf(p0_.x,p1_.x),p2_.x),
+		std::fminf(std::fminf(p0_.y, p1_.y), p2_.y),
+		std::fminf(std::fminf(p0_.z, p1_.z), p2_.z)
 		);
 	Vector3 tail(
-		std::fmaxf(std::fmaxf(p0.x,p1.x),p2.x),
-		std::fmaxf(std::fmaxf(p0.y, p1.y), p2.y),
-		std::fmaxf(std::fmaxf(p0.z, p1.z), p2.z)
+		std::fmaxf(std::fmaxf(p0_.x,p1_.x),p2_.x),
+		std::fmaxf(std::fmaxf(p0_.y, p1_.y), p2_.y),
+		std::fmaxf(std::fmaxf(p0_.z, p1_.z), p2_.z)
 	);
 	return BBox(bottom,tail);
 }
@@ -137,10 +142,38 @@ BBox Triangle::getBoundingBox()
 Vector3 Triangle::getMidPoint()
 {
 	return Vector3(
-		(p0.x + p1.x + p2.x) / 3.0,
-		(p0.y + p1.y + p2.y) / 3.0,
-		(p0.z + p1.z + p2.z) / 3.0
+		(p0_.x + p1_.x + p2_.x) / 3.0,
+		(p0_.y + p1_.y + p2_.y) / 3.0,
+		(p0_.z + p1_.z + p2_.z) / 3.0
 	);
+}
+
+void Triangle::GetTexturePosition(const Vector3& point,float& u, float& v)
+{
+	Vector3 b = getBarycentric(point);
+	Vector3 c = Vector3();
+	c = c + (p0_*b.x);
+	c = c + (p1_*b.y);
+	c = c + (p2_*b.z);
+	u = c.x;
+	v = c.y;
+}
+
+Vector3 Triangle::getBarycentric(const Vector3& point)
+{
+	Vector3 v2 = point - p0_;
+	Vector3 edge1 = p1_ - p0_;
+	Vector3 edge2 = p2_ - p0_;
+	double d00 = edge1.dot(edge1);
+	double d01 = edge1.dot(edge2);
+	double d11 = edge2.dot(edge2);
+	double d20 = p2_.dot(edge1);
+	double d21 = p2_.dot(edge2);
+	double d = d00*d11 - d01*d01;
+	double v = (d11*d20 - d01*d21) / d;
+	double w = (d00*d21 - d01*d20) / d;
+	double u = 1 - v - w;
+	return Vector3(u,v,w);
 }
 
 bool Box::intersect(Ray& ray, float* thit, LocalGeo* local){

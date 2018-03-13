@@ -15,7 +15,7 @@ Color ImageTexture::getColor(Vector3 &point)
 	return Color();
 }
 
-Color ImageTexture::getColor(double u, double v)
+Color ImageTexture::getColor(float u, float v)
 {
 	int x = (fmod(fabs(u), 1.0)) * (width - 1);
 	int y = (1. - fmod(fabs(v), 1.0)) * (height - 1);

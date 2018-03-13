@@ -12,6 +12,7 @@ public:
 	virtual void trans(Matrix& matrix)=0;
 	virtual BBox getBoundingBox() { return BBox(); }
 	virtual Vector3 getMidPoint() { return Vector3(); }
+	virtual void GetTexturePosition(const Vector3& point,float& u,float& v) {}
 private:
 
 };
@@ -28,6 +29,7 @@ public:
 	}
 	BBox getBoundingBox() override;
 	Vector3 getMidPoint() override;
+	void GetTexturePosition(const Vector3& point,float& u, float& v) override;
 public:
 	float radius;
 	Point center;
@@ -38,25 +40,37 @@ class Triangle : public Shape{
 public:
 	Triangle(){}
 	Triangle(Vector3 &t1,Vector3 &t2,Vector3 &t3){
-		this->p0 = t1;
-		this->p1 = t2;
-		this->p2 = t3;
-		normal = (p2 - p0).cross(p1-p0).normalize();
+		this->p0_ = t1;
+		this->p1_ = t2;
+		this->p2_ = t3;
+		normal = (p2_ - p0_).cross(p1_-p0_).normalize();
 	}
+	
+	Triangle(Vector3 &p0, Vector3 &p1, Vector3 &p2,
+		Vector3 &t0,Vector3& t1,Vector3& t2) 
+		:p0_(p0),p1_(p1),p2_(p2),t0_(t0),t1_(t1),t2_(t2)
+	{
+		normal = (p2_ - p0_).cross(p1_ - p0_).normalize();
+	}
+	~Triangle() {}
+
 	bool intersect(Ray& ray, float* thit, LocalGeo* local);
 	bool intersectP(Ray& ray);
 	void trans(Matrix& matrix){
-		this->p0 = matrix.transform(p0);
-		this->p1 = matrix.transform(p1);
-		this->p2 = matrix.transform(p2);
-		this->normal = (p2 - p0).cross(p1 - p0).normalize();
+		this->p0_ = matrix.transform(p0_);
+		this->p1_ = matrix.transform(p1_);
+		this->p2_ = matrix.transform(p2_);
+		this->normal = (p2_ - p0_).cross(p1_ - p0_).normalize();
 	}
 	BBox getBoundingBox() override;
 	Vector3 getMidPoint() override;
-	~Triangle(){}
+	void GetTexturePosition(const Vector3& point,float& u, float& v) override;
 public:
-	Vector3 p0, p1, p2;
+	Vector3 p0_, p1_, p2_;
+	Vector3 t0_, t1_, t2_;		//texture coordinates
 	Vector3 normal;
+private:
+	Vector3 getBarycentric(const Vector3& point);
 };
 
 class Box : public Shape{

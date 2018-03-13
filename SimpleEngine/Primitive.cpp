@@ -36,6 +36,13 @@ Vector3 GeometricPrimitive::getMidPoint() const
 	return shape->getMidPoint();
 }
 
+Color GeometricPrimitive::getColor(const Vector3& point)
+{
+	float u, v;
+	shape->GetTexturePosition(point,u,v);
+	return mat->getColor(u, v);
+}
+
 AggregatePrimitive::AggregatePrimitive(){
 }
 AggregatePrimitive::~AggregatePrimitive(){

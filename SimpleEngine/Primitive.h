@@ -18,6 +18,7 @@ public:
 	virtual void getBRDF(LocalGeo& local,BRDF* brdf) = 0;
 	virtual BBox getBoundingBox() const { return BBox(); }
 	virtual Vector3 getMidPoint() const { return Vector3(); }
+	virtual Color getColor(const Vector3& point) {return Color()}
 public:
 };
 
@@ -42,6 +43,7 @@ public:
 	void getBRDF(LocalGeo& local, BRDF* brdf);
 	BBox getBoundingBox() const override;
 	Vector3 getMidPoint() const override;
+	virtual Color getColor(const Vector3& point) override;
 public:
 	Shape* shape;
 	Material* mat;
@@ -58,6 +60,7 @@ public:
 
 	void setMaterial(const Material& marptr);
 	void addObject(const std::shared_ptr<Shape> shapeptr);
+	virtual Color getColor(const Vector3& point) override { return Color(); }
 private:
 	std::vector<std::shared_ptr<Shape>> objects;
 };
