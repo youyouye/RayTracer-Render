@@ -2,6 +2,7 @@
 #include "vector.h"
 #include "variables.h"
 #include "kdtree.h"
+#include "rand48/erand48.h"
 #include <algorithm>
 
 RayTracer::~RayTracer()
@@ -94,7 +95,8 @@ void RayTracer::kd_trace(Ray& ray, int depth, Color& color,unsigned short*X)
 	}
 	else
 	{
-		//get emission?
+		color = color*brdf.emission;
+		return;
 	}
 
 	if ((brdf.kr.r > 0) || (brdf.kr.g > 0) || (brdf.kr.b > 0))
@@ -116,7 +118,7 @@ Color* RayTracer::shading(LocalGeo local, BRDF brdf, Ray lray, Color lcolor){
 	Vector3 half = (lray.dir + eyedirn).normalize();
 	float nDotH = Vector3(local.normal).normalize().dot(half);
 	Color phong = brdf.ks*lcolor*std::pow(std::max(nDotH,0.0f),brdf.shininess);
-	return new Color(lambert+phong); //TODO:怎么都不能这么写啊...
+	return new Color(lambert+phong); //TODO:memory leak...
 }
 
 void RayTracer::createReflectRay(LocalGeo local, Ray& ray){

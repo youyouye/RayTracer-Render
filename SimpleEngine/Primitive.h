@@ -18,7 +18,7 @@ public:
 	virtual void getBRDF(LocalGeo& local,BRDF* brdf) = 0;
 	virtual BBox getBoundingBox() const { return BBox(); }
 	virtual Vector3 getMidPoint() const { return Vector3(); }
-	virtual Color getColor(const Vector3& point) {return Color()}
+	virtual Color getColor(const Vector3& point) { return Color(); }
 public:
 };
 

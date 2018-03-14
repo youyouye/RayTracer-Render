@@ -16,6 +16,7 @@ public:
 	BBox bbox;
 	KDNode *left;
 	KDNode *right;
+	bool leaf;
 	std::vector<std::shared_ptr<Primitive>> triangles;	//only for triangles
 };
 

@@ -235,3 +235,13 @@ void ReadFile::readfile(const char *name){
 		}
 	}
 }
+
+std::vector<std::shared_ptr<Primitive>> ReadFile::getPrimitives()
+{
+	return primitives;
+}
+
+std::vector<std::shared_ptr<Light>> ReadFile::getLights() 
+{
+	return lights;
+}

@@ -19,7 +19,8 @@ public:
 	~ReadFile(){}
 	void readfile(const char *name);
 	bool readvals(std::stringstream &s, const int numvals, float * values);
-
+	std::vector<std::shared_ptr<Primitive>> getPrimitives();
+	std::vector<std::shared_ptr<Light>> getLights();
 public:
 	int maxdepth;
 	std::string output;

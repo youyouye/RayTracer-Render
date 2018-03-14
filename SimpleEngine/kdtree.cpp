@@ -3,31 +3,35 @@
 KDNode* KDNode::build(const std::vector<std::shared_ptr<Primitive>>& tris, int depth)
 {
 	KDNode* node = new KDNode();
-	node->triangles = tris;
+	node->leaf = false;
+	node->triangles = std::vector<std::shared_ptr<Primitive>>();
 	node->left = nullptr;
 	node->right = nullptr;
 	node->bbox = BBox();
 
 	if (tris.size() == 0)
 		return node;
-	if (tris.size() == 1)
+	if (depth > 25 || tris.size() <= 6)
 	{
+		node->triangles = tris;
+		node->leaf = true;
 		node->bbox = tris[0]->getBoundingBox();
+		for (long i = 1;i < tris.size();i++)
+		{
+			node->bbox.expand(tris[i]->getBoundingBox());
+		}
 		node->left = new KDNode();
 		node->right = new KDNode();
 		node->left->triangles = std::vector<std::shared_ptr<Primitive>>();
 		node->right->triangles = std::vector<std::shared_ptr<Primitive>>();
 		return node;
 	}
+
 	node->bbox = tris[0]->getBoundingBox();
-	for (int i = 1;i < tris.size();i++)
+	Vector3 midpt;
+	for (long i = 1;i < tris.size();i++)
 	{
 		node->bbox.expand(tris[i]->getBoundingBox());
-	}
-
-	Vector3 midpt;
-	for (int i = 0;i < tris.size();i++)
-	{
 		midpt = midpt + tris[i]->getMidPoint() * (double)(1.0 / tris.size());
 	}
 
@@ -50,35 +54,24 @@ KDNode* KDNode::build(const std::vector<std::shared_ptr<Primitive>>& tris, int d
 			break;
 		}
 	}
-	if (left_tris.size() == 0 && right_tris.size() > 0)
-		left_tris = right_tris;
-	if (right_tris.size() == 0 && left_tris.size() > 0)
-		right_tris = left_tris;
-
-	int matches = 0;
-	for (int i = 0;i < left_tris.size();i++)
+	
+	if (tris.size() == left_tris.size() || tris.size() == right_tris.size())
 	{
-		for (int j = 0;j < right_tris.size();j++)
+		node->triangles = tris;
+		node->leaf = true;
+		node->bbox = tris[0]->getBoundingBox();
+		for (long i = 0; i < tris.size(); i++)
 		{
-			if (left_tris[i] == right_tris[j])
-			{
-				matches++;
-			}
+			node->bbox.expand(tris[i]->getBoundingBox());
 		}
-	}
-
-	if ((float)matches/left_tris.size() < 0.5 && (float)matches/right_tris.size() < 0.5 )
-	{
-		node->left = build(left_tris, depth + 1);
-		node->right = build(right_tris, depth + 1);
-	}
-	else 
-	{
 		node->left = new KDNode();
 		node->right = new KDNode();
 		node->left->triangles = std::vector<std::shared_ptr<Primitive>>();
-		node->left->triangles = std::vector<std::shared_ptr<Primitive>>();
+		node->right->triangles = std::vector<std::shared_ptr<Primitive>>();
+		return node;
 	}
+	node->left = build(left_tris, depth + 1);
+	node->right = build(right_tris, depth + 1);
 	return node;
 }
 

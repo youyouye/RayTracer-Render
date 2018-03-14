@@ -3,25 +3,24 @@
 #include "variables.h"
 #include "film.h"
 #include "camera.h"
-#include "RayTracer.h"
 #include "Shape.h"
 #include "material.h"
 #include "readfile.h"
+#include "mesh.h"
 #include "Log.h"
 #include <stdlib.h>
 #include <iostream>
 #include <memory>
+
 void Scene::render(){
-	ReadFile variables;
-	variables.readfile("..//hw3//scene7.test");
 	Sampler sample =Sampler(width,height);
 	Film film = Film(width,height);
 	Sample sam;
 	Ray ray;
-	Camera camera = Camera(Vector3(variables.camera[0], variables.camera[1], variables.camera[2]), Vector3(variables.camera[3], variables.camera[4], variables.camera[5]), Vector3(variables.camera[6], variables.camera[7], variables.camera[8]),variables.camera[9]);
 	RayTracer raytrace;
-	raytrace.primitives = variables.primitives;
-	raytrace.lights = variables.lights;
+	Camera camera;
+//	readUserDefinedFile(raytrace, camera);
+	testObjectModel(raytrace,camera);
 	raytrace.generateKDTree();
 
 	LOG_INFO << "k-d tree start!" << LOG_END;
@@ -38,4 +37,20 @@ void Scene::render(){
 	film.writeImage();
 
 	LOG_INFO << "k-d tree end!" << LOG_END;
+}
+
+//we read camera param,shape param,light param
+void Scene::readUserDefinedFile(RayTracer& raytrace, Camera& camera)
+{
+	ReadFile variables;
+	variables.readfile("..//model//scene7.test");
+	camera = Camera(Vector3(variables.camera[0], variables.camera[1], variables.camera[2]), Vector3(variables.camera[3], variables.camera[4], variables.camera[5]), Vector3(variables.camera[6], variables.camera[7], variables.camera[8]), variables.camera[9]);
+	addObject(raytrace,variables);
+}
+
+void Scene::testObjectModel(RayTracer& raytrace, Camera& camera)
+{
+	camera = Camera(Vector3(0,-5,2.5),Vector3(0,0,1),Vector3(0,0,1),60);
+	auto mesh = std::make_shared<Mesh>("..//model//dragon2.obj");
+	addObject(raytrace, *mesh);
 }

@@ -16,7 +16,7 @@ public:
 	BRDF getBRDF(LocalGeo& local,BRDF* bref) const{
 		return constantBRDF;
 	}
-	Color getColor(const float u, const float v) const;
+	Color getColor(const float u, const float v) ;
 public:
 	bool empty_flag_;
 	bool is_loaded_;

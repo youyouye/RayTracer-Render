@@ -111,6 +111,15 @@
     <ClCompile Include="mesh.cpp">
       <Filter>mesh</Filter>
     </ClCompile>
+    <ClCompile Include="rand48\rand48.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lodepng\lodepng.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tiny_obj_loader\tiny_obj_loader.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="canvas.h">
@@ -199,6 +208,15 @@
     </ClInclude>
     <ClInclude Include="mesh.h">
       <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="rand48\erand48.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lodepng\lodepng.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="tiny_obj_loader\tiny_obj_loader.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

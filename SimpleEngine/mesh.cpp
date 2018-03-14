@@ -81,7 +81,7 @@ Mesh::Mesh(const std::string& file_path)
 				t2 = Vector3();
 			}
 			Triangle* shape = new Triangle(v0, v1, v2, t0, t1, t2);
-			GeometricPrimitive* tri = new GeometricPrimitive();
+			auto tri = std::make_shared<GeometricPrimitive>();
 			tri->shape = shape;
 			if (m_shapes_[i].mesh.material_ids[j] < materials_.size())
 			{
@@ -91,8 +91,19 @@ Mesh::Mesh(const std::string& file_path)
 			{
 				tri->mat = new Material();
 			}
+			tris_.push_back(tri);
 		}
 	}
 	m_shapes_.clear();
 	m_materials_.clear();
+}
+
+std::vector<std::shared_ptr<Primitive>> Mesh::getPrimitives()
+{
+	return tris_;
+}
+
+std::vector<std::shared_ptr<Light>> Mesh::getLights()
+{
+	return std::vector<std::shared_ptr<Light>>();
 }

@@ -9,8 +9,7 @@ class Texture
 public:
 	Texture() {}
 	virtual	~Texture() {}
-	virtual Color getColor(Vector3 &point) { return Color(); }
-	virtual Color getColor(const float u, const float v) { return Color(); }
+	virtual Color getColor(const float& u, const float& v) { return Color(); }
 };
 
 class ImageTexture : public Texture 
@@ -18,9 +17,7 @@ class ImageTexture : public Texture
 public:
 	ImageTexture();
 	void setColor(const Color& color);
-
-	virtual Color getColor(Vector3 &point) override;
-	virtual Color getColor(const float u,const float v) override;
+	virtual Color getColor(const float& u,const float& v) override;
 
 private:
 	std::vector<unsigned char> image;

@@ -14,7 +14,7 @@ Material::~Material()
 {
 }
 
-Color Material::getColor(const float u, const float v) const
+Color Material::getColor(const float u, const float v)
 {
 	if (empty_flag_)
 	{
@@ -24,7 +24,7 @@ Color Material::getColor(const float u, const float v) const
 	{
 		if (is_loaded_)
 		{
-			texture_.getColor(u, v);
+			texture_.getColor(1, 1);
 		}
 		return constantBRDF.ka + constantBRDF.emission;
 	}
