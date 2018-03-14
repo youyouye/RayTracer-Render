@@ -1,0 +1,49 @@
+  body {
+    font: normal 11px auto "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    color: #4f6b72;
+    width: 100%;
+  }
+
+  a {
+    color: #c75f3e;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  #results {
+    margin: 0 auto 0 auto;
+    padding: 0;
+  }
+
+  th {
+    font: bold 11px;
+    color: #4f6b72;
+    border-right: 1px solid #C1DAD7;
+    border-bottom: 1px solid #C1DAD7;
+    border-top: 1px solid #C1DAD7;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 6px 6px 6px 12px;
+    background: #CAE8EA;
+  }
+
+  td {
+    border-right: 1px solid #C1DAD7;
+    border-bottom: 1px solid #C1DAD7;
+    padding: 6px 6px 6px 12px;
+    color: #4f6b72;
+  }
+
+  tr:nth-child(odd) {
+    background: #fff;
+    color: #4f6b72;
+  }
+
+
+  tr:nth-child(even) {
+    background: #F5FAFA;
+    color: #797268;
+  }
