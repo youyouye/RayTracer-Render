@@ -44,6 +44,10 @@ public:
 	Vector3 operator*(float factor) const {
 		return Vector3(x * factor, y * factor, z * factor);
 	};
+	
+	Vector3 operator%(const Vector3& v) const {
+		return Vector3(y*v.z - z*v.y, z*v.x - x*v.z, x*v.y - y*v.x);
+	};
 
 	bool operator==(const Vector3 &v) const {
 		return floatEqual(x, v.x) && floatEqual(y, v.y) && floatEqual(z, v.z);

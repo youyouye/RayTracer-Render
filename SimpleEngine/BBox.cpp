@@ -19,6 +19,11 @@ BBox::~BBox()
 }
 
 bool BBox::hit(const Ray& ray,double& distance) const{
+	//in ,return true?
+	if (ray.pos.x < x1 && ray.pos.x > x0 && ray.pos.y < y1 && ray.pos.y > y0 &&
+		ray.pos.z > z0 && ray.pos.z < z1)
+		return true;
+
 	double ox = ray.pos.x; double oy = ray.pos.y; double oz = ray.pos.z;
 	double dx = ray.dir.x; double dy = ray.dir.y; double dz = ray.dir.z;
 	double tx_min, ty_min, tz_min;

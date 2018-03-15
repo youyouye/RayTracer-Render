@@ -4,6 +4,16 @@
 class Color{
 public:
 	Color(float r = 0.0f, float g = 0.0f, float b = 0.0f, float a = 1.0f);
+	Color(float color[]) 
+	{
+		int length = sizeof(color) / sizeof(color[0]);
+		if (length >= 3)
+		{
+			r = color[0];
+			g = color[1];
+			b = color[2];
+		}
+	}
 	uint32_t uint32() const;
 	Color operator+(const Color &color) const{
 		return Color(r + color.r, g + color.g, b + color.b, a + color.a);

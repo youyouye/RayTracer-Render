@@ -97,6 +97,7 @@ void ReadFile::readfile(const char *name){
 						Sphere* sphere = new Sphere(values[3],Point(values[0],values[1],values[2]));
 						Material* mat = new Material(&BRDF(Color(diffuse[0],diffuse[1],diffuse[2],1),
 							Color(specular[0],specular[1],specular[2],1),Color(ambient[0],ambient[1],ambient[2],1),Color(mirror[0],mirror[1],mirror[2],1),Color(emission[0],emission[1],emission[2],1),shiness));
+						mat->empty_flag_ = false; mat->material_type_ = DIFFUSE;
 						primitives.push_back(make_shared<GeometricPrimitive>(sphere, mat, transfstack.top()));
 					}
 				}
@@ -107,6 +108,7 @@ void ReadFile::readfile(const char *name){
 						Triangle* tri = new Triangle(vertex[values[0]], vertex[values[1]], vertex[values[2]]);
 						Material* mat = new Material(&BRDF(Color(diffuse[0], diffuse[1], diffuse[2], 1),
 							Color(specular[0], specular[1], specular[2], 1), Color(ambient[0], ambient[1], ambient[2], 1), Color(mirror[0], mirror[1], mirror[2], 1), Color(emission[0], emission[1], emission[2], 1), shiness));
+						mat->empty_flag_ = false; mat->material_type_ = DIFFUSE;
 						primitives.push_back(make_shared<GeometricPrimitive>(tri, mat,transfstack.top()));
 					}
 				}

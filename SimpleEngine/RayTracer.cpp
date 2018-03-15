@@ -3,6 +3,8 @@
 #include "variables.h"
 #include "kdtree.h"
 #include "rand48/erand48.h"
+#include "Ray.h"
+#include "material.h"
 #include <algorithm>
 
 RayTracer::~RayTracer()
@@ -69,6 +71,12 @@ void RayTracer::kd_trace(Ray& ray, int depth, Color& color,unsigned short*X)
 		color = Color(0, 0, 0, 1);
 		return;
 	}
+	auto material = in.primitive->getMaterial();
+	if (material->material_type_ == MaterialType::EMIT) 
+	{
+		color = material->default_color_;
+		return;
+	}
 	color = Color(0, 0, 0, 1);
 	in.primitive->getBRDF(in.localGeo, &brdf);
 	Color finalcolor(0, 0, 0, 0);
@@ -93,12 +101,7 @@ void RayTracer::kd_trace(Ray& ray, int depth, Color& color,unsigned short*X)
 	{
 		color = color*(0.9 / p);
 	}
-	else
-	{
-		color = color*brdf.emission;
-		return;
-	}
-
+	//mirror reflection
 	if ((brdf.kr.r > 0) || (brdf.kr.g > 0) || (brdf.kr.b > 0))
 	{
 		Ray reflectRay;
@@ -109,6 +112,11 @@ void RayTracer::kd_trace(Ray& ray, int depth, Color& color,unsigned short*X)
 		color.r = std::min(color.r, 1.0f);	color.b = std::min(color.b, 1.0f);
 		color.g = std::min(color.g, 1.0f);	color.a = std::min(color.a, 1.0f);
 	}
+
+	Ray reflected = in.getReflectedRay(ray,X);
+	Color temp_color;
+//	kd_trace(reflected, depth + 1, temp_color, X);
+//	color = color+temp_color;
 }
 
 Color* RayTracer::shading(LocalGeo local, BRDF brdf, Ray lray, Color lcolor){

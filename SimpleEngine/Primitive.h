@@ -19,6 +19,7 @@ public:
 	virtual BBox getBoundingBox() const { return BBox(); }
 	virtual Vector3 getMidPoint() const { return Vector3(); }
 	virtual Color getColor(const Vector3& point) { return Color(); }
+	virtual Material* getMaterial() = 0;
 public:
 };
 
@@ -44,6 +45,7 @@ public:
 	BBox getBoundingBox() const override;
 	Vector3 getMidPoint() const override;
 	virtual Color getColor(const Vector3& point) override;
+	virtual Material* getMaterial() override { return mat; }
 public:
 	Shape* shape;
 	Material* mat;
@@ -61,6 +63,7 @@ public:
 	void setMaterial(const Material& marptr);
 	void addObject(const std::shared_ptr<Shape> shapeptr);
 	virtual Color getColor(const Vector3& point) override { return Color(); }
+	virtual Material* getMaterial() override { return nullptr; }
 private:
 	std::vector<std::shared_ptr<Shape>> objects;
 };

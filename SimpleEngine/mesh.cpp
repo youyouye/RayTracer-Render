@@ -16,20 +16,13 @@ Mesh::Mesh(const std::string& file_path)
 
 	for (int i = 0;i < m_materials_.size();i++)
 	{
-		std::string texture_path = "";
-		if (!m_materials_[i].diffuse_texname.empty())
-		{
-			if (m_materials_[i].diffuse_texname[0] == '/')
-			{
-				texture_path = m_materials_[i].diffuse_texname;
-			}
-			texture_path = basepath + m_materials_[i].diffuse_texname;
-			materials_.push_back(texture_path);
-		}
-		else 
-		{
-			materials_.push_back(Material());
-		}
+		Material material;
+		material.constantBRDF.ka = Color(m_materials_.at(i).ambient);
+		material.constantBRDF.kd = Color(m_materials_.at(i).diffuse);
+		material.constantBRDF.ks = Color(m_materials_.at(i).specular);
+		material.constantBRDF.emission = Color(m_materials_.at(i).emission);
+		material.constantBRDF.shininess = m_materials_.at(i).shininess;
+		materials_.push_back(material);
 	}
 	for (int i = 0;i < m_shapes_.size();i++)
 	{
@@ -89,7 +82,7 @@ Mesh::Mesh(const std::string& file_path)
 			}
 			else 
 			{
-				tri->mat = new Material();
+				tri->mat = new Material(DIFFUSE,Color(0.9,0.9,0.9));
 			}
 			tris_.push_back(tri);
 		}
@@ -105,8 +98,6 @@ std::vector<std::shared_ptr<Primitive>> Mesh::getPrimitives()
 
 std::vector<std::shared_ptr<Light>> Mesh::getLights()
 {
-	auto light = std::make_shared<PLight>(Vector3(1,1,3),Color(1,1,1));
 	auto lights = std::vector<std::shared_ptr<Light>>();
-	lights.push_back(light);
 	return lights;
 }

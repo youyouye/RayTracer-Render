@@ -3,6 +3,7 @@
 Material::Material()
 	:empty_flag_(true), is_loaded_(false)
 {
+	default_color_ = Color(0.5,0.5,0.5);
 }
 
 Material::Material(std::string file_path)
@@ -18,7 +19,7 @@ Color Material::getColor(const float u, const float v)
 {
 	if (empty_flag_)
 	{
-		return Color(0,0,0);
+		return default_color_;
 	}
 	else 
 	{

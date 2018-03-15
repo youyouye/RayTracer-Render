@@ -25,7 +25,7 @@ class Intersection
 public:
 	Intersection(){}
 	~Intersection(){}
-
+	Ray getReflectedRay(Ray ray,unsigned short * X);
 public:
 	LocalGeo localGeo;
 	Primitive* primitive;

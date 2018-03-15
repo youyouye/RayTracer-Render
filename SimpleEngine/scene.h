@@ -5,7 +5,7 @@
 
 class Scene{
 public:
-	static void render();
+	static void render(int samples = 1);
 	static void readUserDefinedFile(RayTracer& raytrace, Camera& camera);
 	template<typename T>
 	static void addObject(RayTracer& raytrace,T& object)
@@ -15,6 +15,7 @@ public:
 		raytrace.primitives.insert(std::end(raytrace.primitives), std::begin(primitives), std::end(primitives));
 		raytrace.lights.insert(std::end(raytrace.lights), std::begin(lights), std::end(lights));
 	}
+	static void addSingleObject(RayTracer& raytrace, std::shared_ptr<Primitive> primitive);
 	static void testObjectModel(RayTracer& raytrace, Camera& camera);
 };
 

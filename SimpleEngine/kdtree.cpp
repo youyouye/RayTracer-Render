@@ -104,7 +104,7 @@ bool KDNode::hit(Ray& ray, float& t, float& tmin, std::vector<Intersection>& int
 	double distance;
 	if (bbox.hit(ray,distance))
 	{
-//		if (distance > tmin) return false;
+		if (distance > tmin) return false;
 		bool hit_flag = false;
 		bool hitleft = false;
 		bool hitright = false;
@@ -122,8 +122,8 @@ bool KDNode::hit(Ray& ray, float& t, float& tmin, std::vector<Intersection>& int
 				Intersection temp;
 				if (this->triangles[i]->interset(ray,&t,tmin, &temp))
 				{
+					tmin = temp.localGeo.t < tmin ? temp.localGeo.t : tmin;
 					hit_flag = true;
-					tmin = temp.localGeo.t;
 					intersections.push_back(temp);
 				}
 			}
