@@ -9,7 +9,7 @@ public:
 	BBox();
 	BBox(Vector3 bottom,Vector3 tail);
 	~BBox();
-	bool hit(const Ray& ray) const;
+	bool hit(const Ray& ray,double &t) const;
 	void expand(BBox bbox);
 	int longestAxis();
 public:

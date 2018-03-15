@@ -18,13 +18,13 @@ Color Material::getColor(const float u, const float v)
 {
 	if (empty_flag_)
 	{
-		return Color(1,0,1);
+		return Color(0,0,0);
 	}
 	else 
 	{
 		if (is_loaded_)
 		{
-			texture_.getColor(1, 1);
+			return texture_.getColor(u, v);
 		}
 		return constantBRDF.ka + constantBRDF.emission;
 	}

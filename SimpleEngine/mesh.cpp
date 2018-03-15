@@ -105,5 +105,8 @@ std::vector<std::shared_ptr<Primitive>> Mesh::getPrimitives()
 
 std::vector<std::shared_ptr<Light>> Mesh::getLights()
 {
-	return std::vector<std::shared_ptr<Light>>();
+	auto light = std::make_shared<PLight>(Vector3(1,1,3),Color(1,1,1));
+	auto lights = std::vector<std::shared_ptr<Light>>();
+	lights.push_back(light);
+	return lights;
 }

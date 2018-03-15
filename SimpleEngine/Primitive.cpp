@@ -10,9 +10,9 @@ GeometricPrimitive::~GeometricPrimitive(){
 	delete mat;
 }
 
-bool GeometricPrimitive::interset(Ray& ray, float* thit, Intersection* in){
+bool GeometricPrimitive::interset(Ray& ray, float* thit, float& tmin, Intersection* in){
 	LocalGeo olocal;
-	if (!shape->intersect(ray, thit, &olocal)) return false;
+	if (!shape->intersect(ray, thit,tmin, &olocal)) return false;
 	in->primitive = this;
 	in->localGeo = olocal;
 	return true;
@@ -20,7 +20,8 @@ bool GeometricPrimitive::interset(Ray& ray, float* thit, Intersection* in){
 bool GeometricPrimitive::intersectP(Ray& ray){
 	float th = 0;
 	LocalGeo olocal;
-	return shape->intersect(ray,&th,&olocal);
+	float tmin;
+	return shape->intersect(ray,&th,tmin,&olocal);
 }
 void GeometricPrimitive::getBRDF(LocalGeo& local, BRDF* brdf){
 	*brdf = mat->constantBRDF;
@@ -48,7 +49,7 @@ AggregatePrimitive::AggregatePrimitive(){
 AggregatePrimitive::~AggregatePrimitive(){
 }
 
-bool AggregatePrimitive::interset(Ray& ray, float* thit, Intersection* in){
+bool AggregatePrimitive::interset(Ray& ray, float* thit,float& tmin, Intersection* in){
 	float t;
 	Normal normal;
 	Point hitPoint;

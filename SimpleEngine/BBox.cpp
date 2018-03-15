@@ -18,7 +18,7 @@ BBox::~BBox()
 {
 }
 
-bool BBox::hit(const Ray& ray) const{
+bool BBox::hit(const Ray& ray,double& distance) const{
 	double ox = ray.pos.x; double oy = ray.pos.y; double oz = ray.pos.z;
 	double dx = ray.dir.x; double dy = ray.dir.y; double dz = ray.dir.z;
 	double tx_min, ty_min, tz_min;
@@ -81,6 +81,8 @@ bool BBox::hit(const Ray& ray) const{
 	t0 = std::fmax(tz_min, std::fmax(tx_min, ty_min));
 	t1 = std::fmin(tz_max, std::fmin(tx_max, ty_max));
 	
+	distance = t0;
+
 	return t0 < t1;
 }
 

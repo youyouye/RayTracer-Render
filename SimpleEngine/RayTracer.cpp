@@ -134,7 +134,8 @@ bool RayTracer::interset(Ray& ray, float* thit, Intersection* in){
 	temp->localGeo.t = 10000;
 	for (auto i = primitives.begin(); i != primitives.end(); i++)
 	{
-		if ((*i)->interset(ray, thit, in))
+		float tmin = INFINITY;
+		if ((*i)->interset(ray, thit, tmin, in))
 		{
 			if (in->localGeo.t >ray.t_min && in->localGeo.t <ray.t_max)
 			{
@@ -172,8 +173,8 @@ bool RayTracer::kdTreeInterset(Ray& ray, float* thit, Intersection& in)
 	temp->localGeo.t = 10000;
 
 	std::vector<Intersection> all_in;
-
-	if (kdtree->hit(ray, *thit, all_in))
+	float tmin = INFINITY;
+	if (kdtree->hit(ray, *thit,tmin, all_in))
 	{
 		for (auto it = all_in.begin();it != all_in.end();it++)
 		{

@@ -13,7 +13,7 @@ class Material;
 class Primitive
 {
 public:
-	virtual bool interset(Ray& ray,float* thit,Intersection* in) = 0;
+	virtual bool interset(Ray& ray,float* thit, float& tmin,Intersection* in) = 0;
 	virtual bool intersectP(Ray& ray) = 0;
 	virtual void getBRDF(LocalGeo& local,BRDF* brdf) = 0;
 	virtual BBox getBoundingBox() const { return BBox(); }
@@ -38,7 +38,7 @@ public:
 		this->shape->trans(mat);
 	}
 	~GeometricPrimitive();
-	bool interset(Ray& ray, float* thit, Intersection* in);
+	bool interset(Ray& ray, float* thit,float& tmin, Intersection* in) override;
 	bool intersectP(Ray& ray);
 	void getBRDF(LocalGeo& local, BRDF* brdf);
 	BBox getBoundingBox() const override;
@@ -54,7 +54,7 @@ class AggregatePrimitive : public Primitive{
 public:
 	AggregatePrimitive();
 	~AggregatePrimitive();
-	bool interset(Ray& ray, float* thit, Intersection* in);
+	bool interset(Ray& ray, float* thit, float& tmin, Intersection* in) override;
 	bool intersectP(Ray& ray);
 	void getBRDF(LocalGeo& local, BRDF* brdf);
 

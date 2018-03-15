@@ -7,7 +7,7 @@
 class Shape
 {
 public:
-	virtual bool intersect(Ray& ray, float* thit, LocalGeo* local)=0;
+	virtual bool intersect(Ray& ray, float* thit, float& tmin, LocalGeo* local)=0;
 	virtual bool intersectP(Ray& ray)=0;
 	virtual void trans(Matrix& matrix)=0;
 	virtual BBox getBoundingBox() { return BBox(); }
@@ -22,7 +22,7 @@ public:
 	Sphere();
 	Sphere(float r,Point &center);
 	~Sphere();
-	bool intersect(Ray& ray, float* thit, LocalGeo* local) ;
+	bool intersect(Ray& ray, float* thit,float& tmin, LocalGeo* local) override;
 	bool intersectP(Ray& ray) ;
 	void trans(Matrix& matrix){
 		this->mat = matrix;
@@ -54,7 +54,7 @@ public:
 	}
 	~Triangle() {}
 
-	bool intersect(Ray& ray, float* thit, LocalGeo* local);
+	bool intersect(Ray& ray, float* thit, float& tmin, LocalGeo* local) override;
 	bool intersectP(Ray& ray);
 	void trans(Matrix& matrix){
 		this->p0_ = matrix.transform(p0_);
@@ -89,7 +89,7 @@ public:
 		case 5: return Normal(0,0,1); //z
 		}
 	}
-	virtual bool intersect(Ray& ray, float* thit, LocalGeo* local);
+	virtual bool intersect(Ray& ray, float* thit, float& tmin, LocalGeo* local) override;
 	virtual bool intersectP(Ray& ray);
 	virtual void trans(Matrix& matrix);
 };
@@ -99,7 +99,7 @@ public:
 	Disk() = default;
 	~Disk() = default;
 public:
-	virtual bool intersect(Ray& ray, float* thit, LocalGeo* local);
+	virtual bool intersect(Ray& ray, float* thit,float& tmin, LocalGeo* local) override;
 	virtual bool intersectP(Ray& ray);
 	virtual void trans(Matrix& matrix);
 };
@@ -109,7 +109,7 @@ public:
 	Rectangle() = default;
 	~Rectangle() = default;
 public:
-	virtual bool intersect(Ray& ray, float* thit, LocalGeo* local);
+	virtual bool intersect(Ray& ray, float* thit, float& tmin, LocalGeo* local) override;
 	virtual bool intersectP(Ray& ray);
 	virtual void trans(Matrix& matrix);
 };
@@ -119,7 +119,7 @@ public:
 	Cylinder() = default;
 	~Cylinder() = default;
 public:
-	virtual bool intersect(Ray& ray, float* thit, LocalGeo* local);
+	virtual bool intersect(Ray& ray, float* thit, float& tmin, LocalGeo* local) override;
 	virtual bool intersectP(Ray& ray);
 	virtual void trans(Matrix& matrix);
 };
@@ -129,7 +129,7 @@ public:
 	Torus();
 	~Torus();
 public:
-	virtual bool intersect(Ray& ray, float* thit, LocalGeo* local);
+	virtual bool intersect(Ray& ray, float* thit, float& tmin, LocalGeo* local) override;
 	virtual bool intersectP(Ray& ray);
 	virtual void trans(Matrix& matrix);
 };

@@ -47,8 +47,8 @@ KDNode* KDNode::build(const std::vector<std::shared_ptr<Primitive>>& tris, int d
 			midpt.x >= tris[i]->getMidPoint().x ? right_tris.push_back(tris[i]) : left_tris.push_back(tris[i]);
 			break;
 		case 1:
-			break;
 			midpt.y >= tris[i]->getMidPoint().y ? right_tris.push_back(tris[i]) : left_tris.push_back(tris[i]);
+			break;
 		case 2:
 			midpt.z >= tris[i]->getMidPoint().z ? right_tris.push_back(tris[i]) : left_tris.push_back(tris[i]);
 			break;
@@ -75,21 +75,22 @@ KDNode* KDNode::build(const std::vector<std::shared_ptr<Primitive>>& tris, int d
 	return node;
 }
 
-bool KDNode::hit(Ray& ray, float& t, Intersection& in)
+bool KDNode::hit(Ray& ray, float& t, float& tmin, Intersection& in)
 {
-	if (bbox.hit(ray))
+	double distance;
+	if (bbox.hit(ray, distance))
 	{
 		if (left->triangles.size() > 0 || right->triangles.size() > 0)
 		{
-			bool hitleft = left->hit(ray, t, in);
-			bool hitright = right->hit(ray,t, in);
+			bool hitleft = left->hit(ray, t,tmin, in);
+			bool hitright = right->hit(ray,t, tmin,in);
 			return hitright || hitright;
 		}
 		else 
 		{
 			for (int i = 0;i < triangles.size();i++)
 			{
-				if (triangles[i]->interset(ray,&t,&in))
+				if (triangles[i]->interset(ray,&t,tmin,&in))
 					return true;
 			}
 		}
@@ -98,32 +99,37 @@ bool KDNode::hit(Ray& ray, float& t, Intersection& in)
 	return false;
 }
 
-bool KDNode::hit(Ray& ray, float& t, std::vector<Intersection>& intersections)
+bool KDNode::hit(Ray& ray, float& t, float& tmin, std::vector<Intersection>& intersections)
 {
-	if (bbox.hit(ray))
+	double distance;
+	if (bbox.hit(ray,distance))
 	{
-		if (left->triangles.size() > 0 || right->triangles.size() > 0)
+//		if (distance > tmin) return false;
+		bool hit_flag = false;
+		bool hitleft = false;
+		bool hitright = false;
+		if (!this->leaf)
 		{
-			bool hitleft = left->hit(ray, t, intersections);
-			bool hitright = right->hit(ray, t, intersections);
+			hitleft = left->hit(ray, t,tmin, intersections);
+			hitright = right->hit(ray, t,tmin, intersections);
 			return hitleft || hitright;
 		}
-		else
+		else 
 		{
-			bool hit_flag = false;
-			for (int i = 0; i < triangles.size(); i++)
+			long tir_size = this->triangles.size();
+			for (long i = 0;i < triangles.size();i++)
 			{
 				Intersection temp;
-				if (triangles[i]->interset(ray, &t, &temp))
+				if (this->triangles[i]->interset(ray,&t,tmin, &temp))
 				{
 					hit_flag = true;
+					tmin = temp.localGeo.t;
 					intersections.push_back(temp);
 				}
 			}
 			if (hit_flag)
 				return true;
 		}
-		return false;
 	}
 	return false;
 }

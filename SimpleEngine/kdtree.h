@@ -10,8 +10,8 @@ class KDNode
 public:
 	KDNode() = default;
 	KDNode* build(const std::vector<std::shared_ptr<Primitive>>& tris,int depth);
-	bool hit(Ray& ray,float& t,Intersection& intersection);
-	bool hit(Ray& ray, float& t, std::vector<Intersection>& intersections);
+	bool hit(Ray& ray,float& t,float& tmin,Intersection& intersection);
+	bool hit(Ray& ray, float& t,float& tmin, std::vector<Intersection>& intersections);
 public:
 	BBox bbox;
 	KDNode *left;
