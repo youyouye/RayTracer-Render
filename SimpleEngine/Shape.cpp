@@ -124,6 +124,7 @@ bool Triangle::intersect(Ray& ray, float* thit, float& tmin, LocalGeo* local){
 	float fInvDet = 1.0f / det;
 	T *= fInvDet;
 	local->pos = ray.pos + ray.dir*T;
+	local->normal = normal;		//is so strange for not has this
 	if ((Vector3(eye[0], eye[1], eye[2]) - local->pos).dot(normal) < 0)
 	{
 		local->normal = Normal(-normal.x,-normal.y,-normal.z);

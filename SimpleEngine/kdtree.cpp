@@ -104,7 +104,7 @@ bool KDNode::hit(Ray& ray, float& t, float& tmin, std::vector<Intersection>& int
 	double distance;
 	if (bbox.hit(ray,distance))
 	{
-		if (distance > tmin) return false;
+//		if (distance > tmin) return false;
 		bool hit_flag = false;
 		bool hitleft = false;
 		bool hitright = false;

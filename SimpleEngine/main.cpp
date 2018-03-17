@@ -126,5 +126,5 @@ int main(int argc, char* args[]){
 	Scene::render();
 	FreeImage_DeInitialise();
 	return 0;
-}
+};
 

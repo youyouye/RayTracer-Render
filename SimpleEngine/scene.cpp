@@ -18,8 +18,8 @@ void Scene::render(int samples){
 	height = 720;
 	RayTracer raytrace;
 	Camera camera;
-	readUserDefinedFile(raytrace, camera);
-//	testObjectModel(raytrace,camera);
+//	readUserDefinedFile(raytrace, camera);
+	testObjectModel(raytrace,camera);
 	raytrace.generateKDTree();
 
 	Sampler sample =Sampler(width,height);
@@ -54,7 +54,7 @@ void Scene::render(int samples){
 void Scene::readUserDefinedFile(RayTracer& raytrace, Camera& camera)
 {
 	ReadFile variables;
-	variables.readfile("..//model//scene4-specular.test");
+	variables.readfile("..//model//scene6.test");
 	camera = Camera(Vector3(variables.camera[0], variables.camera[1], variables.camera[2]), Vector3(variables.camera[3], variables.camera[4], variables.camera[5]), Vector3(variables.camera[6], variables.camera[7], variables.camera[8]), variables.camera[9],width,height);
 	addObject(raytrace,variables);
 }
@@ -65,15 +65,15 @@ void Scene::testObjectModel(RayTracer& raytrace, Camera& camera)
 	auto mesh = std::make_shared<Mesh>("..//model//dragon2.obj");
 	addObject(raytrace, *mesh);
 
-//	auto bottom = std::make_shared<GeometricPrimitive>(new Sphere(1000,Point(0,0,-1000)),new Material());
-//	auto left = std::make_shared<GeometricPrimitive>(new Sphere(1000, Point(-1004, 0, 0)), new Material(DIFFUSE,Color(0.85,0.4,0.4)));
-//	auto right = std::make_shared<GeometricPrimitive>(new Sphere(1000, Point(1004, 0, 0)), new Material(DIFFUSE,Color(0.4, 0.4, 0.85)));
-//	auto top = std::make_shared<GeometricPrimitive>(new Sphere(1000, Point(0, 1006, 0)), new Material());
+	auto bottom = std::make_shared<GeometricPrimitive>(new Sphere(1000,Point(0,0,-1000)),new Material(DIFFUSE,Color(1,1,1)));
+	auto left = std::make_shared<GeometricPrimitive>(new Sphere(1000, Point(-1004, 0, 0)), new Material(DIFFUSE,Color(0.85,0.4,0.4)));
+	auto right = std::make_shared<GeometricPrimitive>(new Sphere(1000, Point(1004, 0, 0)), new Material(DIFFUSE,Color(0.4, 0.4, 0.85)));
+	auto top = std::make_shared<GeometricPrimitive>(new Sphere(1000, Point(0, 1006, 0)), new Material(DIFFUSE, Color(1, 1, 1)));
 	auto emit_light = std::make_shared<GeometricPrimitive>(new Sphere(100, Point(0, 0, 110)), new Material(EMIT,Color(2.2,2.2,2.2)));
-//	addSingleObject(raytrace, bottom);
-//	addSingleObject(raytrace, left);
-//	addSingleObject(raytrace, right);
-//	addSingleObject(raytrace, top);
+	addSingleObject(raytrace, bottom);
+	addSingleObject(raytrace, left);
+	addSingleObject(raytrace, right);
+	addSingleObject(raytrace, top);
 	addSingleObject(raytrace, emit_light);
 }
 

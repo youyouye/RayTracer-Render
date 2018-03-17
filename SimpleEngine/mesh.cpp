@@ -37,14 +37,14 @@ Mesh::Mesh(const std::string& file_path)
 				m_shapes_[i].mesh.positions[m_shapes_[i].mesh.indices[3 * j] * 3 + 2]
 			) + position_;
 			v1 = Vector3(
-				m_shapes_[i].mesh.positions[m_shapes_[i].mesh.indices[3 * j] * 3],
-				m_shapes_[i].mesh.positions[m_shapes_[i].mesh.indices[3 * j] * 3 + 1],
-				m_shapes_[i].mesh.positions[m_shapes_[i].mesh.indices[3 * j] * 3 + 2]
+				m_shapes_[i].mesh.positions[m_shapes_[i].mesh.indices[3 * j + 1] * 3],
+				m_shapes_[i].mesh.positions[m_shapes_[i].mesh.indices[3 * j + 1] * 3 + 1],
+				m_shapes_[i].mesh.positions[m_shapes_[i].mesh.indices[3 * j + 1] * 3 + 2]
 			) + position_;
 			v2 = Vector3(
-				m_shapes_[i].mesh.positions[m_shapes_[i].mesh.indices[3 * j] * 3],
-				m_shapes_[i].mesh.positions[m_shapes_[i].mesh.indices[3 * j] * 3 + 1],
-				m_shapes_[i].mesh.positions[m_shapes_[i].mesh.indices[3 * j] * 3 + 2]
+				m_shapes_[i].mesh.positions[m_shapes_[i].mesh.indices[3 * j + 2] * 3],
+				m_shapes_[i].mesh.positions[m_shapes_[i].mesh.indices[3 * j + 2] * 3 + 1],
+				m_shapes_[i].mesh.positions[m_shapes_[i].mesh.indices[3 * j + 2] * 3 + 2]
 			) + position_;
 
 			Vector3 t0, t1, t2;
