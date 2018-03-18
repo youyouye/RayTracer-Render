@@ -38,7 +38,7 @@ void Camera::generateRay(Sample& sample, Ray* ray,bool jitter,unsigned short* X)
 	*/
 	Vector3 pixel = eye + direction * 2;
 	pixel = pixel - x_direction*ratio + x_direction*((sample.x*2*ratio)*width_recp) + x_jitter;
-	pixel = pixel + y_direction - y_direction*((sample.y*2.0)*height_recp+y_jitter) + y_jitter;
+	pixel = pixel + y_direction - y_direction*((sample.y*2.0)*height_recp+y_jitter);
 	ray->pos = eye;
 	ray->dir = (pixel - eye).normalize();
 }

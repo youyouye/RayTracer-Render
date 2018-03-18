@@ -123,7 +123,7 @@ int main(int argc, char* args[]){
 	test();
 #endif // _DEBUG
 	FreeImage_Initialise();
-	Scene::render(4);
+	Scene::render();
 	FreeImage_DeInitialise();
 	return 0;
 };

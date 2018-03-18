@@ -16,7 +16,7 @@ Ray Intersection::getReflectedRay(Ray ray, unsigned short * X)
 			reflected.z + (erand48(X) - 0.5)*roughess
 		).normalize();
 		Ray ray;
-		ray.pos = this->localGeo.pos+reflected*0.003;
+		ray.pos = this->localGeo.pos;
 		ray.dir = reflected;
 		return ray;
 	}
