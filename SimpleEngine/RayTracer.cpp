@@ -117,7 +117,9 @@ void RayTracer::kd_trace(Ray& ray, int depth, Color& color, unsigned short*X)
 		Ray reflected = in.getReflectedRay(ray, X);
 		Color temp_color;
 		kd_trace(reflected, depth + 1, temp_color, X);
-		color = color + temp_color;
+		color = color*temp_color;
+		color.r = std::min(color.r, 1.0f);	color.b = std::min(color.b, 1.0f);
+		color.g = std::min(color.g, 1.0f);	color.a = std::min(color.a, 1.0f);
 	}
 }
 
