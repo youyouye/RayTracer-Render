@@ -1,6 +1,6 @@
 #Thousand Spheres
 size 640 480
-camera 0 0 0 0 0 -1 0 1 0 45
+camera -0.001 0.001 -0.001 0 0 -1 0 1 0 45
 output scene5.png
 
 maxdepth 5
