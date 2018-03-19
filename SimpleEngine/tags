@@ -1,0 +1,1330 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ADAM7_DX	lodepng/lodepng.cpp	/^static const unsigned ADAM7_DX[7] = { 8, 8, 4, 4, 2, 2, 1 }; \/*x delta values*\/$/;"	v	file:
+ADAM7_DY	lodepng/lodepng.cpp	/^static const unsigned ADAM7_DY[7] = { 8, 8, 8, 4, 4, 2, 2 }; \/*y delta values*\/$/;"	v	file:
+ADAM7_IX	lodepng/lodepng.cpp	/^static const unsigned ADAM7_IX[7] = { 0, 4, 0, 2, 0, 1, 0 }; \/*x start values*\/$/;"	v	file:
+ADAM7_IY	lodepng/lodepng.cpp	/^static const unsigned ADAM7_IY[7] = { 0, 0, 4, 0, 2, 0, 1 }; \/*y start values*\/$/;"	v	file:
+Adam7_deinterlace	lodepng/lodepng.cpp	/^static void Adam7_deinterlace(unsigned char* out, const unsigned char* in, unsigned w, unsigned h, unsigned bpp)$/;"	f	file:
+Adam7_getpassvalues	lodepng/lodepng.cpp	/^static void Adam7_getpassvalues(unsigned passw[7], unsigned passh[7], size_t filter_passstart[8],$/;"	f	file:
+Adam7_interlace	lodepng/lodepng.cpp	/^static void Adam7_interlace(unsigned char* out, const unsigned char* in, unsigned w, unsigned h, unsigned bpp)$/;"	f	file:
+AggregatePrimitive	Primitive.cpp	/^AggregatePrimitive::AggregatePrimitive(){$/;"	f	class:AggregatePrimitive
+AggregatePrimitive	Primitive.h	/^class AggregatePrimitive : public Primitive{$/;"	c
+BBox	BBox.cpp	/^BBox::BBox()$/;"	f	class:BBox
+BBox	BBox.cpp	/^BBox::BBox(Vector3 bottom, Vector3 tail)$/;"	f	class:BBox
+BBox	BBox.h	/^class BBox$/;"	c
+BITMAPINFO	FreeImage.h	/^} BITMAPINFO, *PBITMAPINFO;$/;"	t	typeref:struct:tagBITMAPINFO
+BITMAPINFOHEADER	FreeImage.h	/^} BITMAPINFOHEADER, *PBITMAPINFOHEADER; $/;"	t	typeref:struct:tagBITMAPINFOHEADER
+BMP_DEFAULT	FreeImage.h	671;"	d
+BMP_SAVE_RLE	FreeImage.h	672;"	d
+BOOL	FreeImage.h	/^typedef int32_t BOOL;$/;"	t
+BOOL	FreeImage.h	/^typedef long BOOL;$/;"	t
+BRDF	BRDF.cpp	/^BRDF::BRDF()$/;"	f	class:BRDF
+BRDF	BRDF.h	/^	BRDF(const Color &d,const Color &s,const Color &a,const Color &r){$/;"	f	class:BRDF
+BRDF	BRDF.h	/^	BRDF(const Color &d,const Color &s,const Color &a,const Color &r,const Color &emission,float shin){$/;"	f	class:BRDF
+BRDF	BRDF.h	/^class BRDF$/;"	c
+BRDF_H_	BRDF.h	2;"	d
+BYTE	FreeImage.h	/^typedef uint8_t BYTE;$/;"	t
+BYTE	FreeImage.h	/^typedef unsigned char BYTE;$/;"	t
+Box	Shape.h	/^class Box : public Shape{$/;"	c
+Buffer	Log.h	/^	typedef LogBuffer<4000> Buffer;$/;"	t	class:LogStream
+CAMERA_H_	camera.h	2;"	d
+CANVAS_H_	canvas.h	2;"	d
+CERROR_BREAK	lodepng/lodepng.cpp	97;"	d	file:
+CERROR_RETURN	lodepng/lodepng.cpp	121;"	d	file:
+CERROR_RETURN_ERROR	lodepng/lodepng.cpp	107;"	d	file:
+CERROR_TRY_RETURN	lodepng/lodepng.cpp	114;"	d	file:
+CLCL_ORDER	lodepng/lodepng.cpp	/^static const unsigned CLCL_ORDER[NUM_CODE_LENGTH_CODES]$/;"	v	file:
+COLOR_H_	color.h	2;"	d
+CUT_DEFAULT	FreeImage.h	673;"	d
+Camera	camera.cpp	/^Camera::Camera()$/;"	f	class:Camera
+Camera	camera.h	/^	Camera(const Vector3 &eye,const Vector3 &target,const Vector3 &up,float fox,int width,int height){$/;"	f	class:Camera
+Camera	camera.h	/^class Camera{$/;"	c
+Canvas	canvas.h	/^	Canvas(uint32_t *pixels, float width, float height){$/;"	f	class:Canvas
+Canvas	canvas.h	/^class Canvas{$/;"	c
+Coin	lodepng/lodepng.cpp	/^typedef struct Coin$/;"	s	file:
+Coin	lodepng/lodepng.cpp	/^} Coin;$/;"	t	typeref:struct:Coin	file:
+Color	color.cpp	/^Color::Color(float red, float green, float blue, float alpha){$/;"	f	class:Color
+Color	color.h	/^	Color(float color[]) $/;"	f	class:Color
+Color	color.h	/^class Color{$/;"	c
+ColorTree	lodepng/lodepng.cpp	/^struct ColorTree$/;"	s	file:
+ColorTree	lodepng/lodepng.cpp	/^typedef struct ColorTree ColorTree;$/;"	t	typeref:struct:ColorTree	file:
+Cylinder	Shape.h	/^class Cylinder :public Shape{$/;"	c
+DDS_DEFAULT	FreeImage.h	674;"	d
+DEBUG	Log.h	/^		DEBUG,$/;"	e	enum:Logger::LogLevel
+DEFAULT_WINDOWSIZE	lodepng/lodepng.cpp	2247;"	d	file:
+DIFFUSE	material.h	/^	DIFFUSE,$/;"	e	enum:MaterialType
+DISTANCEBASE	lodepng/lodepng.cpp	/^static const unsigned DISTANCEBASE[30]$/;"	v	file:
+DISTANCEEXTRA	lodepng/lodepng.cpp	/^static const unsigned DISTANCEEXTRA[30]$/;"	v	file:
+DLL_API	FreeImage.h	40;"	d
+DLL_API	FreeImage.h	52;"	d
+DLL_API	FreeImage.h	54;"	d
+DLL_API	FreeImage.h	65;"	d
+DLL_API	FreeImage.h	67;"	d
+DLL_CALLCONV	FreeImage.h	41;"	d
+DLL_CALLCONV	FreeImage.h	44;"	d
+DLL_CALLCONV	FreeImage.h	63;"	d
+DLight	light.h	/^	DLight(Vector3 d):lc(0,0,0,0),intensity(0,0,0){$/;"	f	class:DLight
+DLight	light.h	/^	DLight(Vector3 d,Color color):intensity(0,0,0){$/;"	f	class:DLight
+DLight	light.h	/^	DLight(Vector3 d,Vector3 inten) :lc(0,0,0,0){$/;"	f	class:DLight
+DLight	light.h	/^class DLight : public Light{$/;"	c
+DWORD	FreeImage.h	/^typedef uint32_t DWORD;$/;"	t
+DWORD	FreeImage.h	/^typedef unsigned long DWORD;$/;"	t
+Disk	Shape.h	/^class Disk :public Shape{$/;"	c
+EMIT	material.h	/^	EMIT$/;"	e	enum:MaterialType
+ERROR	Log.h	/^		ERROR,$/;"	e	enum:Logger::LogLevel
+ERROR_BREAK	lodepng/lodepng.cpp	104;"	d	file:
+EXR_B44	FreeImage.h	681;"	d
+EXR_DEFAULT	FreeImage.h	675;"	d
+EXR_FLOAT	FreeImage.h	676;"	d
+EXR_LC	FreeImage.h	682;"	d
+EXR_NONE	FreeImage.h	677;"	d
+EXR_PIZ	FreeImage.h	679;"	d
+EXR_PXR24	FreeImage.h	680;"	d
+EXR_ZIP	FreeImage.h	678;"	d
+FALSE	FreeImage.h	135;"	d
+FATAL	Log.h	/^		FATAL,$/;"	e	enum:Logger::LogLevel
+FAXG3_DEFAULT	FreeImage.h	683;"	d
+FI16_555_BLUE_MASK	FreeImage.h	357;"	d
+FI16_555_BLUE_SHIFT	FreeImage.h	360;"	d
+FI16_555_GREEN_MASK	FreeImage.h	356;"	d
+FI16_555_GREEN_SHIFT	FreeImage.h	359;"	d
+FI16_555_RED_MASK	FreeImage.h	355;"	d
+FI16_555_RED_SHIFT	FreeImage.h	358;"	d
+FI16_565_BLUE_MASK	FreeImage.h	363;"	d
+FI16_565_BLUE_SHIFT	FreeImage.h	366;"	d
+FI16_565_GREEN_MASK	FreeImage.h	362;"	d
+FI16_565_GREEN_SHIFT	FreeImage.h	365;"	d
+FI16_565_RED_MASK	FreeImage.h	361;"	d
+FI16_565_RED_SHIFT	FreeImage.h	364;"	d
+FICOMPLEX	FreeImage.h	/^} FICOMPLEX;$/;"	t	typeref:struct:tagFICOMPLEX
+FIF_LOAD_NOPIXELS	FreeImage.h	669;"	d
+FIICC_COLOR_IS_CMYK	FreeImage.h	371;"	d
+FIICC_DEFAULT	FreeImage.h	370;"	d
+FILM_H_	film.h	2;"	d
+FIRGB16	FreeImage.h	/^} FIRGB16;$/;"	t	typeref:struct:tagFIRGB16
+FIRGBA16	FreeImage.h	/^} FIRGBA16;$/;"	t	typeref:struct:tagFIRGBA16
+FIRGBAF	FreeImage.h	/^} FIRGBAF;$/;"	t	typeref:struct:tagFIRGBAF
+FIRGBF	FreeImage.h	/^} FIRGBF;$/;"	t	typeref:struct:tagFIRGBF
+FIRST_LENGTH_CODE_INDEX	lodepng/lodepng.cpp	469;"	d	file:
+FI_COLOR_ALPHA_IS_INDEX	FreeImage.h	770;"	d
+FI_COLOR_FIND_EQUAL_COLOR	FreeImage.h	769;"	d
+FI_COLOR_IS_RGBA_COLOR	FreeImage.h	768;"	d
+FI_COLOR_IS_RGB_COLOR	FreeImage.h	767;"	d
+FI_COLOR_PALETTE_SEARCH_MASK	FreeImage.h	771;"	d
+FI_CloseProc	FreeImage.h	/^typedef void (DLL_CALLCONV *FI_CloseProc)(FreeImageIO *io, fi_handle handle, void *data);$/;"	t
+FI_DEFAULT	FreeImage.h	111;"	d
+FI_DEFAULT	FreeImage.h	115;"	d
+FI_DescriptionProc	FreeImage.h	/^typedef const char *(DLL_CALLCONV *FI_DescriptionProc)(void);$/;"	t
+FI_ENUM	FreeImage.h	/^FI_ENUM(FREE_IMAGE_COLOR_CHANNEL) {$/;"	f
+FI_ENUM	FreeImage.h	/^FI_ENUM(FREE_IMAGE_COLOR_TYPE) {$/;"	f
+FI_ENUM	FreeImage.h	/^FI_ENUM(FREE_IMAGE_DITHER) {$/;"	f
+FI_ENUM	FreeImage.h	/^FI_ENUM(FREE_IMAGE_FILTER) {$/;"	f
+FI_ENUM	FreeImage.h	/^FI_ENUM(FREE_IMAGE_FORMAT) {$/;"	f
+FI_ENUM	FreeImage.h	/^FI_ENUM(FREE_IMAGE_JPEG_OPERATION) {$/;"	f
+FI_ENUM	FreeImage.h	/^FI_ENUM(FREE_IMAGE_MDMODEL) {$/;"	f
+FI_ENUM	FreeImage.h	/^FI_ENUM(FREE_IMAGE_MDTYPE) {$/;"	f
+FI_ENUM	FreeImage.h	/^FI_ENUM(FREE_IMAGE_QUANTIZE) {$/;"	f
+FI_ENUM	FreeImage.h	/^FI_ENUM(FREE_IMAGE_TMO) {$/;"	f
+FI_ENUM	FreeImage.h	/^FI_ENUM(FREE_IMAGE_TYPE) {$/;"	f
+FI_ENUM	FreeImage.h	112;"	d
+FI_ENUM	FreeImage.h	116;"	d
+FI_ExtensionListProc	FreeImage.h	/^typedef const char *(DLL_CALLCONV *FI_ExtensionListProc)(void);$/;"	t
+FI_FormatProc	FreeImage.h	/^typedef const char *(DLL_CALLCONV *FI_FormatProc)(void);$/;"	t
+FI_InitProc	FreeImage.h	/^typedef void (DLL_CALLCONV *FI_InitProc)(Plugin *plugin, int format_id);$/;"	t
+FI_LoadProc	FreeImage.h	/^typedef FIBITMAP *(DLL_CALLCONV *FI_LoadProc)(FreeImageIO *io, fi_handle handle, int page, int flags, void *data);$/;"	t
+FI_MimeProc	FreeImage.h	/^typedef const char *(DLL_CALLCONV *FI_MimeProc)(void);$/;"	t
+FI_OpenProc	FreeImage.h	/^typedef void *(DLL_CALLCONV *FI_OpenProc)(FreeImageIO *io, fi_handle handle, BOOL read);$/;"	t
+FI_PageCapabilityProc	FreeImage.h	/^typedef int (DLL_CALLCONV *FI_PageCapabilityProc)(FreeImageIO *io, fi_handle handle, void *data);$/;"	t
+FI_PageCountProc	FreeImage.h	/^typedef int (DLL_CALLCONV *FI_PageCountProc)(FreeImageIO *io, fi_handle handle, void *data);$/;"	t
+FI_RESCALE_DEFAULT	FreeImage.h	776;"	d
+FI_RESCALE_OMIT_METADATA	FreeImage.h	778;"	d
+FI_RESCALE_TRUE_COLOR	FreeImage.h	777;"	d
+FI_RGBA_ALPHA	FreeImage.h	295;"	d
+FI_RGBA_ALPHA	FreeImage.h	309;"	d
+FI_RGBA_ALPHA	FreeImage.h	325;"	d
+FI_RGBA_ALPHA	FreeImage.h	339;"	d
+FI_RGBA_ALPHA_MASK	FreeImage.h	299;"	d
+FI_RGBA_ALPHA_MASK	FreeImage.h	313;"	d
+FI_RGBA_ALPHA_MASK	FreeImage.h	329;"	d
+FI_RGBA_ALPHA_MASK	FreeImage.h	343;"	d
+FI_RGBA_ALPHA_SHIFT	FreeImage.h	303;"	d
+FI_RGBA_ALPHA_SHIFT	FreeImage.h	317;"	d
+FI_RGBA_ALPHA_SHIFT	FreeImage.h	333;"	d
+FI_RGBA_ALPHA_SHIFT	FreeImage.h	347;"	d
+FI_RGBA_BLUE	FreeImage.h	294;"	d
+FI_RGBA_BLUE	FreeImage.h	308;"	d
+FI_RGBA_BLUE	FreeImage.h	324;"	d
+FI_RGBA_BLUE	FreeImage.h	338;"	d
+FI_RGBA_BLUE_MASK	FreeImage.h	298;"	d
+FI_RGBA_BLUE_MASK	FreeImage.h	312;"	d
+FI_RGBA_BLUE_MASK	FreeImage.h	328;"	d
+FI_RGBA_BLUE_MASK	FreeImage.h	342;"	d
+FI_RGBA_BLUE_SHIFT	FreeImage.h	302;"	d
+FI_RGBA_BLUE_SHIFT	FreeImage.h	316;"	d
+FI_RGBA_BLUE_SHIFT	FreeImage.h	332;"	d
+FI_RGBA_BLUE_SHIFT	FreeImage.h	346;"	d
+FI_RGBA_GREEN	FreeImage.h	293;"	d
+FI_RGBA_GREEN	FreeImage.h	307;"	d
+FI_RGBA_GREEN	FreeImage.h	323;"	d
+FI_RGBA_GREEN	FreeImage.h	337;"	d
+FI_RGBA_GREEN_MASK	FreeImage.h	297;"	d
+FI_RGBA_GREEN_MASK	FreeImage.h	311;"	d
+FI_RGBA_GREEN_MASK	FreeImage.h	327;"	d
+FI_RGBA_GREEN_MASK	FreeImage.h	341;"	d
+FI_RGBA_GREEN_SHIFT	FreeImage.h	301;"	d
+FI_RGBA_GREEN_SHIFT	FreeImage.h	315;"	d
+FI_RGBA_GREEN_SHIFT	FreeImage.h	331;"	d
+FI_RGBA_GREEN_SHIFT	FreeImage.h	345;"	d
+FI_RGBA_RED	FreeImage.h	292;"	d
+FI_RGBA_RED	FreeImage.h	306;"	d
+FI_RGBA_RED	FreeImage.h	322;"	d
+FI_RGBA_RED	FreeImage.h	336;"	d
+FI_RGBA_RED_MASK	FreeImage.h	296;"	d
+FI_RGBA_RED_MASK	FreeImage.h	310;"	d
+FI_RGBA_RED_MASK	FreeImage.h	326;"	d
+FI_RGBA_RED_MASK	FreeImage.h	340;"	d
+FI_RGBA_RED_SHIFT	FreeImage.h	300;"	d
+FI_RGBA_RED_SHIFT	FreeImage.h	314;"	d
+FI_RGBA_RED_SHIFT	FreeImage.h	330;"	d
+FI_RGBA_RED_SHIFT	FreeImage.h	344;"	d
+FI_RGBA_RGB_MASK	FreeImage.h	351;"	d
+FI_ReadProc	FreeImage.h	/^typedef unsigned (DLL_CALLCONV *FI_ReadProc) (void *buffer, unsigned size, unsigned count, fi_handle handle);$/;"	t
+FI_RegExprProc	FreeImage.h	/^typedef const char *(DLL_CALLCONV *FI_RegExprProc)(void);$/;"	t
+FI_STRUCT	FreeImage.h	/^FI_STRUCT (FIBITMAP) { void *data; };$/;"	f
+FI_STRUCT	FreeImage.h	/^FI_STRUCT (FIICCPROFILE) { $/;"	f
+FI_STRUCT	FreeImage.h	/^FI_STRUCT (FIMEMORY) { void *data; };$/;"	f
+FI_STRUCT	FreeImage.h	/^FI_STRUCT (FIMETADATA) { void *data; };$/;"	f
+FI_STRUCT	FreeImage.h	/^FI_STRUCT (FIMULTIBITMAP) { void *data; };$/;"	f
+FI_STRUCT	FreeImage.h	/^FI_STRUCT (FITAG) { void *data; };$/;"	f
+FI_STRUCT	FreeImage.h	/^FI_STRUCT (Plugin) {$/;"	f
+FI_STRUCT	FreeImage.h	/^FI_STRUCT(FreeImageIO) {$/;"	f
+FI_STRUCT	FreeImage.h	113;"	d
+FI_STRUCT	FreeImage.h	117;"	d
+FI_SaveProc	FreeImage.h	/^typedef BOOL (DLL_CALLCONV *FI_SaveProc)(FreeImageIO *io, FIBITMAP *dib, fi_handle handle, int page, int flags, void *data);$/;"	t
+FI_SeekProc	FreeImage.h	/^typedef int (DLL_CALLCONV *FI_SeekProc) (fi_handle handle, long offset, int origin);$/;"	t
+FI_SupportsExportBPPProc	FreeImage.h	/^typedef BOOL (DLL_CALLCONV *FI_SupportsExportBPPProc)(int bpp);$/;"	t
+FI_SupportsExportTypeProc	FreeImage.h	/^typedef BOOL (DLL_CALLCONV *FI_SupportsExportTypeProc)(FREE_IMAGE_TYPE type);$/;"	t
+FI_SupportsICCProfilesProc	FreeImage.h	/^typedef BOOL (DLL_CALLCONV *FI_SupportsICCProfilesProc)(void);$/;"	t
+FI_SupportsNoPixelsProc	FreeImage.h	/^typedef BOOL (DLL_CALLCONV *FI_SupportsNoPixelsProc)(void);$/;"	t
+FI_TellProc	FreeImage.h	/^typedef long (DLL_CALLCONV *FI_TellProc) (fi_handle handle);$/;"	t
+FI_ValidateProc	FreeImage.h	/^typedef BOOL (DLL_CALLCONV *FI_ValidateProc)(FreeImageIO *io, fi_handle handle);$/;"	t
+FI_WriteProc	FreeImage.h	/^typedef unsigned (DLL_CALLCONV *FI_WriteProc) (void *buffer, unsigned size, unsigned count, fi_handle handle);$/;"	t
+FLUSH	Log.h	/^		FLUSH$/;"	e	enum:LogStream::Tag
+FOUNDATION_H_	foundation.h	2;"	d
+FREEIMAGE_BIGENDIAN	FreeImage.h	79;"	d
+FREEIMAGE_COLORORDER	FreeImage.h	97;"	d
+FREEIMAGE_COLORORDER	FreeImage.h	99;"	d
+FREEIMAGE_COLORORDER_BGR	FreeImage.h	93;"	d
+FREEIMAGE_COLORORDER_RGB	FreeImage.h	94;"	d
+FREEIMAGE_H	FreeImage.h	27;"	d
+FREEIMAGE_IO	FreeImage.h	587;"	d
+FREEIMAGE_MAJOR_VERSION	FreeImage.h	31;"	d
+FREEIMAGE_MINOR_VERSION	FreeImage.h	32;"	d
+FREEIMAGE_RELEASE_SERIAL	FreeImage.h	33;"	d
+Film	film.h	/^	Film(int w, int h){$/;"	f	class:Film
+Film	film.h	/^class Film{$/;"	c
+FreeImage_OutputMessageFunction	FreeImage.h	/^typedef void (*FreeImage_OutputMessageFunction)(FREE_IMAGE_FORMAT fif, const char *msg);$/;"	t
+FreeImage_OutputMessageFunctionStdCall	FreeImage.h	/^typedef void (DLL_CALLCONV *FreeImage_OutputMessageFunctionStdCall)(FREE_IMAGE_FORMAT fif, const char *msg); $/;"	t
+GCC_HASCLASSVISIBILITY	FreeImage.h	60;"	d
+GIF_DEFAULT	FreeImage.h	684;"	d
+GIF_LOAD256	FreeImage.h	685;"	d
+GIF_PLAYBACK	FreeImage.h	686;"	d
+GeometricPrimitive	Primitive.cpp	/^GeometricPrimitive::GeometricPrimitive()$/;"	f	class:GeometricPrimitive
+GeometricPrimitive	Primitive.h	/^	GeometricPrimitive(Shape* shape, Material* material,Matrix mat){$/;"	f	class:GeometricPrimitive
+GeometricPrimitive	Primitive.h	/^	GeometricPrimitive(Shape* shape,Material* material){$/;"	f	class:GeometricPrimitive
+GeometricPrimitive	Primitive.h	/^class GeometricPrimitive : public Primitive$/;"	c
+GetTexturePosition	Shape.cpp	/^void Sphere::GetTexturePosition(const Vector3& point,float& u, float& v)$/;"	f	class:Sphere
+GetTexturePosition	Shape.cpp	/^void Triangle::GetTexturePosition(const Vector3& point,float& u, float& v)$/;"	f	class:Triangle
+GetTexturePosition	Shape.h	/^	virtual void GetTexturePosition(const Vector3& point,float& u,float& v) {}$/;"	f	class:Shape
+HASH_BIT_MASK	lodepng/lodepng.cpp	/^static const unsigned HASH_BIT_MASK = 65535; \/*HASH_NUM_VALUES - 1, but C90 does not like that as initializer*\/$/;"	v	file:
+HASH_NUM_VALUES	lodepng/lodepng.cpp	/^static const unsigned HASH_NUM_VALUES = 65536;$/;"	v	file:
+HDR_DEFAULT	FreeImage.h	687;"	d
+Hash	lodepng/lodepng.cpp	/^typedef struct Hash$/;"	s	file:
+Hash	lodepng/lodepng.cpp	/^} Hash;$/;"	t	typeref:struct:Hash	file:
+HuffmanTree	lodepng/lodepng.cpp	/^typedef struct HuffmanTree$/;"	s	file:
+HuffmanTree	lodepng/lodepng.cpp	/^} HuffmanTree;$/;"	t	typeref:struct:HuffmanTree	file:
+HuffmanTree_cleanup	lodepng/lodepng.cpp	/^static void HuffmanTree_cleanup(HuffmanTree* tree)$/;"	f	file:
+HuffmanTree_getCode	lodepng/lodepng.cpp	/^static unsigned HuffmanTree_getCode(const HuffmanTree* tree, unsigned index)$/;"	f	file:
+HuffmanTree_getLength	lodepng/lodepng.cpp	/^static unsigned HuffmanTree_getLength(const HuffmanTree* tree, unsigned index)$/;"	f	file:
+HuffmanTree_init	lodepng/lodepng.cpp	/^static void HuffmanTree_init(HuffmanTree* tree)$/;"	f	file:
+HuffmanTree_make2DTree	lodepng/lodepng.cpp	/^static unsigned HuffmanTree_make2DTree(HuffmanTree* tree)$/;"	f	file:
+HuffmanTree_makeFromFrequencies	lodepng/lodepng.cpp	/^static unsigned HuffmanTree_makeFromFrequencies(HuffmanTree* tree, const unsigned* frequencies,$/;"	f	file:
+HuffmanTree_makeFromLengths	lodepng/lodepng.cpp	/^static unsigned HuffmanTree_makeFromLengths(HuffmanTree* tree, const unsigned* bitlen,$/;"	f	file:
+HuffmanTree_makeFromLengths2	lodepng/lodepng.cpp	/^static unsigned HuffmanTree_makeFromLengths2(HuffmanTree* tree)$/;"	f	file:
+ICO_DEFAULT	FreeImage.h	688;"	d
+ICO_MAKEALPHA	FreeImage.h	689;"	d
+IFF_DEFAULT	FreeImage.h	690;"	d
+IMAGE_H_	image.h	2;"	d
+INFO	Log.h	/^		INFO,$/;"	e	enum:Logger::LogLevel
+INT64	FreeImage.h	/^typedef int64_t INT64;$/;"	t
+INT64	FreeImage.h	/^typedef signed __int64 INT64;$/;"	t
+Image	image.cpp	/^Image::Image(const char *path)$/;"	f	class:Image
+Image	image.h	/^class Image{$/;"	c
+ImageTexture	texture.cpp	/^ImageTexture::ImageTexture()$/;"	f	class:ImageTexture
+ImageTexture	texture.h	/^class ImageTexture : public Texture $/;"	c
+InitMaterial	tiny_obj_loader/tiny_obj_loader.cc	/^void InitMaterial(material_t& material) {$/;"	f	namespace:tinyobj
+Intersection	Ray.h	/^	Intersection(){}$/;"	f	class:Intersection
+Intersection	Ray.h	/^class Intersection$/;"	c
+J2K_DEFAULT	FreeImage.h	691;"	d
+JP2_DEFAULT	FreeImage.h	692;"	d
+JPEG_ACCURATE	FreeImage.h	695;"	d
+JPEG_BASELINE	FreeImage.h	710;"	d
+JPEG_CMYK	FreeImage.h	696;"	d
+JPEG_DEFAULT	FreeImage.h	693;"	d
+JPEG_EXIFROTATE	FreeImage.h	697;"	d
+JPEG_FAST	FreeImage.h	694;"	d
+JPEG_GREYSCALE	FreeImage.h	698;"	d
+JPEG_OPTIMIZE	FreeImage.h	709;"	d
+JPEG_PROGRESSIVE	FreeImage.h	704;"	d
+JPEG_QUALITYAVERAGE	FreeImage.h	702;"	d
+JPEG_QUALITYBAD	FreeImage.h	703;"	d
+JPEG_QUALITYGOOD	FreeImage.h	700;"	d
+JPEG_QUALITYNORMAL	FreeImage.h	701;"	d
+JPEG_QUALITYSUPERB	FreeImage.h	699;"	d
+JPEG_SUBSAMPLING_411	FreeImage.h	705;"	d
+JPEG_SUBSAMPLING_420	FreeImage.h	706;"	d
+JPEG_SUBSAMPLING_422	FreeImage.h	707;"	d
+JPEG_SUBSAMPLING_444	FreeImage.h	708;"	d
+JXR_DEFAULT	FreeImage.h	760;"	d
+JXR_LOSSLESS	FreeImage.h	761;"	d
+JXR_PROGRESSIVE	FreeImage.h	762;"	d
+KDNode	kdtree.h	/^class KDNode $/;"	c
+KOALA_DEFAULT	FreeImage.h	711;"	d
+LAST_LENGTH_CODE_INDEX	lodepng/lodepng.cpp	470;"	d	file:
+LBM_DEFAULT	FreeImage.h	712;"	d
+LCT_GREY	lodepng/lodepng.h	/^  LCT_GREY = 0, \/*greyscale: 1,2,4,8,16 bit*\/$/;"	e	enum:LodePNGColorType
+LCT_GREY_ALPHA	lodepng/lodepng.h	/^  LCT_GREY_ALPHA = 4, \/*greyscale with alpha: 8,16 bit*\/$/;"	e	enum:LodePNGColorType
+LCT_PALETTE	lodepng/lodepng.h	/^  LCT_PALETTE = 3, \/*palette: 1,2,4,8 bit*\/$/;"	e	enum:LodePNGColorType
+LCT_RGB	lodepng/lodepng.h	/^  LCT_RGB = 2, \/*RGB: 8,16 bit*\/$/;"	e	enum:LodePNGColorType
+LCT_RGBA	lodepng/lodepng.h	/^  LCT_RGBA = 6 \/*RGB with alpha: 8,16 bit*\/$/;"	e	enum:LodePNGColorType
+LENGTHBASE	lodepng/lodepng.cpp	/^static const unsigned LENGTHBASE[29]$/;"	v	file:
+LENGTHEXTRA	lodepng/lodepng.cpp	/^static const unsigned LENGTHEXTRA[29]$/;"	v	file:
+LFS_BRUTE_FORCE	lodepng/lodepng.h	/^  LFS_BRUTE_FORCE,$/;"	e	enum:LodePNGFilterStrategy
+LFS_ENTROPY	lodepng/lodepng.h	/^  LFS_ENTROPY,$/;"	e	enum:LodePNGFilterStrategy
+LFS_MINSUM	lodepng/lodepng.h	/^  LFS_MINSUM,$/;"	e	enum:LodePNGFilterStrategy
+LFS_PREDEFINED	lodepng/lodepng.h	/^  LFS_PREDEFINED$/;"	e	enum:LodePNGFilterStrategy
+LFS_ZERO	lodepng/lodepng.h	/^  LFS_ZERO,$/;"	e	enum:LodePNGFilterStrategy
+LIGHT_H_	light.h	2;"	d
+LODEPNG_COMPILE_ALLOCATORS	lodepng/lodepng.h	78;"	d
+LODEPNG_COMPILE_ANCILLARY_CHUNKS	lodepng/lodepng.h	68;"	d
+LODEPNG_COMPILE_CPP	lodepng/lodepng.h	83;"	d
+LODEPNG_COMPILE_DECODER	lodepng/lodepng.h	56;"	d
+LODEPNG_COMPILE_DISK	lodepng/lodepng.h	64;"	d
+LODEPNG_COMPILE_ENCODER	lodepng/lodepng.h	60;"	d
+LODEPNG_COMPILE_ERROR_TEXT	lodepng/lodepng.h	72;"	d
+LODEPNG_COMPILE_PNG	lodepng/lodepng.h	52;"	d
+LODEPNG_COMPILE_ZLIB	lodepng/lodepng.h	48;"	d
+LODEPNG_H	lodepng/lodepng.h	27;"	d
+LODEPNG_VERSION_STRING	lodepng/lodepng.h	36;"	d
+LOG_DEBUG	Log.h	175;"	d
+LOG_END	Log.h	180;"	d
+LOG_ERROR	Log.h	178;"	d
+LOG_FATAL	Log.h	179;"	d
+LOG_INFO	Log.h	176;"	d
+LOG_TRACE	Log.h	174;"	d
+LOG_WARN	Log.h	177;"	d
+LONG	FreeImage.h	/^typedef int32_t LONG;$/;"	t
+LONG	FreeImage.h	/^typedef long LONG;$/;"	t
+Light	light.h	/^class Light{$/;"	c
+LoadMtl	tiny_obj_loader/tiny_obj_loader.cc	/^std::string LoadMtl ($/;"	f	namespace:tinyobj
+LoadObj	tiny_obj_loader/tiny_obj_loader.cc	/^LoadObj($/;"	f	namespace:tinyobj
+LoadObj	tiny_obj_loader/tiny_obj_loader.cc	/^std::string LoadObj($/;"	f	namespace:tinyobj
+LocalGeo	vector.h	/^	LocalGeo(){$/;"	f	class:LocalGeo
+LocalGeo	vector.h	/^class LocalGeo$/;"	c
+LodePNGColorMode	lodepng/lodepng.h	/^typedef struct LodePNGColorMode$/;"	s
+LodePNGColorMode	lodepng/lodepng.h	/^} LodePNGColorMode;$/;"	t	typeref:struct:LodePNGColorMode
+LodePNGColorProfile	lodepng/lodepng.h	/^typedef struct LodePNGColorProfile$/;"	s
+LodePNGColorProfile	lodepng/lodepng.h	/^} LodePNGColorProfile;$/;"	t	typeref:struct:LodePNGColorProfile
+LodePNGColorType	lodepng/lodepng.h	/^typedef enum LodePNGColorType$/;"	g
+LodePNGColorType	lodepng/lodepng.h	/^} LodePNGColorType;$/;"	t	typeref:enum:LodePNGColorType
+LodePNGCompressSettings	lodepng/lodepng.h	/^struct LodePNGCompressSettings \/*deflate = compress*\/$/;"	s
+LodePNGCompressSettings	lodepng/lodepng.h	/^typedef struct LodePNGCompressSettings LodePNGCompressSettings;$/;"	t	typeref:struct:LodePNGCompressSettings
+LodePNGDecoderSettings	lodepng/lodepng.h	/^typedef struct LodePNGDecoderSettings$/;"	s
+LodePNGDecoderSettings	lodepng/lodepng.h	/^} LodePNGDecoderSettings;$/;"	t	typeref:struct:LodePNGDecoderSettings
+LodePNGDecompressSettings	lodepng/lodepng.h	/^struct LodePNGDecompressSettings$/;"	s
+LodePNGDecompressSettings	lodepng/lodepng.h	/^typedef struct LodePNGDecompressSettings LodePNGDecompressSettings;$/;"	t	typeref:struct:LodePNGDecompressSettings
+LodePNGEncoderSettings	lodepng/lodepng.h	/^typedef struct LodePNGEncoderSettings$/;"	s
+LodePNGEncoderSettings	lodepng/lodepng.h	/^} LodePNGEncoderSettings;$/;"	t	typeref:struct:LodePNGEncoderSettings
+LodePNGFilterStrategy	lodepng/lodepng.h	/^typedef enum LodePNGFilterStrategy$/;"	g
+LodePNGFilterStrategy	lodepng/lodepng.h	/^} LodePNGFilterStrategy;$/;"	t	typeref:enum:LodePNGFilterStrategy
+LodePNGIText_cleanup	lodepng/lodepng.cpp	/^static void LodePNGIText_cleanup(LodePNGInfo* info)$/;"	f	file:
+LodePNGIText_copy	lodepng/lodepng.cpp	/^static unsigned LodePNGIText_copy(LodePNGInfo* dest, const LodePNGInfo* source)$/;"	f	file:
+LodePNGIText_init	lodepng/lodepng.cpp	/^static void LodePNGIText_init(LodePNGInfo* info)$/;"	f	file:
+LodePNGInfo	lodepng/lodepng.h	/^typedef struct LodePNGInfo$/;"	s
+LodePNGInfo	lodepng/lodepng.h	/^} LodePNGInfo;$/;"	t	typeref:struct:LodePNGInfo
+LodePNGState	lodepng/lodepng.h	/^typedef struct LodePNGState$/;"	s
+LodePNGState	lodepng/lodepng.h	/^} LodePNGState;$/;"	t	typeref:struct:LodePNGState
+LodePNGText_cleanup	lodepng/lodepng.cpp	/^static void LodePNGText_cleanup(LodePNGInfo* info)$/;"	f	file:
+LodePNGText_copy	lodepng/lodepng.cpp	/^static unsigned LodePNGText_copy(LodePNGInfo* dest, const LodePNGInfo* source)$/;"	f	file:
+LodePNGText_init	lodepng/lodepng.cpp	/^static void LodePNGText_init(LodePNGInfo* info)$/;"	f	file:
+LodePNGTime	lodepng/lodepng.h	/^typedef struct LodePNGTime$/;"	s
+LodePNGTime	lodepng/lodepng.h	/^} LodePNGTime;$/;"	t	typeref:struct:LodePNGTime
+LodePNGUnknownChunks_cleanup	lodepng/lodepng.cpp	/^static void LodePNGUnknownChunks_cleanup(LodePNGInfo* info)$/;"	f	file:
+LodePNGUnknownChunks_copy	lodepng/lodepng.cpp	/^static unsigned LodePNGUnknownChunks_copy(LodePNGInfo* dest, const LodePNGInfo* src)$/;"	f	file:
+LodePNGUnknownChunks_init	lodepng/lodepng.cpp	/^static void LodePNGUnknownChunks_init(LodePNGInfo* info)$/;"	f	file:
+LogBuffer	Log.h	/^	LogBuffer() $/;"	f	class:LogBuffer
+LogBuffer	Log.h	/^class LogBuffer $/;"	c
+LogLevel	Log.h	/^	enum LogLevel$/;"	g	class:Logger
+LogLevelName	Log.cpp	/^const char* LogLevelName[Logger::NUM_LOG_LEVELS] =$/;"	v
+LogStream	Log.h	/^class LogStream$/;"	c
+Logger	Log.cpp	/^Logger::Logger(SourceFile file, int line, LogLevel level, const char* func)$/;"	f	class:Logger
+Logger	Log.h	/^class Logger $/;"	c
+MATERIAL_H_	material.h	2;"	d
+MATH_H_	math.h	2;"	d
+MATRIX_H_	matrix.h	2;"	d
+MAX_SUPPORTED_DEFLATE_LENGTH	lodepng/lodepng.cpp	/^static const size_t MAX_SUPPORTED_DEFLATE_LENGTH = 258;$/;"	v	file:
+MNG_DEFAULT	FreeImage.h	713;"	d
+Material	material.cpp	/^Material::Material()$/;"	f	class:Material
+Material	material.cpp	/^Material::Material(MaterialType type,Color default_color) :$/;"	f	class:Material
+Material	material.cpp	/^Material::Material(std::string file_path)$/;"	f	class:Material
+Material	material.h	/^	Material(BRDF* brdf){$/;"	f	class:Material
+Material	material.h	/^class Material$/;"	c
+MaterialFileReader	tiny_obj_loader/tiny_obj_loader.h	/^        MaterialFileReader(const std::string& mtl_basepath): m_mtlBasePath(mtl_basepath) {}$/;"	f	class:tinyobj::MaterialFileReader
+MaterialFileReader	tiny_obj_loader/tiny_obj_loader.h	/^class MaterialFileReader:$/;"	c	namespace:tinyobj
+MaterialReader	tiny_obj_loader/tiny_obj_loader.h	/^    MaterialReader(){}$/;"	f	class:tinyobj::MaterialReader
+MaterialReader	tiny_obj_loader/tiny_obj_loader.h	/^class MaterialReader$/;"	c	namespace:tinyobj
+MaterialType	material.h	/^enum MaterialType$/;"	g
+Matrix	matrix.h	/^	Matrix(){$/;"	f	class:Matrix
+Matrix	matrix.h	/^	Matrix(float values[]){$/;"	f	class:Matrix
+Matrix	matrix.h	/^class Matrix{$/;"	c
+Mesh	mesh.cpp	/^Mesh::Mesh(const std::string& file_path) $/;"	f	class:Mesh
+Mesh	mesh.h	/^class Mesh $/;"	c
+NULL	FreeImage.h	141;"	d
+NUM_CODE_LENGTH_CODES	lodepng/lodepng.cpp	476;"	d	file:
+NUM_DEFLATE_CODE_SYMBOLS	lodepng/lodepng.cpp	472;"	d	file:
+NUM_DISTANCE_SYMBOLS	lodepng/lodepng.cpp	474;"	d	file:
+NUM_LOG_LEVELS	Log.h	/^		NUM_LOG_LEVELS,$/;"	e	enum:Logger::LogLevel
+Normal	vector.h	/^	Normal(Point p){$/;"	f	class:Normal
+Normal	vector.h	/^	Normal(Vector3 v){$/;"	f	class:Normal
+Normal	vector.h	/^	Normal(float x=0.0f,float y=0.0f,float z=0.0f){$/;"	f	class:Normal
+Normal	vector.h	/^class Normal$/;"	c
+PBITMAPINFO	FreeImage.h	/^} BITMAPINFO, *PBITMAPINFO;$/;"	t	typeref:struct:tagBITMAPINFO
+PBITMAPINFOHEADER	FreeImage.h	/^} BITMAPINFOHEADER, *PBITMAPINFOHEADER; $/;"	t	typeref:struct:tagBITMAPINFOHEADER
+PCD_BASE	FreeImage.h	715;"	d
+PCD_BASEDIV16	FreeImage.h	717;"	d
+PCD_BASEDIV4	FreeImage.h	716;"	d
+PCD_DEFAULT	FreeImage.h	714;"	d
+PCX_DEFAULT	FreeImage.h	718;"	d
+PFM_DEFAULT	FreeImage.h	719;"	d
+PI	math.h	/^const float PI = 3.1415926535;$/;"	v
+PICT_DEFAULT	FreeImage.h	720;"	d
+PLUGINS	FreeImage.h	624;"	d
+PLight	light.h	/^	PLight(Point p){$/;"	f	class:PLight
+PLight	light.h	/^	PLight(Vector3 d, Color color){$/;"	f	class:PLight
+PLight	light.h	/^class PLight : public Light{$/;"	c
+PNG_DEFAULT	FreeImage.h	721;"	d
+PNG_IGNOREGAMMA	FreeImage.h	722;"	d
+PNG_INTERLACED	FreeImage.h	727;"	d
+PNG_Z_BEST_COMPRESSION	FreeImage.h	725;"	d
+PNG_Z_BEST_SPEED	FreeImage.h	723;"	d
+PNG_Z_DEFAULT_COMPRESSION	FreeImage.h	724;"	d
+PNG_Z_NO_COMPRESSION	FreeImage.h	726;"	d
+PNM_DEFAULT	FreeImage.h	728;"	d
+PNM_SAVE_ASCII	FreeImage.h	730;"	d
+PNM_SAVE_RAW	FreeImage.h	729;"	d
+POINT_H_	Point.h	2;"	d
+PRIMITIVE_H_	Primitive.h	2;"	d
+PSD_CMYK	FreeImage.h	732;"	d
+PSD_DEFAULT	FreeImage.h	731;"	d
+PSD_LAB	FreeImage.h	733;"	d
+PathTracer	PathTracer.h	/^class PathTracer $/;"	c
+Point	Point.cpp	/^Point::Point(const Vector3 &v){$/;"	f	class:Point
+Point	Point.h	/^	Point(float x=0.0f,float y=0.0f,float z=0.0f){$/;"	f	class:Point
+Point	Point.h	/^class Point$/;"	c
+Primitive	Primitive.h	/^class Primitive$/;"	c
+RAND48_ADD	rand48/rand48.c	31;"	d	file:
+RAND48_MULT_0	rand48/rand48.c	28;"	d	file:
+RAND48_MULT_1	rand48/rand48.c	29;"	d	file:
+RAND48_MULT_2	rand48/rand48.c	30;"	d	file:
+RAND48_SEED_0	rand48/rand48.c	25;"	d	file:
+RAND48_SEED_1	rand48/rand48.c	26;"	d	file:
+RAND48_SEED_2	rand48/rand48.c	27;"	d	file:
+RAS_DEFAULT	FreeImage.h	734;"	d
+RAW_DEFAULT	FreeImage.h	735;"	d
+RAW_DISPLAY	FreeImage.h	737;"	d
+RAW_HALFSIZE	FreeImage.h	738;"	d
+RAW_PREVIEW	FreeImage.h	736;"	d
+RAW_UNPROCESSED	FreeImage.h	739;"	d
+RAYTRACER_H_	RayTracer.h	2;"	d
+RAY_H_	Ray.h	2;"	d
+READBIT	lodepng/lodepng.cpp	444;"	d	file:
+READFILE_H_	readfile.h	2;"	d
+RGBQUAD	FreeImage.h	/^} RGBQUAD;$/;"	t	typeref:struct:tagRGBQUAD
+RGBTRIPLE	FreeImage.h	/^} RGBTRIPLE;$/;"	t	typeref:struct:tagRGBTRIPLE
+Ray	Ray.h	/^	Ray() :t_min(0.00001), t_max(100000){$/;"	f	class:Ray
+Ray	Ray.h	/^	Ray(Point p) : t_min(0.00001),t_max(100000){$/;"	f	class:Ray
+Ray	Ray.h	/^class Ray$/;"	c
+RayTracer	RayTracer.h	/^	RayTracer(){}$/;"	f	class:RayTracer
+RayTracer	RayTracer.h	/^	RayTracer(Primitive* p) :thit(0){$/;"	f	class:RayTracer
+RayTracer	RayTracer.h	/^	RayTracer(Shape& shape) : thit(0){$/;"	f	class:RayTracer
+RayTracer	RayTracer.h	/^class RayTracer{$/;"	c
+ReadFile	readfile.h	/^	ReadFile() {$/;"	f	class:ReadFile
+ReadFile	readfile.h	/^class ReadFile{$/;"	c
+Rectangle	Shape.h	/^class Rectangle :public Shape{$/;"	c
+SAMPLE_H_	sampler.h	2;"	d
+SCENE_H_	scene.h	2;"	d
+SCREEN_BPP	main.cpp	/^const int SCREEN_BPP = 32;$/;"	v
+SCREEN_HEIGHT	main.cpp	/^const int SCREEN_HEIGHT = 480;$/;"	v
+SCREEN_WIDTH	main.cpp	/^const int SCREEN_WIDTH = 640;$/;"	v
+SEEK_CUR	FreeImage.h	146;"	d
+SEEK_END	FreeImage.h	147;"	d
+SEEK_SET	FreeImage.h	145;"	d
+SEPCULAR	material.h	/^	SEPCULAR = 1,$/;"	e	enum:MaterialType
+SGI_DEFAULT	FreeImage.h	740;"	d
+SHAPE_H_	Shape.h	2;"	d
+Sample	sampler.h	/^	Sample():x(0.0),y(0.0) {}$/;"	f	class:Sample
+Sample	sampler.h	/^	Sample(float x, float y){$/;"	f	class:Sample
+Sample	sampler.h	/^class Sample{$/;"	c
+Sampler	sampler.h	/^	Sampler(int width,int height):index(0) {$/;"	f	class:Sampler
+Sampler	sampler.h	/^class Sampler$/;"	c
+Scene	scene.h	/^class Scene{$/;"	c
+Shape	Shape.h	/^class Shape$/;"	c
+SmallTest	small_test.h	/^class SmallTest $/;"	c
+SourceFile	Log.h	/^		SourceFile() {}$/;"	f	class:Logger::SourceFile
+SourceFile	Log.h	/^		explicit SourceFile(const char* filename)$/;"	f	class:Logger::SourceFile
+SourceFile	Log.h	/^		inline SourceFile(const char(&arr)[N])$/;"	f	class:Logger::SourceFile
+SourceFile	Log.h	/^	class SourceFile $/;"	c	class:Logger
+Sphere	Shape.cpp	/^Sphere::Sphere() : radius(0),center(0,0,0){$/;"	f	class:Sphere
+Sphere	Shape.cpp	/^Sphere::Sphere(float r, Point center){$/;"	f	class:Sphere
+Sphere	Shape.h	/^class Sphere : public Shape{	$/;"	c
+State	lodepng/lodepng.cpp	/^State::State()$/;"	f	class:lodepng::State
+State	lodepng/lodepng.cpp	/^State::State(const State& other)$/;"	f	class:lodepng::State
+State	lodepng/lodepng.h	/^class State : public LodePNGState$/;"	c	namespace:lodepng
+TARGA_DEFAULT	FreeImage.h	741;"	d
+TARGA_LOAD_RGB888	FreeImage.h	742;"	d
+TARGA_SAVE_RLE	FreeImage.h	743;"	d
+TIFF_ADOBE_DEFLATE	FreeImage.h	748;"	d
+TIFF_CCITTFAX3	FreeImage.h	750;"	d
+TIFF_CCITTFAX4	FreeImage.h	751;"	d
+TIFF_CMYK	FreeImage.h	745;"	d
+TIFF_DEFAULT	FreeImage.h	744;"	d
+TIFF_DEFLATE	FreeImage.h	747;"	d
+TIFF_JPEG	FreeImage.h	753;"	d
+TIFF_LOGLUV	FreeImage.h	754;"	d
+TIFF_LZW	FreeImage.h	752;"	d
+TIFF_NONE	FreeImage.h	749;"	d
+TIFF_PACKBITS	FreeImage.h	746;"	d
+TRACE	Log.h	/^		TRACE,$/;"	e	enum:Logger::LogLevel
+TRUE	FreeImage.h	138;"	d
+Tag	Log.h	/^	enum Tag {$/;"	g	class:LogStream
+Texture	texture.h	/^	Texture() {}$/;"	f	class:Texture
+Texture	texture.h	/^class Texture $/;"	c
+TextureBRDF	BRDF.h	/^class TextureBRDF : public BRDF$/;"	c
+Torus	Shape.h	/^class Torus :public Shape{$/;"	c
+Triangle	Shape.h	/^	Triangle(){}$/;"	f	class:Triangle
+Triangle	Shape.h	/^	Triangle(Vector3 &p0, Vector3 &p1, Vector3 &p2,$/;"	f	class:Triangle
+Triangle	Shape.h	/^	Triangle(Vector3 &t1,Vector3 &t2,Vector3 &t3){$/;"	f	class:Triangle
+Triangle	Shape.h	/^class Triangle : public Shape{$/;"	c
+UINT64	FreeImage.h	/^typedef uint64_t UINT64;$/;"	t
+UINT64	FreeImage.h	/^typedef unsigned __int64 UINT64;$/;"	t
+VARIBALES_H_	variables.h	2;"	d
+VECTOR_H_	vector.h	2;"	d
+VERTEX_H_	vertex.h	2;"	d
+Vector2	vector.h	/^	Vector2(float x=0.0f, float y=0.0f){ $/;"	f	class:Vector2
+Vector2	vector.h	/^class Vector2{$/;"	c
+Vector3	vector.cpp	/^Vector3::Vector3(Normal n){$/;"	f	class:Vector3
+Vector3	vector.h	/^	Vector3(Point p){$/;"	f	class:Vector3
+Vector3	vector.h	/^	Vector3(float x = 0.0f, float y = 0.0f, float z = 0.0f) {$/;"	f	class:Vector3
+Vector3	vector.h	/^class Vector3{$/;"	c
+Vertex2	vertex.h	/^	Vertex2(const Vector2 &position, const Color &color){$/;"	f	class:Vertex2
+Vertex2	vertex.h	/^class Vertex2{$/;"	c
+WARN	Log.h	/^		WARN,$/;"	e	enum:Logger::LogLevel
+WBMP_DEFAULT	FreeImage.h	755;"	d
+WEBP_DEFAULT	FreeImage.h	758;"	d
+WEBP_LOSSLESS	FreeImage.h	759;"	d
+WORD	FreeImage.h	/^typedef uint16_t WORD;$/;"	t
+WORD	FreeImage.h	/^typedef unsigned short WORD;$/;"	t
+XBM_DEFAULT	FreeImage.h	756;"	d
+XPM_DEFAULT	FreeImage.h	757;"	d
+_BBOX__H_	BBox.h	2;"	d
+_TINY_OBJ_LOADER_H	tiny_obj_loader/tiny_obj_loader.h	7;"	d
+_WINDOWS_	FreeImage.h	128;"	d
+_WINDOWS_	FreeImage.h	132;"	d
+_dorand48	rand48/rand48.c	/^_dorand48(unsigned short xseed[3])$/;"	f
+_height	canvas.h	/^	float _height;$/;"	m	class:Canvas
+_pixels	canvas.h	/^	uint32_t *_pixels;$/;"	m	class:Canvas
+_rand48_add	rand48/rand48.c	/^unsigned short _rand48_add = RAND48_ADD;$/;"	v
+_rand48_mult	rand48/rand48.c	/^unsigned short _rand48_mult[3] = {$/;"	v
+_rand48_seed	rand48/rand48.c	/^unsigned short _rand48_seed[3] = {$/;"	v
+_width	canvas.h	/^	float _width;$/;"	m	class:Canvas
+a	color.h	/^	float a;$/;"	m	class:Color
+add	Log.h	/^	void add(size_t len) { cur_ += len; }$/;"	f	class:LogBuffer
+addBitToStream	lodepng/lodepng.cpp	420;"	d	file:
+addBitsToStream	lodepng/lodepng.cpp	/^static void addBitsToStream(size_t* bitpointer, ucvector* bitstream, unsigned value, size_t nbits)$/;"	f	file:
+addBitsToStreamReversed	lodepng/lodepng.cpp	/^static void addBitsToStreamReversed(size_t* bitpointer, ucvector* bitstream, unsigned value, size_t nbits)$/;"	f	file:
+addChunk	lodepng/lodepng.cpp	/^static unsigned addChunk(ucvector* out, const char* chunkName, const unsigned char* data, size_t length)$/;"	f	file:
+addChunk_IDAT	lodepng/lodepng.cpp	/^static unsigned addChunk_IDAT(ucvector* out, const unsigned char* data, size_t datasize,$/;"	f	file:
+addChunk_IEND	lodepng/lodepng.cpp	/^static unsigned addChunk_IEND(ucvector* out)$/;"	f	file:
+addChunk_IHDR	lodepng/lodepng.cpp	/^static unsigned addChunk_IHDR(ucvector* out, unsigned w, unsigned h,$/;"	f	file:
+addChunk_PLTE	lodepng/lodepng.cpp	/^static unsigned addChunk_PLTE(ucvector* out, const LodePNGColorMode* info)$/;"	f	file:
+addChunk_bKGD	lodepng/lodepng.cpp	/^static unsigned addChunk_bKGD(ucvector* out, const LodePNGInfo* info)$/;"	f	file:
+addChunk_iTXt	lodepng/lodepng.cpp	/^static unsigned addChunk_iTXt(ucvector* out, unsigned compressed, const char* keyword, const char* langtag,$/;"	f	file:
+addChunk_pHYs	lodepng/lodepng.cpp	/^static unsigned addChunk_pHYs(ucvector* out, const LodePNGInfo* info)$/;"	f	file:
+addChunk_tEXt	lodepng/lodepng.cpp	/^static unsigned addChunk_tEXt(ucvector* out, const char* keyword, const char* textstring)$/;"	f	file:
+addChunk_tIME	lodepng/lodepng.cpp	/^static unsigned addChunk_tIME(ucvector* out, const LodePNGTime* time)$/;"	f	file:
+addChunk_tRNS	lodepng/lodepng.cpp	/^static unsigned addChunk_tRNS(ucvector* out, const LodePNGColorMode* info)$/;"	f	file:
+addChunk_zTXt	lodepng/lodepng.cpp	/^static unsigned addChunk_zTXt(ucvector* out, const char* keyword, const char* textstring,$/;"	f	file:
+addColorBits	lodepng/lodepng.cpp	/^static void addColorBits(unsigned char* out, size_t index, unsigned bits, unsigned in)$/;"	f	file:
+addHuffmanSymbol	lodepng/lodepng.cpp	/^static void addHuffmanSymbol(size_t* bp, ucvector* compressed, unsigned code, unsigned bitlen)$/;"	f	file:
+addLengthDistance	lodepng/lodepng.cpp	/^static void addLengthDistance(uivector* values, size_t length, size_t distance)$/;"	f	file:
+addObject	Primitive.cpp	/^void AggregatePrimitive::addObject(const std::shared_ptr<Shape> shapeptr){$/;"	f	class:AggregatePrimitive
+addObject	scene.h	/^	static void addObject(RayTracer& raytrace,T& object)$/;"	f	class:Scene
+addPaddingBits	lodepng/lodepng.cpp	/^static void addPaddingBits(unsigned char* out, const unsigned char* in,$/;"	f	file:
+addSingleObject	scene.cpp	/^void Scene::addSingleObject(RayTracer& raytrace, std::shared_ptr<Primitive> primitive)$/;"	f	class:Scene
+addUnknownChunks	lodepng/lodepng.cpp	/^static unsigned addUnknownChunks(ucvector* out, unsigned char* data, size_t datasize)$/;"	f	file:
+add_coins	lodepng/lodepng.cpp	/^static void add_coins(Coin* c1, const Coin* c2)$/;"	f	file:
+add_id	lodepng/lodepng.h	/^  unsigned add_id;$/;"	m	struct:LodePNGEncoderSettings
+adler32	lodepng/lodepng.cpp	/^static unsigned adler32(const unsigned char* data, unsigned len)$/;"	f	file:
+allocsize	lodepng/lodepng.cpp	/^  size_t allocsize; \/*allocated size in bytes*\/$/;"	m	struct:uivector	file:
+allocsize	lodepng/lodepng.cpp	/^  size_t allocsize; \/*allocated size*\/$/;"	m	struct:ucvector	file:
+alpha	FreeImage.h	/^	WORD alpha;$/;"	m	struct:tagFIRGBA16
+alpha	FreeImage.h	/^	float alpha;$/;"	m	struct:tagFIRGBAF
+alpha	lodepng/lodepng.h	/^  unsigned alpha; \/*alpha channel or alpha palette required*\/$/;"	m	struct:LodePNGColorProfile
+ambient	readfile.h	/^	float ambient[4];$/;"	m	class:ReadFile
+ambient	tiny_obj_loader/tiny_obj_loader.h	/^    float ambient[3];$/;"	m	struct:tinyobj::__anon1
+ambient_texname	tiny_obj_loader/tiny_obj_loader.h	/^    std::string ambient_texname;$/;"	m	struct:tinyobj::__anon1
+append	Log.h	/^	void append(const char* buf, size_t len) $/;"	f	class:LogBuffer
+append	Log.h	/^	void append(const char* data, int len) { buffer_.append(data, len); }$/;"	f	class:LogStream
+append_symbol_coins	lodepng/lodepng.cpp	/^static unsigned append_symbol_coins(Coin* coins, const unsigned* frequencies, unsigned numcodes, size_t sum)$/;"	f	file:
+auto_convert	lodepng/lodepng.h	/^  unsigned auto_convert; \/*automatically choose output PNG color type. Default: true*\/$/;"	m	struct:LodePNGEncoderSettings
+avail	Log.h	/^	int avail() const { return static_cast<int>(end() - cur_); }$/;"	f	class:LogBuffer
+b	color.h	/^	float b;$/;"	m	class:Color
+background_b	lodepng/lodepng.h	/^  unsigned background_b;       \/*blue component of suggested background color*\/$/;"	m	struct:LodePNGInfo
+background_defined	lodepng/lodepng.h	/^  unsigned background_defined; \/*is a suggested background color given?*\/$/;"	m	struct:LodePNGInfo
+background_g	lodepng/lodepng.h	/^  unsigned background_g;       \/*green component of suggested background color*\/$/;"	m	struct:LodePNGInfo
+background_r	lodepng/lodepng.h	/^  unsigned background_r;       \/*red component of suggested background color*\/$/;"	m	struct:LodePNGInfo
+basename_	Log.h	/^	SourceFile basename_;$/;"	m	class:Logger
+bbox	kdtree.h	/^	BBox bbox;$/;"	m	class:KDNode
+biBitCount	FreeImage.h	/^  WORD  biBitCount;$/;"	m	struct:tagBITMAPINFOHEADER
+biClrImportant	FreeImage.h	/^  DWORD biClrImportant;$/;"	m	struct:tagBITMAPINFOHEADER
+biClrUsed	FreeImage.h	/^  DWORD biClrUsed; $/;"	m	struct:tagBITMAPINFOHEADER
+biCompression	FreeImage.h	/^  DWORD biCompression; $/;"	m	struct:tagBITMAPINFOHEADER
+biHeight	FreeImage.h	/^  LONG  biHeight; $/;"	m	struct:tagBITMAPINFOHEADER
+biPlanes	FreeImage.h	/^  WORD  biPlanes; $/;"	m	struct:tagBITMAPINFOHEADER
+biSize	FreeImage.h	/^  DWORD biSize;$/;"	m	struct:tagBITMAPINFOHEADER
+biSizeImage	FreeImage.h	/^  DWORD biSizeImage; $/;"	m	struct:tagBITMAPINFOHEADER
+biWidth	FreeImage.h	/^  LONG  biWidth; $/;"	m	struct:tagBITMAPINFOHEADER
+biXPelsPerMeter	FreeImage.h	/^  LONG  biXPelsPerMeter; $/;"	m	struct:tagBITMAPINFOHEADER
+biYPelsPerMeter	FreeImage.h	/^  LONG  biYPelsPerMeter; $/;"	m	struct:tagBITMAPINFOHEADER
+bitdepth	lodepng/lodepng.h	/^  unsigned bitdepth;  \/*bits per sample, see PNG standard or documentation further in this header file*\/$/;"	m	struct:LodePNGColorMode
+bits	lodepng/lodepng.h	/^  unsigned bits; \/*bits per channel (not for palette). 1,2 or 4 for greyscale only. 16 if 16-bit per channel required.*\/$/;"	m	struct:LodePNGColorProfile
+blue	FreeImage.h	/^	WORD blue;$/;"	m	struct:tagFIRGB16
+blue	FreeImage.h	/^	WORD blue;$/;"	m	struct:tagFIRGBA16
+blue	FreeImage.h	/^	float blue;$/;"	m	struct:tagFIRGBAF
+blue	FreeImage.h	/^	float blue;$/;"	m	struct:tagFIRGBF
+bmiColors	FreeImage.h	/^  RGBQUAD          bmiColors[1];$/;"	m	struct:tagBITMAPINFO
+bmiHeader	FreeImage.h	/^  BITMAPINFOHEADER bmiHeader; $/;"	m	struct:tagBITMAPINFO
+btype	lodepng/lodepng.h	/^  unsigned btype; \/*the block type for LZ (0, 1, 2 or 3, see zlib standard). Should be 2 for proper compression.*\/$/;"	m	struct:LodePNGCompressSettings
+buffer	Log.h	/^	const Buffer& buffer() const { return buffer_; }$/;"	f	class:LogStream
+buffer_	Log.h	/^	Buffer buffer_;$/;"	m	class:LogStream
+build	kdtree.cpp	/^KDNode* KDNode::build(const std::vector<std::shared_ptr<Primitive>>& tris, int depth)$/;"	f	class:KDNode
+byte	variables.h	/^typedef unsigned char byte;$/;"	t
+camera	readfile.h	/^	float camera[10];$/;"	m	class:ReadFile
+center	Shape.h	/^	Point center;$/;"	m	class:Sphere
+chain	lodepng/lodepng.cpp	/^  unsigned short* chain;$/;"	m	struct:Hash	file:
+chainz	lodepng/lodepng.cpp	/^  unsigned short* chainz; \/*those with same amount of zeros*\/$/;"	m	struct:Hash	file:
+checkColorValidity	lodepng/lodepng.cpp	/^static unsigned checkColorValidity(LodePNGColorType colortype, unsigned bd) \/*bd = bitdepth*\/$/;"	f	file:
+children	lodepng/lodepng.cpp	/^  ColorTree* children[16]; \/*up to 16 pointers to ColorTree of next level*\/$/;"	m	struct:ColorTree	file:
+cleanup_coins	lodepng/lodepng.cpp	/^static void cleanup_coins(Coin* coins, size_t num)$/;"	f	file:
+coin_cleanup	lodepng/lodepng.cpp	/^static void coin_cleanup(void* c)$/;"	f	file:
+coin_compare	lodepng/lodepng.cpp	/^static int coin_compare(const void* a, const void* b) {$/;"	f	file:
+coin_copy	lodepng/lodepng.cpp	/^static void coin_copy(Coin* c1, const Coin* c2)$/;"	f	file:
+coin_init	lodepng/lodepng.cpp	/^static void coin_init(Coin* c)$/;"	f	file:
+color	lodepng/lodepng.h	/^  LodePNGColorMode color;     \/*color type and bits, palette and transparency of the PNG file*\/$/;"	m	struct:LodePNGInfo
+color	vertex.h	/^	Color color;$/;"	m	class:Vertex2
+color_	texture.h	/^	Color color_;$/;"	m	class:ImageTexture
+color_convert	lodepng/lodepng.h	/^  unsigned color_convert; \/*whether to convert the PNG to the color type you want. Default: yes*\/$/;"	m	struct:LodePNGDecoderSettings
+color_tree_add	lodepng/lodepng.cpp	/^static void color_tree_add(ColorTree* tree,$/;"	f	file:
+color_tree_cleanup	lodepng/lodepng.cpp	/^static void color_tree_cleanup(ColorTree* tree)$/;"	f	file:
+color_tree_get	lodepng/lodepng.cpp	/^static int color_tree_get(ColorTree* tree, unsigned char r, unsigned char g, unsigned char b, unsigned char a)$/;"	f	file:
+color_tree_has	lodepng/lodepng.cpp	/^static int color_tree_has(ColorTree* tree, unsigned char r, unsigned char g, unsigned char b, unsigned char a)$/;"	f	file:
+color_tree_init	lodepng/lodepng.cpp	/^static void color_tree_init(ColorTree* tree)$/;"	f	file:
+colored	lodepng/lodepng.h	/^  unsigned colored; \/*not greyscale*\/$/;"	m	struct:LodePNGColorProfile
+colortype	lodepng/lodepng.h	/^  LodePNGColorType colortype; \/*color type, see PNG standard or documentation further in this header file*\/$/;"	m	struct:LodePNGColorMode
+commit	film.cpp	/^void Film::commit(const Sample& sample,const Color& color){$/;"	f	class:Film
+compress	lodepng/lodepng.cpp	/^unsigned compress(std::vector<unsigned char>& out, const std::vector<unsigned char>& in,$/;"	f	namespace:lodepng
+compress	lodepng/lodepng.cpp	/^unsigned compress(std::vector<unsigned char>& out, const unsigned char* in, size_t insize,$/;"	f	namespace:lodepng
+compression_method	lodepng/lodepng.h	/^  unsigned compression_method;\/*compression method of the original file. Always 0.*\/$/;"	m	struct:LodePNGInfo
+constantBRDF	material.h	/^	BRDF constantBRDF;$/;"	m	class:Material
+convert	Log.cpp	/^size_t convert(char buf[], T value)$/;"	f
+convertHex	Log.cpp	/^size_t convertHex(char buf[], uintptr_t value)$/;"	f
+countZeros	lodepng/lodepng.cpp	/^static unsigned countZeros(const unsigned char* data, size_t size, size_t pos)$/;"	f	file:
+createReflectRay	RayTracer.cpp	/^void RayTracer::createReflectRay(LocalGeo local, Ray& ray){$/;"	f	class:RayTracer
+cross	vector.cpp	/^Vector3::cross(const Vector3 &v) const {$/;"	f	class:Vector3
+cur_	Log.h	/^	char* cur_;$/;"	m	class:LogBuffer
+current	Log.h	/^	char* current() { return cur_; }$/;"	f	class:LogBuffer
+custom_context	lodepng/lodepng.h	/^  const void* custom_context; \/*optional custom settings for custom functions*\/$/;"	m	struct:LodePNGCompressSettings
+custom_context	lodepng/lodepng.h	/^  const void* custom_context; \/*optional custom settings for custom functions*\/$/;"	m	struct:LodePNGDecompressSettings
+custom_deflate	lodepng/lodepng.h	/^  unsigned (*custom_deflate)(unsigned char**, size_t*,$/;"	m	struct:LodePNGCompressSettings
+custom_inflate	lodepng/lodepng.h	/^  unsigned (*custom_inflate)(unsigned char**, size_t*,$/;"	m	struct:LodePNGDecompressSettings
+custom_zlib	lodepng/lodepng.h	/^  unsigned (*custom_zlib)(unsigned char**, size_t*,$/;"	m	struct:LodePNGCompressSettings
+custom_zlib	lodepng/lodepng.h	/^  unsigned (*custom_zlib)(unsigned char**, size_t*,$/;"	m	struct:LodePNGDecompressSettings
+data	Log.h	/^	const char* data() const { return data_; }$/;"	f	class:LogBuffer
+data	lodepng/lodepng.cpp	/^  unsigned char* data;$/;"	m	struct:ucvector	file:
+data	lodepng/lodepng.cpp	/^  unsigned* data;$/;"	m	struct:uivector	file:
+data_	Log.h	/^		const char* data_;$/;"	m	class:Logger::SourceFile
+data_	Log.h	/^	char data_[SIZE];$/;"	m	class:LogBuffer
+day	lodepng/lodepng.h	/^  unsigned day;     \/*1-31*\/$/;"	m	struct:LodePNGTime
+decode	lodepng/lodepng.cpp	/^unsigned decode(std::vector<unsigned char>& out, unsigned& w, unsigned& h, const std::string& filename,$/;"	f	namespace:lodepng
+decode	lodepng/lodepng.cpp	/^unsigned decode(std::vector<unsigned char>& out, unsigned& w, unsigned& h, const unsigned char* in,$/;"	f	namespace:lodepng
+decode	lodepng/lodepng.cpp	/^unsigned decode(std::vector<unsigned char>& out, unsigned& w, unsigned& h,$/;"	f	namespace:lodepng
+decodeGeneric	lodepng/lodepng.cpp	/^static void decodeGeneric(unsigned char** out, unsigned* w, unsigned* h,$/;"	f	file:
+decoder	lodepng/lodepng.h	/^  LodePNGDecoderSettings decoder; \/*the decoding settings*\/$/;"	m	struct:LodePNGState
+decompress	lodepng/lodepng.cpp	/^unsigned decompress(std::vector<unsigned char>& out, const std::vector<unsigned char>& in,$/;"	f	namespace:lodepng
+decompress	lodepng/lodepng.cpp	/^unsigned decompress(std::vector<unsigned char>& out, const unsigned char* in, size_t insize,$/;"	f	namespace:lodepng
+default_color_	material.h	/^	Color default_color_;$/;"	m	class:Material
+deflate	lodepng/lodepng.cpp	/^static unsigned deflate(unsigned char** out, size_t* outsize,$/;"	f	file:
+deflateDynamic	lodepng/lodepng.cpp	/^static unsigned deflateDynamic(ucvector* out, size_t* bp, Hash* hash,$/;"	f	file:
+deflateFixed	lodepng/lodepng.cpp	/^static unsigned deflateFixed(ucvector* out, size_t* bp, Hash* hash,$/;"	f	file:
+deflateNoCompression	lodepng/lodepng.cpp	/^static unsigned deflateNoCompression(ucvector* out, const unsigned char* data, size_t datasize)$/;"	f	file:
+diffuse	readfile.h	/^	float diffuse[4];$/;"	m	class:ReadFile
+diffuse	tiny_obj_loader/tiny_obj_loader.h	/^    float diffuse[3];$/;"	m	struct:tinyobj::__anon1
+diffuse_texname	tiny_obj_loader/tiny_obj_loader.h	/^    std::string diffuse_texname;$/;"	m	struct:tinyobj::__anon1
+digits	Log.cpp	/^const char digits[] = "9876543210123456789";$/;"	v
+digitsHex	Log.cpp	/^const char digitsHex[] = "0123456789ABCDEF";$/;"	v
+dir	Ray.h	/^	Vector3 dir;$/;"	m	class:Ray
+direction	camera.h	/^	Vector3 direction;$/;"	m	class:Camera
+direction	light.h	/^	Vector3 direction;$/;"	m	class:DLight
+dissolve	tiny_obj_loader/tiny_obj_loader.h	/^    float dissolve;           \/\/ 1 == opaque; 0 == fully transparent$/;"	m	struct:tinyobj::__anon1
+dot	vector.cpp	/^Vector3::dot(const Vector3 &v) const {$/;"	f	class:Vector3
+drand48	rand48/rand48.c	/^drand48(void)$/;"	f
+drawLine	canvas.cpp	/^void Canvas::drawLine(const Vertex2 &v1, const Vertex2 &v2)$/;"	f	class:Canvas
+drawPoint	canvas.cpp	/^void Canvas::drawPoint(const Vector2 &point, const Color &color)$/;"	f	class:Canvas
+drawTriangle	canvas.cpp	/^void Canvas::drawTriangle(const Vertex2 &v1, const Vertex2 &v2, const Vertex2 &v3)$/;"	f	class:Canvas
+emission	BRDF.h	/^	Color emission;$/;"	m	class:BRDF
+emission	readfile.h	/^	float emission[4];$/;"	m	class:ReadFile
+emission	tiny_obj_loader/tiny_obj_loader.h	/^    float emission[3];$/;"	m	struct:tinyobj::__anon1
+empty_flag_	material.h	/^	bool empty_flag_;$/;"	m	class:Material
+encode	lodepng/lodepng.cpp	/^unsigned encode(const std::string& filename,$/;"	f	namespace:lodepng
+encode	lodepng/lodepng.cpp	/^unsigned encode(std::vector<unsigned char>& out, const unsigned char* in, unsigned w, unsigned h,$/;"	f	namespace:lodepng
+encode	lodepng/lodepng.cpp	/^unsigned encode(std::vector<unsigned char>& out,$/;"	f	namespace:lodepng
+encodeLZ77	lodepng/lodepng.cpp	/^static unsigned encodeLZ77(uivector* out, Hash* hash,$/;"	f	file:
+encoder	lodepng/lodepng.h	/^  LodePNGEncoderSettings encoder; \/*the encoding settings*\/$/;"	m	struct:LodePNGState
+end	Log.h	/^	const char* end() const { return data_ + sizeof(data_); }$/;"	f	class:LogBuffer
+erand48	rand48/rand48.c	/^erand48(unsigned short xseed[3])$/;"	f
+error	lodepng/lodepng.h	/^  unsigned error;$/;"	m	struct:LodePNGState
+expand	BBox.cpp	/^void BBox::expand(BBox bbox)$/;"	f	class:BBox
+exportFaceGroupToShape	tiny_obj_loader/tiny_obj_loader.cc	/^exportFaceGroupToShape($/;"	f	namespace:tinyobj
+eye	camera.h	/^	Vector3 eye;$/;"	m	class:Camera
+eye	variables.cpp	/^float eye[3];/;"	v
+fi_handle	FreeImage.h	/^typedef void* fi_handle;$/;"	t
+filename	variables.cpp	/^char* filename;$/;"	v
+filter	lodepng/lodepng.cpp	/^static unsigned filter(unsigned char* out, const unsigned char* in, unsigned w, unsigned h,$/;"	f	file:
+filterScanline	lodepng/lodepng.cpp	/^static void filterScanline(unsigned char* out, const unsigned char* scanline, const unsigned char* prevline,$/;"	f	file:
+filter_method	lodepng/lodepng.h	/^  unsigned filter_method;     \/*filter method of the original file*\/$/;"	m	struct:LodePNGInfo
+filter_palette_zero	lodepng/lodepng.h	/^  unsigned filter_palette_zero;$/;"	m	struct:LodePNGEncoderSettings
+filter_strategy	lodepng/lodepng.h	/^  LodePNGFilterStrategy filter_strategy;$/;"	m	struct:LodePNGEncoderSettings
+fixIndex	tiny_obj_loader/tiny_obj_loader.cc	/^static inline int fixIndex(int idx, int n)$/;"	f	namespace:tinyobj
+floatEpsilon	math.h	/^const float floatEpsilon = 0.001;$/;"	v
+floatEqual	math.h	/^floatEqual(float a,float b){$/;"	f
+flog2	lodepng/lodepng.cpp	/^static float flog2(float f)$/;"	f	file:
+flush	Log.cpp	/^void LogStream::flush()$/;"	f	class:LogStream
+flush	Log.cpp	/^void Logger::flush()$/;"	f	class:Logger
+force_palette	lodepng/lodepng.h	/^  unsigned force_palette;$/;"	m	struct:LodePNGEncoderSettings
+formatInteger	Log.cpp	/^void LogStream::formatInteger(T v)$/;"	f	class:LogStream
+fox	camera.h	/^	float fox;$/;"	m	class:Camera
+g	color.h	/^	float g;$/;"	m	class:Color
+generateFixedDistanceTree	lodepng/lodepng.cpp	/^static unsigned generateFixedDistanceTree(HuffmanTree* tree)$/;"	f	file:
+generateFixedLitLenTree	lodepng/lodepng.cpp	/^static unsigned generateFixedLitLenTree(HuffmanTree* tree)$/;"	f	file:
+generateKDTree	RayTracer.cpp	/^void RayTracer::generateKDTree()$/;"	f	class:RayTracer
+generateLightRay	light.cpp	/^void DLight::generateLightRay(LocalGeo& local, Ray* lray, Color* lcolor){$/;"	f	class:DLight
+generateLightRay	light.cpp	/^void PLight::generateLightRay(LocalGeo& local, Ray* lray, Color* lcolor){$/;"	f	class:PLight
+generateRay	camera.cpp	/^void Camera::generateRay(Sample& sample, Ray* ray,bool jitter,unsigned short* X)$/;"	f	class:Camera
+getBRDF	Primitive.cpp	/^void AggregatePrimitive::getBRDF(LocalGeo& local, BRDF* brdf){$/;"	f	class:AggregatePrimitive
+getBRDF	Primitive.cpp	/^void GeometricPrimitive::getBRDF(LocalGeo& local, BRDF* brdf){$/;"	f	class:GeometricPrimitive
+getBRDF	material.h	/^	BRDF getBRDF(LocalGeo& local,BRDF* bref) const{$/;"	f	class:Material
+getBarycentric	Shape.cpp	/^Vector3 Triangle::getBarycentric(const Vector3& point)$/;"	f	class:Triangle
+getBoundingBox	Primitive.cpp	/^BBox GeometricPrimitive::getBoundingBox() const$/;"	f	class:GeometricPrimitive
+getBoundingBox	Primitive.h	/^	virtual BBox getBoundingBox() const { return BBox(); }$/;"	f	class:Primitive
+getBoundingBox	Shape.cpp	/^BBox Sphere::getBoundingBox()$/;"	f	class:Sphere
+getBoundingBox	Shape.cpp	/^BBox Triangle::getBoundingBox()$/;"	f	class:Triangle
+getBoundingBox	Shape.h	/^	virtual BBox getBoundingBox() { return BBox(); }$/;"	f	class:Shape
+getColor	Primitive.cpp	/^Color GeometricPrimitive::getColor(const Vector3& point)$/;"	f	class:GeometricPrimitive
+getColor	Primitive.h	/^	virtual Color getColor(const Vector3& point) { return Color(); }$/;"	f	class:Primitive
+getColor	material.cpp	/^Color Material::getColor(const float u, const float v)$/;"	f	class:Material
+getColor	texture.cpp	/^Color ImageTexture::getColor(const float& u, const float& v)$/;"	f	class:ImageTexture
+getColor	texture.h	/^	virtual Color getColor(const float& u, const float& v) { return Color(); }$/;"	f	class:Texture
+getExecPercent	sampler.cpp	/^std::string Sampler::getExecPercent()$/;"	f	class:Sampler
+getHash	lodepng/lodepng.cpp	/^static unsigned getHash(const unsigned char* data, size_t size, size_t pos)$/;"	f	file:
+getIntensity	light.h	/^	Vector3 getIntensity(){$/;"	f	class:DLight
+getIntensity	light.h	/^	Vector3 getIntensity(){$/;"	f	class:PLight
+getLights	mesh.cpp	/^std::vector<std::shared_ptr<Light>> Mesh::getLights()$/;"	f	class:Mesh
+getLights	readfile.cpp	/^std::vector<std::shared_ptr<Light>> ReadFile::getLights() $/;"	f	class:ReadFile
+getMidPoint	Primitive.cpp	/^Vector3 GeometricPrimitive::getMidPoint() const$/;"	f	class:GeometricPrimitive
+getMidPoint	Primitive.h	/^	virtual Vector3 getMidPoint() const { return Vector3(); }$/;"	f	class:Primitive
+getMidPoint	Shape.cpp	/^Vector3 Sphere::getMidPoint()$/;"	f	class:Sphere
+getMidPoint	Shape.cpp	/^Vector3 Triangle::getMidPoint()$/;"	f	class:Triangle
+getMidPoint	Shape.h	/^	virtual Vector3 getMidPoint() { return Vector3(); }$/;"	f	class:Shape
+getNormal	Shape.h	/^	Normal getNormal(const int face_hit) const {$/;"	f	class:Box
+getNumColorChannels	lodepng/lodepng.cpp	/^static unsigned getNumColorChannels(LodePNGColorType colortype)$/;"	f	file:
+getPaletteTranslucency	lodepng/lodepng.cpp	/^static unsigned getPaletteTranslucency(const unsigned char* palette, size_t palettesize)$/;"	f	file:
+getPixelColorRGBA16	lodepng/lodepng.cpp	/^static void getPixelColorRGBA16(unsigned short* r, unsigned short* g, unsigned short* b, unsigned short* a,$/;"	f	file:
+getPixelColorRGBA8	lodepng/lodepng.cpp	/^static void getPixelColorRGBA8(unsigned char* r, unsigned char* g,$/;"	f	file:
+getPixelColorsRGBA8	lodepng/lodepng.cpp	/^static void getPixelColorsRGBA8(unsigned char* buffer, size_t numpixels,$/;"	f	file:
+getPrimitives	mesh.cpp	/^std::vector<std::shared_ptr<Primitive>> Mesh::getPrimitives()$/;"	f	class:Mesh
+getPrimitives	readfile.cpp	/^std::vector<std::shared_ptr<Primitive>> ReadFile::getPrimitives()$/;"	f	class:ReadFile
+getReflectedRay	Ray.cpp	/^Ray Intersection::getReflectedRay(Ray ray, unsigned short * X)$/;"	f	class:Intersection
+getSample	sampler.cpp	/^bool Sampler::getSample(Sample& sample){$/;"	f	class:Sampler
+getTreeInflateDynamic	lodepng/lodepng.cpp	/^static unsigned getTreeInflateDynamic(HuffmanTree* tree_ll, HuffmanTree* tree_d,$/;"	f	file:
+getTreeInflateFixed	lodepng/lodepng.cpp	/^static void getTreeInflateFixed(HuffmanTree* tree_ll, HuffmanTree* tree_d)$/;"	f	file:
+getValueRequiredBits	lodepng/lodepng.cpp	/^static unsigned getValueRequiredBits(unsigned char value)$/;"	f	file:
+green	FreeImage.h	/^	WORD green;$/;"	m	struct:tagFIRGB16
+green	FreeImage.h	/^	WORD green;$/;"	m	struct:tagFIRGBA16
+green	FreeImage.h	/^	float green;$/;"	m	struct:tagFIRGBAF
+green	FreeImage.h	/^	float green;$/;"	m	struct:tagFIRGBF
+h	sampler.h	/^	int h, w;$/;"	m	class:Sampler
+hash_cleanup	lodepng/lodepng.cpp	/^static void hash_cleanup(Hash* hash)$/;"	f	file:
+hash_init	lodepng/lodepng.cpp	/^static unsigned hash_init(Hash* hash, unsigned windowsize)$/;"	f	file:
+head	lodepng/lodepng.cpp	/^  int* head; \/*hash value to head circular pos - can be outdated if went around window*\/$/;"	m	struct:Hash	file:
+headz	lodepng/lodepng.cpp	/^  int* headz; \/*similar to head, but for chainz*\/$/;"	m	struct:Hash	file:
+height	film.h	/^	int height, width;$/;"	m	class:Film
+height	image.h	/^	int height;$/;"	m	class:Image
+height	texture.h	/^	unsigned int height;$/;"	m	class:ImageTexture
+height	variables.cpp	/^int height;$/;"	v
+height_recp	camera.h	/^	float height_recp;$/;"	m	class:Camera
+hit	BBox.cpp	/^bool BBox::hit(const Ray& ray,double& distance) const{$/;"	f	class:BBox
+hit	kdtree.cpp	/^bool KDNode::hit(Ray& ray, float& t, float& tmin, Intersection& in)$/;"	f	class:KDNode
+hit	kdtree.cpp	/^bool KDNode::hit(Ray& ray, float& t, float& tmin, std::vector<Intersection>& intersections)$/;"	f	class:KDNode
+hour	lodepng/lodepng.h	/^  unsigned hour;    \/*0-23*\/$/;"	m	struct:LodePNGTime
+huffmanDecodeSymbol	lodepng/lodepng.cpp	/^static unsigned huffmanDecodeSymbol(const unsigned char* in, size_t* bp,$/;"	f	file:
+i	FreeImage.h	/^    double i;$/;"	m	struct:tagFICOMPLEX
+identify	matrix.h	/^	static Matrix identify(){$/;"	f	class:Matrix
+ignore_adler32	lodepng/lodepng.h	/^  unsigned ignore_adler32; \/*if 1, continue and don't give an error message if the Adler32 checksum is corrupted*\/$/;"	m	struct:LodePNGDecompressSettings
+ignore_crc	lodepng/lodepng.h	/^  unsigned ignore_crc; \/*ignore CRC checksums*\/$/;"	m	struct:LodePNGDecoderSettings
+illum	tiny_obj_loader/tiny_obj_loader.h	/^    int illum;$/;"	m	struct:tinyobj::__anon1
+image	texture.h	/^	std::vector<unsigned char> image;$/;"	m	class:ImageTexture
+index	lodepng/lodepng.cpp	/^  int index; \/*the payload. Only has a meaningful value if this is in the last level*\/$/;"	m	struct:ColorTree	file:
+index	sampler.h	/^	int index;$/;"	m	class:Sampler
+indices	tiny_obj_loader/tiny_obj_loader.h	/^    std::vector<unsigned int>   indices;$/;"	m	struct:tinyobj::__anon2
+inflate	lodepng/lodepng.cpp	/^static unsigned inflate(unsigned char** out, size_t* outsize,$/;"	f	file:
+inflateHuffmanBlock	lodepng/lodepng.cpp	/^static unsigned inflateHuffmanBlock(ucvector* out, const unsigned char* in, size_t* bp,$/;"	f	file:
+inflateNoCompression	lodepng/lodepng.cpp	/^static unsigned inflateNoCompression(ucvector* out, const unsigned char* in, size_t* bp, size_t* pos, size_t inlength)$/;"	f	file:
+info_png	lodepng/lodepng.h	/^  LodePNGInfo info_png; \/*info of the PNG image obtained after decoding*\/$/;"	m	struct:LodePNGState
+info_raw	lodepng/lodepng.h	/^  LodePNGColorMode info_raw; \/*specifies the format in which you would like to get the raw pixel buffer*\/$/;"	m	struct:LodePNGState
+init_coins	lodepng/lodepng.cpp	/^static void init_coins(Coin* coins, size_t num)$/;"	f	file:
+intensity	light.h	/^	Vector3 intensity;$/;"	m	class:DLight
+intensity	light.h	/^	Vector3 intensity;$/;"	m	class:PLight
+interlace_method	lodepng/lodepng.h	/^  unsigned interlace_method;  \/*interlace method of the original file*\/$/;"	m	struct:LodePNGInfo
+interpolate	color.h	/^	Color interpolate(const Color &c, float factor) const {$/;"	f	class:Color
+interpolate	vector.cpp	/^Vector3::interpolate(const Vector3 &v, float factor) const {$/;"	f	class:Vector3
+intersect	Shape.cpp	/^bool Box::intersect(Ray& ray, float* thit, float& tmin,LocalGeo* local){$/;"	f	class:Box
+intersect	Shape.cpp	/^bool Cylinder::intersect(Ray& ray, float* thit, float& tmin, LocalGeo* local){$/;"	f	class:Cylinder
+intersect	Shape.cpp	/^bool Disk::intersect(Ray& ray, float* thit, float& tmin, LocalGeo* local){$/;"	f	class:Disk
+intersect	Shape.cpp	/^bool Rectangle::intersect(Ray& ray, float* thit, float& tmin, LocalGeo* local){$/;"	f	class:Rectangle
+intersect	Shape.cpp	/^bool Sphere::intersect(Ray& ray, float* thit,float& tmin, LocalGeo* local){$/;"	f	class:Sphere
+intersect	Shape.cpp	/^bool Torus::intersect(Ray& ray, float* thit, float& tmin, LocalGeo* local){$/;"	f	class:Torus
+intersect	Shape.cpp	/^bool Triangle::intersect(Ray& ray, float* thit, float& tmin, LocalGeo* local){$/;"	f	class:Triangle
+intersectP	Primitive.cpp	/^bool AggregatePrimitive::intersectP(Ray& ray){$/;"	f	class:AggregatePrimitive
+intersectP	Primitive.cpp	/^bool GeometricPrimitive::intersectP(Ray& ray){$/;"	f	class:GeometricPrimitive
+intersectP	RayTracer.cpp	/^bool RayTracer::intersectP(Ray &ray){$/;"	f	class:RayTracer
+intersectP	Shape.cpp	/^bool Box::intersectP(Ray& ray){$/;"	f	class:Box
+intersectP	Shape.cpp	/^bool Cylinder::intersectP(Ray& ray){$/;"	f	class:Cylinder
+intersectP	Shape.cpp	/^bool Disk::intersectP(Ray& ray){$/;"	f	class:Disk
+intersectP	Shape.cpp	/^bool Rectangle::intersectP(Ray& ray){$/;"	f	class:Rectangle
+intersectP	Shape.cpp	/^bool Sphere::intersectP(Ray& ray){$/;"	f	class:Sphere
+intersectP	Shape.cpp	/^bool Torus::intersectP(Ray& ray){$/;"	f	class:Torus
+intersectP	Shape.cpp	/^bool Triangle::intersectP(Ray& ray){$/;"	f	class:Triangle
+interset	Primitive.cpp	/^bool AggregatePrimitive::interset(Ray& ray, float* thit,float& tmin, Intersection* in){$/;"	f	class:AggregatePrimitive
+interset	Primitive.cpp	/^bool GeometricPrimitive::interset(Ray& ray, float* thit, float& tmin, Intersection* in){$/;"	f	class:GeometricPrimitive
+interset	RayTracer.cpp	/^bool RayTracer::interset(Ray& ray, float* thit, Intersection* in){$/;"	f	class:RayTracer
+inverse	matrix.h	/^	Matrix inverse(){$/;"	f	class:Matrix
+ior	tiny_obj_loader/tiny_obj_loader.h	/^    float ior;                \/\/ index of refraction$/;"	m	struct:tinyobj::__anon1
+isNewLine	tiny_obj_loader/tiny_obj_loader.cc	/^static inline bool isNewLine(const char c) {$/;"	f	namespace:tinyobj
+isSpace	tiny_obj_loader/tiny_obj_loader.cc	/^static inline bool isSpace(const char c) {$/;"	f	namespace:tinyobj
+is_loaded_	material.h	/^	bool is_loaded_;$/;"	m	class:Material
+itext_keys	lodepng/lodepng.h	/^  char** itext_keys; \/*the English keyword of the text chunk (e.g. "Comment")*\/$/;"	m	struct:LodePNGInfo
+itext_langtags	lodepng/lodepng.h	/^  char** itext_langtags; \/*language tag for this text's language, ISO\/IEC 646 string, e.g. ISO 639 language tag*\/$/;"	m	struct:LodePNGInfo
+itext_num	lodepng/lodepng.h	/^  size_t itext_num; \/*the amount of international texts in this PNG*\/$/;"	m	struct:LodePNGInfo
+itext_strings	lodepng/lodepng.h	/^  char** itext_strings; \/*the actual international text - UTF-8 string*\/$/;"	m	struct:LodePNGInfo
+itext_transkeys	lodepng/lodepng.h	/^  char** itext_transkeys; \/*keyword translated to the international language - UTF-8 string*\/$/;"	m	struct:LodePNGInfo
+jrand48	rand48/rand48.c	/^jrand48(unsigned short xseed[3])$/;"	f
+kMaxNumericSize	Log.h	/^	static const int kMaxNumericSize = 32;$/;"	m	class:LogStream
+ka	BRDF.h	/^	Color kd, ks, ka, kr;$/;"	m	class:BRDF
+kd	BRDF.h	/^	Color kd, ks, ka, kr;$/;"	m	class:BRDF
+kdTreeInterset	RayTracer.cpp	/^bool RayTracer::kdTreeInterset(Ray& ray, float* thit, Intersection& in)$/;"	f	class:RayTracer
+kdTreeIntersetP	RayTracer.cpp	/^bool RayTracer::kdTreeIntersetP(Ray& ray)$/;"	f	class:RayTracer
+kd_trace	RayTracer.cpp	/^void RayTracer::kd_trace(Ray& ray, int depth, Color& color, unsigned short*X)$/;"	f	class:RayTracer
+kdtree	RayTracer.h	/^	KDNode* kdtree;$/;"	m	class:RayTracer
+key	lodepng/lodepng.h	/^  unsigned key; \/*if true, image is not opaque. Only if true and alpha is false, color key is possible.*\/$/;"	m	struct:LodePNGColorProfile
+key_b	lodepng/lodepng.h	/^  unsigned key_b;       \/*blue component of color key*\/$/;"	m	struct:LodePNGColorMode
+key_b	lodepng/lodepng.h	/^  unsigned short key_b;$/;"	m	struct:LodePNGColorProfile
+key_defined	lodepng/lodepng.h	/^  unsigned key_defined; \/*is a transparent color key given? 0 = false, 1 = true*\/$/;"	m	struct:LodePNGColorMode
+key_g	lodepng/lodepng.h	/^  unsigned key_g;       \/*green component of color key*\/$/;"	m	struct:LodePNGColorMode
+key_g	lodepng/lodepng.h	/^  unsigned short key_g;$/;"	m	struct:LodePNGColorProfile
+key_r	lodepng/lodepng.h	/^  unsigned key_r;       \/*red\/greyscale component of color key*\/$/;"	m	struct:LodePNGColorMode
+key_r	lodepng/lodepng.h	/^  unsigned short key_r; \/*these values are always in 16-bit bitdepth in the profile*\/$/;"	m	struct:LodePNGColorProfile
+kr	BRDF.h	/^	Color kd, ks, ka, kr;$/;"	m	class:BRDF
+ks	BRDF.h	/^	Color kd, ks, ka, kr;$/;"	m	class:BRDF
+lazymatching	lodepng/lodepng.h	/^  unsigned lazymatching; \/*use lazy matching: better compression but a bit slower. Default: true*\/$/;"	m	struct:LodePNGCompressSettings
+lc	light.h	/^	Color lc;$/;"	m	class:DLight
+lc	light.h	/^	Color lc;$/;"	m	class:PLight
+lcong48	rand48/rand48.c	/^lcong48(unsigned short p[7])$/;"	f
+leaf	kdtree.h	/^	bool leaf;$/;"	m	class:KDNode
+left	kdtree.h	/^	KDNode *left;$/;"	m	class:KDNode
+length	Log.h	/^	int length() const { return static_cast<int>(cur_ - data_); }$/;"	f	class:LogBuffer
+length	Point.cpp	/^float Point::length() const{$/;"	f	class:Point
+length	vector.cpp	/^Normal::length() const {$/;"	f	class:Normal
+length	vector.cpp	/^Vector3::length() const {$/;"	f	class:Vector3
+lengths	lodepng/lodepng.cpp	/^  unsigned* lengths; \/*the lengths of the codes of the 1d-tree*\/$/;"	m	struct:HuffmanTree	file:
+level_	Log.h	/^	LogLevel level_;$/;"	m	class:Logger
+lights	RayTracer.h	/^	std::vector<std::shared_ptr<Light>> lights;$/;"	m	class:RayTracer
+lights	readfile.h	/^	std::vector<std::shared_ptr<Light>> lights;$/;"	m	class:ReadFile
+line_	Log.h	/^	int line_;$/;"	m	class:Logger
+loadImage	canvas.cpp	/^void Canvas::loadImage(Image &image, Vector2 &position)$/;"	f	class:Canvas
+load_file	lodepng/lodepng.cpp	/^void load_file(std::vector<unsigned char>& buffer, const std::string& filename)$/;"	f	namespace:lodepng
+localGeo	Ray.h	/^	LocalGeo localGeo;$/;"	m	class:Intersection
+lodepng	lodepng/lodepng.cpp	/^namespace lodepng$/;"	n	file:
+lodepng	lodepng/lodepng.h	/^namespace lodepng$/;"	n
+lodepng_add32bitInt	lodepng/lodepng.cpp	/^static void lodepng_add32bitInt(ucvector* buffer, unsigned value)$/;"	f	file:
+lodepng_add_itext	lodepng/lodepng.cpp	/^unsigned lodepng_add_itext(LodePNGInfo* info, const char* key, const char* langtag,$/;"	f
+lodepng_add_text	lodepng/lodepng.cpp	/^unsigned lodepng_add_text(LodePNGInfo* info, const char* key, const char* str)$/;"	f
+lodepng_auto_choose_color	lodepng/lodepng.cpp	/^unsigned lodepng_auto_choose_color(LodePNGColorMode* mode_out,$/;"	f
+lodepng_can_have_alpha	lodepng/lodepng.cpp	/^unsigned lodepng_can_have_alpha(const LodePNGColorMode* info)$/;"	f
+lodepng_chunk_ancillary	lodepng/lodepng.cpp	/^unsigned char lodepng_chunk_ancillary(const unsigned char* chunk)$/;"	f
+lodepng_chunk_append	lodepng/lodepng.cpp	/^unsigned lodepng_chunk_append(unsigned char** out, size_t* outlength, const unsigned char* chunk)$/;"	f
+lodepng_chunk_check_crc	lodepng/lodepng.cpp	/^unsigned lodepng_chunk_check_crc(const unsigned char* chunk)$/;"	f
+lodepng_chunk_create	lodepng/lodepng.cpp	/^unsigned lodepng_chunk_create(unsigned char** out, size_t* outlength, unsigned length,$/;"	f
+lodepng_chunk_data	lodepng/lodepng.cpp	/^unsigned char* lodepng_chunk_data(unsigned char* chunk)$/;"	f
+lodepng_chunk_data_const	lodepng/lodepng.cpp	/^const unsigned char* lodepng_chunk_data_const(const unsigned char* chunk)$/;"	f
+lodepng_chunk_generate_crc	lodepng/lodepng.cpp	/^void lodepng_chunk_generate_crc(unsigned char* chunk)$/;"	f
+lodepng_chunk_length	lodepng/lodepng.cpp	/^unsigned lodepng_chunk_length(const unsigned char* chunk)$/;"	f
+lodepng_chunk_next	lodepng/lodepng.cpp	/^unsigned char* lodepng_chunk_next(unsigned char* chunk)$/;"	f
+lodepng_chunk_next_const	lodepng/lodepng.cpp	/^const unsigned char* lodepng_chunk_next_const(const unsigned char* chunk)$/;"	f
+lodepng_chunk_private	lodepng/lodepng.cpp	/^unsigned char lodepng_chunk_private(const unsigned char* chunk)$/;"	f
+lodepng_chunk_safetocopy	lodepng/lodepng.cpp	/^unsigned char lodepng_chunk_safetocopy(const unsigned char* chunk)$/;"	f
+lodepng_chunk_type	lodepng/lodepng.cpp	/^void lodepng_chunk_type(char type[5], const unsigned char* chunk)$/;"	f
+lodepng_chunk_type_equals	lodepng/lodepng.cpp	/^unsigned char lodepng_chunk_type_equals(const unsigned char* chunk, const char* type)$/;"	f
+lodepng_clear_itext	lodepng/lodepng.cpp	/^void lodepng_clear_itext(LodePNGInfo* info)$/;"	f
+lodepng_clear_text	lodepng/lodepng.cpp	/^void lodepng_clear_text(LodePNGInfo* info)$/;"	f
+lodepng_color_mode_cleanup	lodepng/lodepng.cpp	/^void lodepng_color_mode_cleanup(LodePNGColorMode* info)$/;"	f
+lodepng_color_mode_copy	lodepng/lodepng.cpp	/^unsigned lodepng_color_mode_copy(LodePNGColorMode* dest, const LodePNGColorMode* source)$/;"	f
+lodepng_color_mode_equal	lodepng/lodepng.cpp	/^static int lodepng_color_mode_equal(const LodePNGColorMode* a, const LodePNGColorMode* b)$/;"	f	file:
+lodepng_color_mode_init	lodepng/lodepng.cpp	/^void lodepng_color_mode_init(LodePNGColorMode* info)$/;"	f
+lodepng_color_profile_init	lodepng/lodepng.cpp	/^void lodepng_color_profile_init(LodePNGColorProfile* profile)$/;"	f
+lodepng_compress_settings_init	lodepng/lodepng.cpp	/^void lodepng_compress_settings_init(LodePNGCompressSettings* settings)$/;"	f
+lodepng_convert	lodepng/lodepng.cpp	/^unsigned lodepng_convert(unsigned char* out, const unsigned char* in,$/;"	f
+lodepng_crc32	lodepng/lodepng.cpp	/^unsigned lodepng_crc32(const unsigned char* buf, size_t len)$/;"	f
+lodepng_crc32_table	lodepng/lodepng.cpp	/^static unsigned lodepng_crc32_table[256] = {$/;"	v	file:
+lodepng_decode	lodepng/lodepng.cpp	/^unsigned lodepng_decode(unsigned char** out, unsigned* w, unsigned* h,$/;"	f
+lodepng_decode24	lodepng/lodepng.cpp	/^unsigned lodepng_decode24(unsigned char** out, unsigned* w, unsigned* h, const unsigned char* in, size_t insize)$/;"	f
+lodepng_decode24_file	lodepng/lodepng.cpp	/^unsigned lodepng_decode24_file(unsigned char** out, unsigned* w, unsigned* h, const char* filename)$/;"	f
+lodepng_decode32	lodepng/lodepng.cpp	/^unsigned lodepng_decode32(unsigned char** out, unsigned* w, unsigned* h, const unsigned char* in, size_t insize)$/;"	f
+lodepng_decode32_file	lodepng/lodepng.cpp	/^unsigned lodepng_decode32_file(unsigned char** out, unsigned* w, unsigned* h, const char* filename)$/;"	f
+lodepng_decode_file	lodepng/lodepng.cpp	/^unsigned lodepng_decode_file(unsigned char** out, unsigned* w, unsigned* h, const char* filename,$/;"	f
+lodepng_decode_memory	lodepng/lodepng.cpp	/^unsigned lodepng_decode_memory(unsigned char** out, unsigned* w, unsigned* h, const unsigned char* in,$/;"	f
+lodepng_decoder_settings_init	lodepng/lodepng.cpp	/^void lodepng_decoder_settings_init(LodePNGDecoderSettings* settings)$/;"	f
+lodepng_decompress_settings_init	lodepng/lodepng.cpp	/^void lodepng_decompress_settings_init(LodePNGDecompressSettings* settings)$/;"	f
+lodepng_default_compress_settings	lodepng/lodepng.cpp	/^const LodePNGCompressSettings lodepng_default_compress_settings = {2, 1, DEFAULT_WINDOWSIZE, 3, 128, 1, 0, 0, 0};$/;"	v
+lodepng_default_decompress_settings	lodepng/lodepng.cpp	/^const LodePNGDecompressSettings lodepng_default_decompress_settings = {0, 0, 0, 0};$/;"	v
+lodepng_deflate	lodepng/lodepng.cpp	/^unsigned lodepng_deflate(unsigned char** out, size_t* outsize,$/;"	f
+lodepng_deflatev	lodepng/lodepng.cpp	/^static unsigned lodepng_deflatev(ucvector* out, const unsigned char* in, size_t insize,$/;"	f	file:
+lodepng_encode	lodepng/lodepng.cpp	/^unsigned lodepng_encode(unsigned char** out, size_t* outsize,$/;"	f
+lodepng_encode24	lodepng/lodepng.cpp	/^unsigned lodepng_encode24(unsigned char** out, size_t* outsize, const unsigned char* image, unsigned w, unsigned h)$/;"	f
+lodepng_encode24_file	lodepng/lodepng.cpp	/^unsigned lodepng_encode24_file(const char* filename, const unsigned char* image, unsigned w, unsigned h)$/;"	f
+lodepng_encode32	lodepng/lodepng.cpp	/^unsigned lodepng_encode32(unsigned char** out, size_t* outsize, const unsigned char* image, unsigned w, unsigned h)$/;"	f
+lodepng_encode32_file	lodepng/lodepng.cpp	/^unsigned lodepng_encode32_file(const char* filename, const unsigned char* image, unsigned w, unsigned h)$/;"	f
+lodepng_encode_file	lodepng/lodepng.cpp	/^unsigned lodepng_encode_file(const char* filename, const unsigned char* image, unsigned w, unsigned h,$/;"	f
+lodepng_encode_memory	lodepng/lodepng.cpp	/^unsigned lodepng_encode_memory(unsigned char** out, size_t* outsize, const unsigned char* image,$/;"	f
+lodepng_encoder_settings_init	lodepng/lodepng.cpp	/^void lodepng_encoder_settings_init(LodePNGEncoderSettings* settings)$/;"	f
+lodepng_error_text	lodepng/lodepng.cpp	/^const char* lodepng_error_text(unsigned code)$/;"	f
+lodepng_free	lodepng/lodepng.cpp	/^static void lodepng_free(void* ptr)$/;"	f	file:
+lodepng_get_bpp	lodepng/lodepng.cpp	/^unsigned lodepng_get_bpp(const LodePNGColorMode* info)$/;"	f
+lodepng_get_bpp_lct	lodepng/lodepng.cpp	/^static unsigned lodepng_get_bpp_lct(LodePNGColorType colortype, unsigned bitdepth)$/;"	f	file:
+lodepng_get_channels	lodepng/lodepng.cpp	/^unsigned lodepng_get_channels(const LodePNGColorMode* info)$/;"	f
+lodepng_get_color_profile	lodepng/lodepng.cpp	/^unsigned lodepng_get_color_profile(LodePNGColorProfile* profile,$/;"	f
+lodepng_get_raw_size	lodepng/lodepng.cpp	/^size_t lodepng_get_raw_size(unsigned w, unsigned h, const LodePNGColorMode* color)$/;"	f
+lodepng_get_raw_size_idat	lodepng/lodepng.cpp	/^static size_t lodepng_get_raw_size_idat(unsigned w, unsigned h, const LodePNGColorMode* color)$/;"	f	file:
+lodepng_get_raw_size_lct	lodepng/lodepng.cpp	/^size_t lodepng_get_raw_size_lct(unsigned w, unsigned h, LodePNGColorType colortype, unsigned bitdepth)$/;"	f
+lodepng_has_palette_alpha	lodepng/lodepng.cpp	/^unsigned lodepng_has_palette_alpha(const LodePNGColorMode* info)$/;"	f
+lodepng_huffman_code_lengths	lodepng/lodepng.cpp	/^unsigned lodepng_huffman_code_lengths(unsigned* lengths, const unsigned* frequencies,$/;"	f
+lodepng_inflate	lodepng/lodepng.cpp	/^unsigned lodepng_inflate(unsigned char** out, size_t* outsize,$/;"	f
+lodepng_inflatev	lodepng/lodepng.cpp	/^static unsigned lodepng_inflatev(ucvector* out,$/;"	f	file:
+lodepng_info_cleanup	lodepng/lodepng.cpp	/^void lodepng_info_cleanup(LodePNGInfo* info)$/;"	f
+lodepng_info_copy	lodepng/lodepng.cpp	/^unsigned lodepng_info_copy(LodePNGInfo* dest, const LodePNGInfo* source)$/;"	f
+lodepng_info_init	lodepng/lodepng.cpp	/^void lodepng_info_init(LodePNGInfo* info)$/;"	f
+lodepng_info_swap	lodepng/lodepng.cpp	/^void lodepng_info_swap(LodePNGInfo* a, LodePNGInfo* b)$/;"	f
+lodepng_inspect	lodepng/lodepng.cpp	/^unsigned lodepng_inspect(unsigned* w, unsigned* h, LodePNGState* state,$/;"	f
+lodepng_is_alpha_type	lodepng/lodepng.cpp	/^unsigned lodepng_is_alpha_type(const LodePNGColorMode* info)$/;"	f
+lodepng_is_greyscale_type	lodepng/lodepng.cpp	/^unsigned lodepng_is_greyscale_type(const LodePNGColorMode* info)$/;"	f
+lodepng_is_palette_type	lodepng/lodepng.cpp	/^unsigned lodepng_is_palette_type(const LodePNGColorMode* info)$/;"	f
+lodepng_load_file	lodepng/lodepng.cpp	/^unsigned lodepng_load_file(unsigned char** out, size_t* outsize, const char* filename)$/;"	f
+lodepng_malloc	lodepng/lodepng.cpp	/^static void* lodepng_malloc(size_t size)$/;"	f	file:
+lodepng_palette_add	lodepng/lodepng.cpp	/^unsigned lodepng_palette_add(LodePNGColorMode* info,$/;"	f
+lodepng_palette_clear	lodepng/lodepng.cpp	/^void lodepng_palette_clear(LodePNGColorMode* info)$/;"	f
+lodepng_read32bitInt	lodepng/lodepng.cpp	/^unsigned lodepng_read32bitInt(const unsigned char* buffer)$/;"	f
+lodepng_realloc	lodepng/lodepng.cpp	/^static void* lodepng_realloc(void* ptr, size_t new_size)$/;"	f	file:
+lodepng_save_file	lodepng/lodepng.cpp	/^unsigned lodepng_save_file(const unsigned char* buffer, size_t buffersize, const char* filename)$/;"	f
+lodepng_set32bitInt	lodepng/lodepng.cpp	/^static void lodepng_set32bitInt(unsigned char* buffer, unsigned value)$/;"	f	file:
+lodepng_state_cleanup	lodepng/lodepng.cpp	/^void lodepng_state_cleanup(LodePNGState* state)$/;"	f
+lodepng_state_copy	lodepng/lodepng.cpp	/^void lodepng_state_copy(LodePNGState* dest, const LodePNGState* source)$/;"	f
+lodepng_state_init	lodepng/lodepng.cpp	/^void lodepng_state_init(LodePNGState* state)$/;"	f
+lodepng_zlib_compress	lodepng/lodepng.cpp	/^unsigned lodepng_zlib_compress(unsigned char** out, size_t* outsize, const unsigned char* in,$/;"	f
+lodepng_zlib_decompress	lodepng/lodepng.cpp	/^unsigned lodepng_zlib_decompress(unsigned char** out, size_t* outsize, const unsigned char* in,$/;"	f
+longestAxis	BBox.cpp	/^int BBox::longestAxis()$/;"	f	class:BBox
+lookAtLH	matrix.h	/^	static Matrix lookAtLH(const Vector3 &eye, const Vector3 &target, const Vector3 &up){$/;"	f	class:Matrix
+lrand48	rand48/rand48.c	/^lrand48(void)$/;"	f
+m_materials_	mesh.h	/^	std::vector<tinyobj::material_t> m_materials_;$/;"	m	class:Mesh
+m_mtlBasePath	tiny_obj_loader/tiny_obj_loader.h	/^        std::string m_mtlBasePath;$/;"	m	class:tinyobj::MaterialFileReader
+m_shapes_	mesh.h	/^	std::vector<tinyobj::shape_t> m_shapes_;$/;"	m	class:Mesh
+main	main.cpp	/^int main(int argc, char* argv[]){$/;"	f
+mat	Primitive.h	/^	Material* mat;$/;"	m	class:GeometricPrimitive
+mat	Shape.h	/^	Matrix mat;$/;"	m	class:Sphere
+material_ids	tiny_obj_loader/tiny_obj_loader.h	/^    std::vector<int>            material_ids; \/\/ per-mesh material ID$/;"	m	struct:tinyobj::__anon2
+material_t	tiny_obj_loader/tiny_obj_loader.h	/^} material_t;$/;"	t	namespace:tinyobj	typeref:struct:tinyobj::__anon1
+material_type_	material.h	/^	MaterialType material_type_;$/;"	m	class:Material
+materials_	mesh.h	/^	std::vector<Material> materials_;$/;"	m	class:Mesh
+maxbitlen	lodepng/lodepng.cpp	/^  unsigned maxbitlen; \/*maximum number of bits a single code can get*\/$/;"	m	struct:HuffmanTree	file:
+maxdepth	readfile.h	/^	int maxdepth;$/;"	m	class:ReadFile
+maxdepth	variables.cpp	/^int maxdepth;$/;"	v
+maxverts	readfile.h	/^	int maxverts; \/\/count$/;"	m	class:ReadFile
+mesh	tiny_obj_loader/tiny_obj_loader.h	/^    mesh_t       mesh;$/;"	m	struct:tinyobj::__anon3
+mesh_t	tiny_obj_loader/tiny_obj_loader.h	/^} mesh_t;$/;"	t	namespace:tinyobj	typeref:struct:tinyobj::__anon2
+minmatch	lodepng/lodepng.h	/^  unsigned minmatch; \/*mininum lz77 length. 3 is normally best, 6 can be better for some PNGs. Default: 0*\/$/;"	m	struct:LodePNGCompressSettings
+minute	lodepng/lodepng.h	/^  unsigned minute;  \/*0-59*\/$/;"	m	struct:LodePNGTime
+mirror	readfile.h	/^	float mirror[4];$/;"	m	class:ReadFile
+month	lodepng/lodepng.h	/^  unsigned month;   \/*1-12*\/$/;"	m	struct:LodePNGTime
+mrand48	rand48/rand48.c	/^mrand48(void)$/;"	f
+name	tiny_obj_loader/tiny_obj_loader.h	/^    std::string  name;$/;"	m	struct:tinyobj::__anon3
+name	tiny_obj_loader/tiny_obj_loader.h	/^    std::string name;$/;"	m	struct:tinyobj::__anon1
+nicematch	lodepng/lodepng.h	/^  unsigned nicematch; \/*stop searching if >= this length found. Set to 258 for best compression. Default: 128*\/$/;"	m	struct:LodePNGCompressSettings
+normal	Shape.h	/^	Vector3 normal;$/;"	m	class:Triangle
+normal	vector.h	/^	Normal normal;$/;"	m	class:LocalGeo
+normal_texname	tiny_obj_loader/tiny_obj_loader.h	/^    std::string normal_texname;$/;"	m	struct:tinyobj::__anon1
+normalize	vector.cpp	/^Normal Normal::normalize() const {$/;"	f	class:Normal
+normalize	vector.cpp	/^Vector3::normalize() const {$/;"	f	class:Vector3
+normals	tiny_obj_loader/tiny_obj_loader.h	/^    std::vector<float>          normals;$/;"	m	struct:tinyobj::__anon2
+nrand48	rand48/rand48.c	/^nrand48(unsigned short xseed[3])$/;"	f
+numcodes	lodepng/lodepng.cpp	/^  unsigned numcodes; \/*number of symbols in the alphabet = number of codes*\/$/;"	m	struct:HuffmanTree	file:
+numcolors	lodepng/lodepng.h	/^  unsigned numcolors; \/*amount of colors, up to 257. Not valid if bits == 16.*\/$/;"	m	struct:LodePNGColorProfile
+obj_shape	tiny_obj_loader/tiny_obj_loader.cc	/^struct obj_shape {$/;"	s	namespace:tinyobj	file:
+objects	Primitive.h	/^	std::vector<std::shared_ptr<Shape>> objects;$/;"	m	class:AggregatePrimitive
+operator %	vector.h	/^	Vector3 operator%(const Vector3& v) const {$/;"	f	class:Vector3
+operator ()	tiny_obj_loader/tiny_obj_loader.cc	/^std::string MaterialFileReader::operator() ($/;"	f	class:tinyobj::MaterialFileReader
+operator *	Point.h	/^	Point operator*(float factor) const {$/;"	f	class:Point
+operator *	color.h	/^	Color operator*(const Color &color) const{$/;"	f	class:Color
+operator *	color.h	/^	Color operator*(float factor) const {$/;"	f	class:Color
+operator *	matrix.h	/^	Matrix operator*(const Matrix &matrix) const{$/;"	f	class:Matrix
+operator *	vector.h	/^	Vector3 operator*(float factor) const {$/;"	f	class:Vector3
+operator +	Point.cpp	/^Point Point::operator + (const Vector3 &p) const{$/;"	f	class:Point
+operator +	color.h	/^	Color operator+(const Color &color) const{$/;"	f	class:Color
+operator +	vector.h	/^	Normal operator+(const Normal &n)const{$/;"	f	class:Normal
+operator +	vector.h	/^	Vector3 operator+(const Vector3 &v) const {$/;"	f	class:Vector3
+operator -	Point.h	/^	Point operator-(const Point &p) const{$/;"	f	class:Point
+operator -	color.h	/^	Color operator-(const Color &color) const {$/;"	f	class:Color
+operator -	vector.h	/^	Normal operator-(const Normal &n)const{$/;"	f	class:Normal
+operator -	vector.h	/^	Vector3 operator-(const Vector3 &v) const {$/;"	f	class:Vector3
+operator <	tiny_obj_loader/tiny_obj_loader.cc	/^static inline bool operator<(const vertex_index& a, const vertex_index& b)$/;"	f	namespace:tinyobj
+operator <<	Log.cpp	/^LogStream& LogStream::operator<<(const void* p)$/;"	f	class:LogStream
+operator <<	Log.cpp	/^LogStream& LogStream::operator<<(double v)$/;"	f	class:LogStream
+operator <<	Log.cpp	/^LogStream& LogStream::operator<<(int v)$/;"	f	class:LogStream
+operator <<	Log.cpp	/^LogStream& LogStream::operator<<(long long v)$/;"	f	class:LogStream
+operator <<	Log.cpp	/^LogStream& LogStream::operator<<(long v)$/;"	f	class:LogStream
+operator <<	Log.cpp	/^LogStream& LogStream::operator<<(short v)$/;"	f	class:LogStream
+operator <<	Log.cpp	/^LogStream& LogStream::operator<<(unsigned int v)$/;"	f	class:LogStream
+operator <<	Log.cpp	/^LogStream& LogStream::operator<<(unsigned long long v)$/;"	f	class:LogStream
+operator <<	Log.cpp	/^LogStream& LogStream::operator<<(unsigned long v)$/;"	f	class:LogStream
+operator <<	Log.cpp	/^LogStream& LogStream::operator<<(unsigned short v)$/;"	f	class:LogStream
+operator <<	Log.h	/^	self& operator<<(bool v) $/;"	f	class:LogStream
+operator <<	Log.h	/^	self& operator<<(char v)$/;"	f	class:LogStream
+operator <<	Log.h	/^	self& operator<<(const char* str)$/;"	f	class:LogStream
+operator <<	Log.h	/^	self& operator<<(const std::string& v)$/;"	f	class:LogStream
+operator <<	Log.h	/^	self& operator<<(const unsigned char* str)$/;"	f	class:LogStream
+operator <<	Log.h	/^	self& operator<<(float v)$/;"	f	class:LogStream
+operator <<	Log.h	/^	void operator<<(Tag tag) $/;"	f	class:LogStream
+operator =	lodepng/lodepng.cpp	/^State& State::operator=(const State& other)$/;"	f	class:lodepng::State
+operator ==	matrix.h	/^	bool operator==(const Matrix &m) const{$/;"	f	class:Matrix
+operator ==	vector.h	/^	bool operator==(const Vector3 &v) const {$/;"	f	class:Vector3
+output	readfile.h	/^	std::string output;$/;"	m	class:ReadFile
+override	Primitive.h	/^	BBox getBoundingBox() const override;$/;"	m	class:GeometricPrimitive
+override	Primitive.h	/^	Vector3 getMidPoint() const override;$/;"	m	class:GeometricPrimitive
+override	Primitive.h	/^	bool interset(Ray& ray, float* thit, float& tmin, Intersection* in) override;$/;"	m	class:AggregatePrimitive
+override	Primitive.h	/^	bool interset(Ray& ray, float* thit,float& tmin, Intersection* in) override;$/;"	m	class:GeometricPrimitive
+override	Primitive.h	/^	virtual Color getColor(const Vector3& point) override;$/;"	m	class:GeometricPrimitive
+override	Shape.h	/^	BBox getBoundingBox() override;$/;"	m	class:Sphere
+override	Shape.h	/^	BBox getBoundingBox() override;$/;"	m	class:Triangle
+override	Shape.h	/^	Vector3 getMidPoint() override;$/;"	m	class:Sphere
+override	Shape.h	/^	Vector3 getMidPoint() override;$/;"	m	class:Triangle
+override	Shape.h	/^	bool intersect(Ray& ray, float* thit, float& tmin, LocalGeo* local) override;$/;"	m	class:Triangle
+override	Shape.h	/^	bool intersect(Ray& ray, float* thit,float& tmin, LocalGeo* local) override;$/;"	m	class:Sphere
+override	Shape.h	/^	virtual bool intersect(Ray& ray, float* thit, float& tmin, LocalGeo* local) override;$/;"	m	class:Box
+override	Shape.h	/^	virtual bool intersect(Ray& ray, float* thit, float& tmin, LocalGeo* local) override;$/;"	m	class:Cylinder
+override	Shape.h	/^	virtual bool intersect(Ray& ray, float* thit, float& tmin, LocalGeo* local) override;$/;"	m	class:Rectangle
+override	Shape.h	/^	virtual bool intersect(Ray& ray, float* thit, float& tmin, LocalGeo* local) override;$/;"	m	class:Torus
+override	Shape.h	/^	virtual bool intersect(Ray& ray, float* thit,float& tmin, LocalGeo* local) override;$/;"	m	class:Disk
+override	Shape.h	/^	void GetTexturePosition(const Vector3& point,float& u, float& v) override;$/;"	m	class:Sphere
+override	Shape.h	/^	void GetTexturePosition(const Vector3& point,float& u, float& v) override;$/;"	m	class:Triangle
+override	texture.h	/^	virtual Color getColor(const float& u,const float& v) override;$/;"	m	class:ImageTexture
+p	matrix.h	/^	float p[16];$/;"	m	class:Matrix
+p0_	Shape.h	/^	Vector3 p0_, p1_, p2_;$/;"	m	class:Triangle
+p1_	Shape.h	/^	Vector3 p0_, p1_, p2_;$/;"	m	class:Triangle
+p2_	Shape.h	/^	Vector3 p0_, p1_, p2_;$/;"	m	class:Triangle
+paethPredictor	lodepng/lodepng.cpp	/^static unsigned char paethPredictor(short a, short b, short c)$/;"	f	file:
+palette	lodepng/lodepng.h	/^  unsigned char palette[1024]; \/*Remembers up to the first 256 RGBA colors, in no particular order*\/$/;"	m	struct:LodePNGColorProfile
+palette	lodepng/lodepng.h	/^  unsigned char* palette; \/*palette in RGBARGBA... order. When allocated, must be either 0, or have size 1024*\/$/;"	m	struct:LodePNGColorMode
+palettesize	lodepng/lodepng.h	/^  size_t palettesize; \/*palette size in number of colors (amount of bytes is 4 * palettesize)*\/$/;"	m	struct:LodePNGColorMode
+parseFloat	tiny_obj_loader/tiny_obj_loader.cc	/^static inline float parseFloat(const char*& token)$/;"	f	namespace:tinyobj
+parseFloat2	tiny_obj_loader/tiny_obj_loader.cc	/^static inline void parseFloat2($/;"	f	namespace:tinyobj
+parseFloat3	tiny_obj_loader/tiny_obj_loader.cc	/^static inline void parseFloat3($/;"	f	namespace:tinyobj
+parseInt	tiny_obj_loader/tiny_obj_loader.cc	/^static inline int parseInt(const char*& token)$/;"	f	namespace:tinyobj
+parseString	tiny_obj_loader/tiny_obj_loader.cc	/^static inline std::string parseString(const char*& token)$/;"	f	namespace:tinyobj
+parseTriple	tiny_obj_loader/tiny_obj_loader.cc	/^static vertex_index parseTriple($/;"	f	namespace:tinyobj
+perspectiveFovLH	matrix.h	/^	static Matrix perspectiveFovLH(float fieldOfView, float aspect, float znear, float zfar){$/;"	f	class:Matrix
+phys_defined	lodepng/lodepng.h	/^  unsigned phys_defined; \/*if 0, there is no pHYs chunk and the values below are undefined, if 1 else there is one*\/$/;"	m	struct:LodePNGInfo
+phys_unit	lodepng/lodepng.h	/^  unsigned phys_unit; \/*may be 0 (unknown unit) or 1 (metre)*\/$/;"	m	struct:LodePNGInfo
+phys_x	lodepng/lodepng.h	/^  unsigned phys_x; \/*pixels per unit in x direction*\/$/;"	m	struct:LodePNGInfo
+phys_y	lodepng/lodepng.h	/^  unsigned phys_y; \/*pixels per unit in y direction*\/$/;"	m	struct:LodePNGInfo
+pixels	film.h	/^	unsigned int* pixels;$/;"	m	class:Film
+pixels	image.h	/^	uint32_t *pixels;$/;"	m	class:Image
+point	light.h	/^	Vector3 point;$/;"	m	class:PLight
+pos	Ray.h	/^	Point pos;$/;"	m	class:Ray
+pos	vector.h	/^	Point pos;$/;"	m	class:LocalGeo
+position	vertex.h	/^	Vector2 position;$/;"	m	class:Vertex2
+position_	mesh.h	/^	Vector3 position_;$/;"	m	class:Mesh
+positions	tiny_obj_loader/tiny_obj_loader.h	/^    std::vector<float>          positions;$/;"	m	struct:tinyobj::__anon2
+postProcessScanlines	lodepng/lodepng.cpp	/^static unsigned postProcessScanlines(unsigned char* out, unsigned char* in,$/;"	f	file:
+preProcessScanlines	lodepng/lodepng.cpp	/^static unsigned preProcessScanlines(unsigned char** out, size_t* outsize, const unsigned char* in,$/;"	f	file:
+predefined_filters	lodepng/lodepng.h	/^  const unsigned char* predefined_filters;$/;"	m	struct:LodePNGEncoderSettings
+primitive	Ray.h	/^	Primitive* primitive;$/;"	m	class:Intersection
+primitive	RayTracer.h	/^	Primitive* primitive;$/;"	m	class:RayTracer
+primitives	RayTracer.h	/^	std::vector<std::shared_ptr<Primitive>> primitives;$/;"	m	class:RayTracer
+primitives	readfile.h	/^	std::vector<std::shared_ptr<Primitive>> primitives;$/;"	m	class:ReadFile
+putPixel	canvas.cpp	/^void Canvas::putPixel(int x, int y, const Color &color)$/;"	f	class:Canvas
+r	FreeImage.h	/^	double r;$/;"	m	struct:tagFICOMPLEX
+r	color.h	/^	float r;$/;"	m	class:Color
+radius	Shape.h	/^	float radius;$/;"	m	class:Sphere
+ratio	camera.h	/^	float ratio;$/;"	m	class:Camera
+readBitFromReversedStream	lodepng/lodepng.cpp	/^static unsigned char readBitFromReversedStream(size_t* bitpointer, const unsigned char* bitstream)$/;"	f	file:
+readBitFromStream	lodepng/lodepng.cpp	/^static unsigned char readBitFromStream(size_t* bitpointer, const unsigned char* bitstream)$/;"	f	file:
+readBitsFromReversedStream	lodepng/lodepng.cpp	/^static unsigned readBitsFromReversedStream(size_t* bitpointer, const unsigned char* bitstream, size_t nbits)$/;"	f	file:
+readBitsFromStream	lodepng/lodepng.cpp	/^static unsigned readBitsFromStream(size_t* bitpointer, const unsigned char* bitstream, size_t nbits)$/;"	f	file:
+readChunk_PLTE	lodepng/lodepng.cpp	/^static unsigned readChunk_PLTE(LodePNGColorMode* color, const unsigned char* data, size_t chunkLength)$/;"	f	file:
+readChunk_bKGD	lodepng/lodepng.cpp	/^static unsigned readChunk_bKGD(LodePNGInfo* info, const unsigned char* data, size_t chunkLength)$/;"	f	file:
+readChunk_iTXt	lodepng/lodepng.cpp	/^static unsigned readChunk_iTXt(LodePNGInfo* info, const LodePNGDecompressSettings* zlibsettings,$/;"	f	file:
+readChunk_pHYs	lodepng/lodepng.cpp	/^static unsigned readChunk_pHYs(LodePNGInfo* info, const unsigned char* data, size_t chunkLength)$/;"	f	file:
+readChunk_tEXt	lodepng/lodepng.cpp	/^static unsigned readChunk_tEXt(LodePNGInfo* info, const unsigned char* data, size_t chunkLength)$/;"	f	file:
+readChunk_tIME	lodepng/lodepng.cpp	/^static unsigned readChunk_tIME(LodePNGInfo* info, const unsigned char* data, size_t chunkLength)$/;"	f	file:
+readChunk_tRNS	lodepng/lodepng.cpp	/^static unsigned readChunk_tRNS(LodePNGColorMode* color, const unsigned char* data, size_t chunkLength)$/;"	f	file:
+readChunk_zTXt	lodepng/lodepng.cpp	/^static unsigned readChunk_zTXt(LodePNGInfo* info, const LodePNGDecompressSettings* zlibsettings,$/;"	f	file:
+readUserDefinedFile	scene.cpp	/^void Scene::readUserDefinedFile(RayTracer& raytrace, Camera& camera)$/;"	f	class:Scene
+read_text_chunks	lodepng/lodepng.h	/^  unsigned read_text_chunks; \/*if false but remember_unknown_chunks is true, they're stored in the unknown chunks*\/$/;"	m	struct:LodePNGDecoderSettings
+readfile	readfile.cpp	/^void ReadFile::readfile(const char *name){$/;"	f	class:ReadFile
+readvals	readfile.cpp	/^bool ReadFile::readvals(stringstream &s, const int numvals, float * values){$/;"	f	class:ReadFile
+red	FreeImage.h	/^	WORD red;$/;"	m	struct:tagFIRGB16
+red	FreeImage.h	/^	WORD red;$/;"	m	struct:tagFIRGBA16
+red	FreeImage.h	/^	float red;$/;"	m	struct:tagFIRGBAF
+red	FreeImage.h	/^	float red;$/;"	m	struct:tagFIRGBF
+remember_unknown_chunks	lodepng/lodepng.h	/^  unsigned remember_unknown_chunks;$/;"	m	struct:LodePNGDecoderSettings
+removePaddingBits	lodepng/lodepng.cpp	/^static void removePaddingBits(unsigned char* out, const unsigned char* in,$/;"	f	file:
+render	scene.cpp	/^void Scene::render(int samples){$/;"	f	class:Scene
+reset	Log.h	/^	void reset() { cur_ = data_; }$/;"	f	class:LogBuffer
+resetBuffer	Log.h	/^	void resetBuffer() { buffer_.reset(); }$/;"	f	class:LogStream
+rgbBlue	FreeImage.h	/^  BYTE rgbBlue;$/;"	m	struct:tagRGBQUAD
+rgbGreen	FreeImage.h	/^  BYTE rgbGreen;$/;"	m	struct:tagRGBQUAD
+rgbRed	FreeImage.h	/^  BYTE rgbRed;$/;"	m	struct:tagRGBQUAD
+rgbReserved	FreeImage.h	/^  BYTE rgbReserved;$/;"	m	struct:tagRGBQUAD
+rgba16ToPixel	lodepng/lodepng.cpp	/^static void rgba16ToPixel(unsigned char* out, size_t i,$/;"	f	file:
+rgba8ToPixel	lodepng/lodepng.cpp	/^static unsigned rgba8ToPixel(unsigned char* out, size_t i,$/;"	f	file:
+rgbtBlue	FreeImage.h	/^  BYTE rgbtBlue;$/;"	m	struct:tagRGBTRIPLE
+rgbtGreen	FreeImage.h	/^  BYTE rgbtGreen;$/;"	m	struct:tagRGBTRIPLE
+rgbtRed	FreeImage.h	/^  BYTE rgbtRed;$/;"	m	struct:tagRGBTRIPLE
+right	kdtree.h	/^	KDNode *right;$/;"	m	class:KDNode
+rightmultiply	readfile.cpp	/^void rightmultiply(const Matrix & M, stack<Matrix> &transfstack)$/;"	f
+rotate	matrix.h	/^	static Matrix rotate(const float degree,const Vector3 &axis){$/;"	f	class:Matrix
+rotation	matrix.h	/^	static Matrix rotation(const Vector3 &r) {$/;"	f	class:Matrix
+rotationX	matrix.h	/^	static Matrix rotationX(float angle){$/;"	f	class:Matrix
+rotationY	matrix.h	/^	static Matrix rotationY(float angle) {$/;"	f	class:Matrix
+rotationZ	matrix.h	/^	static Matrix rotationZ(float angle) {$/;"	f	class:Matrix
+save_file	lodepng/lodepng.cpp	/^void save_file(const std::vector<unsigned char>& buffer, const std::string& filename)$/;"	f	namespace:lodepng
+scale	matrix.h	/^	static Matrix scale(const Vector3 &s) {$/;"	f	class:Matrix
+searchCodeIndex	lodepng/lodepng.cpp	/^static size_t searchCodeIndex(const unsigned* array, size_t array_size, size_t value)$/;"	f	file:
+second	lodepng/lodepng.h	/^  unsigned second;  \/*0-60 (to allow for leap seconds)*\/$/;"	m	struct:LodePNGTime
+seed48	rand48/rand48.c	/^seed48(unsigned short xseed[3])$/;"	f
+self	Log.h	/^	typedef LogStream self;$/;"	t	class:LogStream
+setBitOfReversedStream	lodepng/lodepng.cpp	/^static void setBitOfReversedStream(size_t* bitpointer, unsigned char* bitstream, unsigned char bit)$/;"	f	file:
+setBitOfReversedStream0	lodepng/lodepng.cpp	/^static void setBitOfReversedStream0(size_t* bitpointer, unsigned char* bitstream, unsigned char bit)$/;"	f	file:
+setColor	texture.cpp	/^void ImageTexture::setColor(const Color& color)$/;"	f	class:ImageTexture
+setMaterial	Primitive.cpp	/^void AggregatePrimitive::setMaterial(const Material& marptr){$/;"	f	class:AggregatePrimitive
+shading	RayTracer.cpp	/^Color* RayTracer::shading(LocalGeo local, BRDF brdf, Ray lray, Color lcolor){$/;"	f	class:RayTracer
+shape	Primitive.h	/^	Shape* shape;$/;"	m	class:GeometricPrimitive
+shape	RayTracer.h	/^	Shape* shape;$/;"	m	class:RayTracer
+shape_t	tiny_obj_loader/tiny_obj_loader.h	/^} shape_t;$/;"	t	namespace:tinyobj	typeref:struct:tinyobj::__anon3
+shiness	readfile.h	/^	float shiness;$/;"	m	class:ReadFile
+shininess	BRDF.h	/^	float shininess;$/;"	m	class:BRDF
+shininess	tiny_obj_loader/tiny_obj_loader.h	/^    float shininess;$/;"	m	struct:tinyobj::__anon1
+size	lodepng/lodepng.cpp	/^  size_t size; \/*size in number of unsigned longs*\/$/;"	m	struct:uivector	file:
+size	lodepng/lodepng.cpp	/^  size_t size; \/*used size*\/$/;"	m	struct:ucvector	file:
+size_	Log.h	/^		int size_;$/;"	m	class:Logger::SourceFile
+specular	readfile.h	/^	float specular[4];$/;"	m	class:ReadFile
+specular	tiny_obj_loader/tiny_obj_loader.h	/^    float specular[3];$/;"	m	struct:tinyobj::__anon1
+specular_texname	tiny_obj_loader/tiny_obj_loader.h	/^    std::string specular_texname;$/;"	m	struct:tinyobj::__anon1
+split	foundation.h	/^split(const std::string &str, char delimiter) {$/;"	f
+srand48	rand48/rand48.c	/^srand48(long seed)$/;"	f
+standardsView	matrix.h	/^	static Matrix standardsView(int w,int h){$/;"	f	class:Matrix
+stream	Log.h	/^	LogStream& stream() { return stream_; }$/;"	f	class:Logger
+stream_	Log.h	/^	LogStream stream_;$/;"	m	class:Logger
+string_cleanup	lodepng/lodepng.cpp	/^static void string_cleanup(char** out)$/;"	f	file:
+string_init	lodepng/lodepng.cpp	/^static void string_init(char** out)$/;"	f	file:
+string_resize	lodepng/lodepng.cpp	/^static unsigned string_resize(char** out, size_t size)$/;"	f	file:
+string_set	lodepng/lodepng.cpp	/^static void string_set(char** out, const char* in)$/;"	f	file:
+symbols	lodepng/lodepng.cpp	/^  uivector symbols;$/;"	m	struct:Coin	file:
+t	vector.h	/^	float t;$/;"	m	class:LocalGeo
+t0_	Shape.h	/^	Vector3 t0_, t1_, t2_;		\/\/texture coordinates$/;"	m	class:Triangle
+t1_	Shape.h	/^	Vector3 t0_, t1_, t2_;		\/\/texture coordinates$/;"	m	class:Triangle
+t2_	Shape.h	/^	Vector3 t0_, t1_, t2_;		\/\/texture coordinates$/;"	m	class:Triangle
+t_max	Ray.h	/^	float t_min, t_max;$/;"	m	class:Ray
+t_min	Ray.h	/^	float t_min, t_max;$/;"	m	class:Ray
+tagBITMAPINFO	FreeImage.h	/^typedef struct tagBITMAPINFO { $/;"	s
+tagBITMAPINFOHEADER	FreeImage.h	/^typedef struct tagBITMAPINFOHEADER{$/;"	s
+tagFICOMPLEX	FreeImage.h	/^typedef struct tagFICOMPLEX {$/;"	s
+tagFIRGB16	FreeImage.h	/^typedef struct tagFIRGB16 {$/;"	s
+tagFIRGBA16	FreeImage.h	/^typedef struct tagFIRGBA16 {$/;"	s
+tagFIRGBAF	FreeImage.h	/^typedef struct tagFIRGBAF {$/;"	s
+tagFIRGBF	FreeImage.h	/^typedef struct tagFIRGBF {$/;"	s
+tagRGBQUAD	FreeImage.h	/^typedef struct tagRGBQUAD {$/;"	s
+tagRGBTRIPLE	FreeImage.h	/^typedef struct tagRGBTRIPLE {$/;"	s
+target	camera.h	/^	Vector3 target;$/;"	m	class:Camera
+test	main.cpp	/^void test() $/;"	f
+testAll	small_test.cpp	/^void SmallTest::testAll()$/;"	f	class:SmallTest
+testBBox	small_test.cpp	/^void SmallTest::testBBox()$/;"	f	class:SmallTest
+testObjectModel	scene.cpp	/^void Scene::testObjectModel(RayTracer& raytrace, Camera& camera)$/;"	f	class:Scene
+texcoords	tiny_obj_loader/tiny_obj_loader.h	/^    std::vector<float>          texcoords;$/;"	m	struct:tinyobj::__anon2
+text_compression	lodepng/lodepng.h	/^  unsigned text_compression;$/;"	m	struct:LodePNGEncoderSettings
+text_keys	lodepng/lodepng.h	/^  char** text_keys; \/*the keyword of a text chunk (e.g. "Comment")*\/$/;"	m	struct:LodePNGInfo
+text_num	lodepng/lodepng.h	/^  size_t text_num; \/*the amount of texts in these char** buffers (there may be more texts in itext)*\/$/;"	m	struct:LodePNGInfo
+text_strings	lodepng/lodepng.h	/^  char** text_strings; \/*the actual text*\/$/;"	m	struct:LodePNGInfo
+texture_	BRDF.h	/^	Texture* texture_;$/;"	m	class:TextureBRDF
+texture_	material.h	/^	Texture texture_;$/;"	m	class:Material
+thit	RayTracer.h	/^	float thit;$/;"	m	class:RayTracer
+time	lodepng/lodepng.h	/^  LodePNGTime time;$/;"	m	struct:LodePNGInfo
+time_defined	lodepng/lodepng.h	/^  unsigned time_defined; \/*set to 1 to make the encoder generate a tIME chunk*\/$/;"	m	struct:LodePNGInfo
+tinyobj	tiny_obj_loader/tiny_obj_loader.cc	/^namespace tinyobj {$/;"	n	file:
+tinyobj	tiny_obj_loader/tiny_obj_loader.h	/^namespace tinyobj {$/;"	n
+toString	Log.h	/^	std::string toString() const { return std::string(data_, length()); }$/;"	f	class:LogBuffer
+trace	RayTracer.cpp	/^void RayTracer::trace(Ray& ray, int depth, Color& color){$/;"	f	class:RayTracer
+trans	Primitive.h	/^	Matrix trans;$/;"	m	class:GeometricPrimitive
+trans	Shape.cpp	/^void Box::trans(Matrix& matrix){$/;"	f	class:Box
+trans	Shape.cpp	/^void Cylinder::trans(Matrix& matrix){$/;"	f	class:Cylinder
+trans	Shape.cpp	/^void Disk::trans(Matrix& matrix){$/;"	f	class:Disk
+trans	Shape.cpp	/^void Rectangle::trans(Matrix& matrix){$/;"	f	class:Rectangle
+trans	Shape.cpp	/^void Torus::trans(Matrix& matrix){$/;"	f	class:Torus
+trans	Shape.h	/^	void trans(Matrix& matrix){$/;"	f	class:Sphere
+trans	Shape.h	/^	void trans(Matrix& matrix){$/;"	f	class:Triangle
+transform	matrix.h	/^	Vector3 transform(const Vector3 &v) const {$/;"	f	class:Matrix
+transformD	matrix.h	/^	Vector3 transformD(const Vector3 &v) const {$/;"	f	class:Matrix
+translation	matrix.h	/^	static Matrix translation(const Vector3 &t) {$/;"	f	class:Matrix
+transmittance	tiny_obj_loader/tiny_obj_loader.h	/^    float transmittance[3];$/;"	m	struct:tinyobj::__anon1
+transposition	matrix.h	/^	Matrix transposition(){$/;"	f	class:Matrix
+tree1d	lodepng/lodepng.cpp	/^  unsigned* tree1d;$/;"	m	struct:HuffmanTree	file:
+tree2d	lodepng/lodepng.cpp	/^  unsigned* tree2d;$/;"	m	struct:HuffmanTree	file:
+triangles	kdtree.h	/^	std::vector<std::shared_ptr<Primitive>> triangles;	\/\/only for triangles$/;"	m	class:KDNode
+tris_	mesh.h	/^	std::vector<std::shared_ptr<Primitive>> tris_;$/;"	m	class:Mesh
+ucvector	lodepng/lodepng.cpp	/^typedef struct ucvector$/;"	s	file:
+ucvector	lodepng/lodepng.cpp	/^} ucvector;$/;"	t	typeref:struct:ucvector	file:
+ucvector_cleanup	lodepng/lodepng.cpp	/^static void ucvector_cleanup(void* p)$/;"	f	file:
+ucvector_init	lodepng/lodepng.cpp	/^static void ucvector_init(ucvector* p)$/;"	f	file:
+ucvector_init_buffer	lodepng/lodepng.cpp	/^static void ucvector_init_buffer(ucvector* p, unsigned char* buffer, size_t size)$/;"	f	file:
+ucvector_push_back	lodepng/lodepng.cpp	/^static unsigned ucvector_push_back(ucvector* p, unsigned char c)$/;"	f	file:
+ucvector_reserve	lodepng/lodepng.cpp	/^static unsigned ucvector_reserve(ucvector* p, size_t allocsize)$/;"	f	file:
+ucvector_resize	lodepng/lodepng.cpp	/^static unsigned ucvector_resize(ucvector* p, size_t size)$/;"	f	file:
+ucvector_resizev	lodepng/lodepng.cpp	/^static unsigned ucvector_resizev(ucvector* p, size_t size, unsigned char value)$/;"	f	file:
+uint32	color.cpp	/^uint32_t Color::uint32() const$/;"	f	class:Color
+uivector	lodepng/lodepng.cpp	/^typedef struct uivector$/;"	s	file:
+uivector	lodepng/lodepng.cpp	/^} uivector;$/;"	t	typeref:struct:uivector	file:
+uivector_cleanup	lodepng/lodepng.cpp	/^static void uivector_cleanup(void* p)$/;"	f	file:
+uivector_copy	lodepng/lodepng.cpp	/^static unsigned uivector_copy(uivector* p, const uivector* q)$/;"	f	file:
+uivector_init	lodepng/lodepng.cpp	/^static void uivector_init(uivector* p)$/;"	f	file:
+uivector_push_back	lodepng/lodepng.cpp	/^static unsigned uivector_push_back(uivector* p, unsigned c)$/;"	f	file:
+uivector_reserve	lodepng/lodepng.cpp	/^static unsigned uivector_reserve(uivector* p, size_t allocsize)$/;"	f	file:
+uivector_resize	lodepng/lodepng.cpp	/^static unsigned uivector_resize(uivector* p, size_t size)$/;"	f	file:
+uivector_resizev	lodepng/lodepng.cpp	/^static unsigned uivector_resizev(uivector* p, size_t size, unsigned value)$/;"	f	file:
+unfilter	lodepng/lodepng.cpp	/^static unsigned unfilter(unsigned char* out, const unsigned char* in, unsigned w, unsigned h, unsigned bpp)$/;"	f	file:
+unfilterScanline	lodepng/lodepng.cpp	/^static unsigned unfilterScanline(unsigned char* recon, const unsigned char* scanline, const unsigned char* precon,$/;"	f	file:
+unknown_chunks_data	lodepng/lodepng.h	/^  unsigned char* unknown_chunks_data[3];$/;"	m	struct:LodePNGInfo
+unknown_chunks_size	lodepng/lodepng.h	/^  size_t unknown_chunks_size[3]; \/*size in bytes of the unknown chunks, given for protection*\/$/;"	m	struct:LodePNGInfo
+unknown_parameter	tiny_obj_loader/tiny_obj_loader.h	/^    std::map<std::string, std::string> unknown_parameter;$/;"	m	struct:tinyobj::__anon1
+up	camera.h	/^	Vector3 up;$/;"	m	class:Camera
+updateHashChain	lodepng/lodepng.cpp	/^static void updateHashChain(Hash* hash, size_t wpos, unsigned hashval, unsigned short numzeros)$/;"	f	file:
+updateVertex	tiny_obj_loader/tiny_obj_loader.cc	/^updateVertex($/;"	f	namespace:tinyobj
+update_adler32	lodepng/lodepng.cpp	/^static unsigned update_adler32(unsigned adler, const unsigned char* data, unsigned len)$/;"	f	file:
+use_lz77	lodepng/lodepng.h	/^  unsigned use_lz77; \/*whether or not to use LZ77. Should be 1 for proper compression.*\/$/;"	m	struct:LodePNGCompressSettings
+v	tiny_obj_loader/tiny_obj_loader.cc	/^  std::vector<float> v;$/;"	m	struct:tinyobj::obj_shape	file:
+v_idx	tiny_obj_loader/tiny_obj_loader.cc	/^  int v_idx, vt_idx, vn_idx;$/;"	m	struct:tinyobj::vertex_index	file:
+val	lodepng/lodepng.cpp	/^  int* val; \/*circular pos to hash value*\/$/;"	m	struct:Hash	file:
+vertex	readfile.h	/^	std::vector<Vector3> vertex;$/;"	m	class:ReadFile
+vertex_index	tiny_obj_loader/tiny_obj_loader.cc	/^  vertex_index() {};$/;"	f	struct:tinyobj::vertex_index
+vertex_index	tiny_obj_loader/tiny_obj_loader.cc	/^  vertex_index(int idx) : v_idx(idx), vt_idx(idx), vn_idx(idx) {};$/;"	f	struct:tinyobj::vertex_index
+vertex_index	tiny_obj_loader/tiny_obj_loader.cc	/^  vertex_index(int vidx, int vtidx, int vnidx) : v_idx(vidx), vt_idx(vtidx), vn_idx(vnidx) {};$/;"	f	struct:tinyobj::vertex_index
+vertex_index	tiny_obj_loader/tiny_obj_loader.cc	/^struct vertex_index {$/;"	s	namespace:tinyobj	file:
+vn	tiny_obj_loader/tiny_obj_loader.cc	/^  std::vector<float> vn;$/;"	m	struct:tinyobj::obj_shape	file:
+vn_idx	tiny_obj_loader/tiny_obj_loader.cc	/^  int v_idx, vt_idx, vn_idx;$/;"	m	struct:tinyobj::vertex_index	file:
+vt	tiny_obj_loader/tiny_obj_loader.cc	/^  std::vector<float> vt;$/;"	m	struct:tinyobj::obj_shape	file:
+vt_idx	tiny_obj_loader/tiny_obj_loader.cc	/^  int v_idx, vt_idx, vn_idx;$/;"	m	struct:tinyobj::vertex_index	file:
+w	sampler.h	/^	int h, w;$/;"	m	class:Sampler
+weight	lodepng/lodepng.cpp	/^  float weight; \/*the sum of all weights in this coin*\/$/;"	m	struct:Coin	file:
+width	film.h	/^	int height, width;$/;"	m	class:Film
+width	image.h	/^	int width;$/;"	m	class:Image
+width	texture.h	/^	unsigned int width;$/;"	m	class:ImageTexture
+width	variables.cpp	/^int width;$/;"	v
+width_recp	camera.h	/^	float width_recp;$/;"	m	class:Camera
+windowsize	lodepng/lodepng.h	/^  unsigned windowsize; \/*must be a power of two <= 32768. higher compresses more but is slower. Default value: 2048.*\/$/;"	m	struct:LodePNGCompressSettings
+writeImage	film.cpp	/^void Film::writeImage(){$/;"	f	class:Film
+writeLZ77data	lodepng/lodepng.cpp	/^static void writeLZ77data(size_t* bp, ucvector* out, const uivector* lz77_encoded,$/;"	f	file:
+writeSignature	lodepng/lodepng.cpp	/^static void writeSignature(ucvector* out)$/;"	f	file:
+x	Point.h	/^	float x, y, z;$/;"	m	class:Point
+x	sampler.h	/^	float x, y;$/;"	m	class:Sample
+x	vector.h	/^	float x, y, z;$/;"	m	class:Normal
+x	vector.h	/^	float x;$/;"	m	class:Vector2
+x	vector.h	/^	float x;$/;"	m	class:Vector3
+x0	BBox.h	/^	float x0, y0, z0, x1, y1, z1;$/;"	m	class:BBox
+x1	BBox.h	/^	float x0, y0, z0, x1, y1, z1;$/;"	m	class:BBox
+x_direction	camera.h	/^	Vector3 x_direction;$/;"	m	class:Camera
+x_spacing	camera.h	/^	float x_spacing;$/;"	m	class:Camera
+y	Point.h	/^	float x, y, z;$/;"	m	class:Point
+y	sampler.h	/^	float x, y;$/;"	m	class:Sample
+y	vector.h	/^	float x, y, z;$/;"	m	class:Normal
+y	vector.h	/^	float y;$/;"	m	class:Vector2
+y	vector.h	/^	float y;$/;"	m	class:Vector3
+y0	BBox.h	/^	float x0, y0, z0, x1, y1, z1;$/;"	m	class:BBox
+y1	BBox.h	/^	float x0, y0, z0, x1, y1, z1;$/;"	m	class:BBox
+y_direction	camera.h	/^	Vector3 y_direction;$/;"	m	class:Camera
+y_spacing	camera.h	/^	float y_spacing;$/;"	m	class:Camera
+year	lodepng/lodepng.h	/^  unsigned year;    \/*2 bytes used (0-65535)*\/$/;"	m	struct:LodePNGTime
+z	Point.h	/^	float x, y, z;$/;"	m	class:Point
+z	vector.h	/^	float x, y, z;$/;"	m	class:Normal
+z	vector.h	/^	float z;$/;"	m	class:Vector3
+z0	BBox.h	/^	float x0, y0, z0, x1, y1, z1;$/;"	m	class:BBox
+z1	BBox.h	/^	float x0, y0, z0, x1, y1, z1;$/;"	m	class:BBox
+zero	Log.cpp	/^const char* zero = digits + 9;$/;"	v
+zeros	lodepng/lodepng.cpp	/^  unsigned short* zeros; \/*length of zeros streak, used as a second hash chain*\/$/;"	m	struct:Hash	file:
+zlib_compress	lodepng/lodepng.cpp	/^static unsigned zlib_compress(unsigned char** out, size_t* outsize, const unsigned char* in,$/;"	f	file:
+zlib_decompress	lodepng/lodepng.cpp	/^static unsigned zlib_decompress(unsigned char** out, size_t* outsize, const unsigned char* in,$/;"	f	file:
+zlibsettings	lodepng/lodepng.h	/^  LodePNGCompressSettings zlibsettings; \/*settings for the zlib encoder, such as window size, ...*\/$/;"	m	struct:LodePNGEncoderSettings
+zlibsettings	lodepng/lodepng.h	/^  LodePNGDecompressSettings zlibsettings; \/*in here is the setting to ignore Adler32 checksums*\/$/;"	m	struct:LodePNGDecoderSettings
+~AggregatePrimitive	Primitive.cpp	/^AggregatePrimitive::~AggregatePrimitive(){$/;"	f	class:AggregatePrimitive
+~BBox	BBox.cpp	/^BBox::~BBox()$/;"	f	class:BBox
+~BRDF	BRDF.cpp	/^BRDF::~BRDF()$/;"	f	class:BRDF
+~Camera	camera.cpp	/^Camera::~Camera()$/;"	f	class:Camera
+~Film	film.h	/^	~Film(){$/;"	f	class:Film
+~GeometricPrimitive	Primitive.cpp	/^GeometricPrimitive::~GeometricPrimitive(){$/;"	f	class:GeometricPrimitive
+~Image	image.h	/^	virtual ~Image(){$/;"	f	class:Image
+~Intersection	Ray.h	/^	~Intersection(){}$/;"	f	class:Intersection
+~LocalGeo	vector.h	/^	~LocalGeo(){}$/;"	f	class:LocalGeo
+~LodePNGState	lodepng/lodepng.h	/^  virtual ~LodePNGState(){}$/;"	f	struct:LodePNGState
+~Logger	Log.cpp	/^Logger::~Logger()$/;"	f	class:Logger
+~Material	material.cpp	/^Material::~Material()$/;"	f	class:Material
+~MaterialFileReader	tiny_obj_loader/tiny_obj_loader.h	/^        virtual ~MaterialFileReader() {}$/;"	f	class:tinyobj::MaterialFileReader
+~MaterialReader	tiny_obj_loader/tiny_obj_loader.h	/^    virtual ~MaterialReader(){}$/;"	f	class:tinyobj::MaterialReader
+~Normal	vector.h	/^	~Normal(){}$/;"	f	class:Normal
+~Point	Point.h	/^	~Point(){}$/;"	f	class:Point
+~Ray	Ray.h	/^	~Ray(){}$/;"	f	class:Ray
+~RayTracer	RayTracer.cpp	/^RayTracer::~RayTracer()$/;"	f	class:RayTracer
+~ReadFile	readfile.h	/^	~ReadFile(){}$/;"	f	class:ReadFile
+~Sampler	sampler.cpp	/^Sampler::~Sampler()$/;"	f	class:Sampler
+~Sphere	Shape.cpp	/^Sphere::~Sphere(){$/;"	f	class:Sphere
+~State	lodepng/lodepng.cpp	/^State::~State()$/;"	f	class:lodepng::State
+~Texture	texture.h	/^	virtual	~Texture() {}$/;"	f	class:Texture
+~Triangle	Shape.h	/^	~Triangle() {}$/;"	f	class:Triangle

@@ -1,15 +1,11 @@
 #include "Shape.h"
 #include "variables.h"
-#include <Windows.h>
 #include <stdio.h>
-#include <tchar.h> 
-
-#define DP1(fmt,var) {TCHAR sOut[256];_stprintf_s(sOut,_T(fmt),var);OutputDebugString(sOut);} 
 
 Sphere::Sphere() : radius(0),center(0,0,0){
 	
 }
-Sphere::Sphere(float r, Point &center){
+Sphere::Sphere(float r, Point center){
 	this->radius = r;
 	this->center = center;
 }
@@ -130,8 +126,6 @@ bool Triangle::intersect(Ray& ray, float* thit, float& tmin, LocalGeo* local){
 		local->normal = Normal(-normal.x,-normal.y,-normal.z);
 	}
 	local->t = T;
-	tmin = T;
-//	DP1("%f\n",T);
 	return true;
 }
 bool Triangle::intersectP(Ray& ray){

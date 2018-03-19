@@ -5,6 +5,7 @@
 #include "rand48/erand48.h"
 #include "Ray.h"
 #include "material.h"
+#include "Log.h"
 #include <algorithm>
 
 RayTracer::~RayTracer()
@@ -144,7 +145,8 @@ Color* RayTracer::shading(LocalGeo local, BRDF brdf, Ray lray, Color lcolor){
 }
 
 void RayTracer::createReflectRay(LocalGeo local, Ray& ray){
-	Vector3 d = local.pos - Vector3(eye[0], eye[1], eye[2]);
+    Vector3 temp(eye[0],eye[1],eye[2]);
+	Vector3 d = local.pos - temp;
 	Vector3 r = d - Vector3(local.normal).normalize() * 2 * (d.dot(local.normal.normalize()));
 	ray.dir = r.normalize();
 	ray.pos = local.pos+ray.dir*0.0003;
@@ -193,22 +195,12 @@ bool RayTracer::kdTreeInterset(Ray& ray, float* thit, Intersection& in)
 	Intersection* temp;
 	temp = &Intersection(); temp->localGeo = LocalGeo();
 	temp->localGeo.t = 10000;
-
-	std::vector<Intersection> all_in;
+    
 	float tmin = INFINITY;
-	if (kdtree->hit(ray, *thit,tmin, all_in))
-	{
-		for (auto it = all_in.begin();it != all_in.end();it++)
-		{
-			if (it->localGeo.t > ray.t_min && it->localGeo.t < ray.t_max)
-			{
-				if (it->localGeo.t < temp->localGeo.t)
-				{
-					*temp = *it;
-				}
-			}
-		}
-	}
+	if (!kdtree->hit(ray, *thit,tmin,*temp))
+    {
+        return false;
+    }
 
 	if (temp->localGeo.t == 10000) {
 		return false;

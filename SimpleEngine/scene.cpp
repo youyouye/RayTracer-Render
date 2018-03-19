@@ -48,13 +48,14 @@ void Scene::render(int samples){
 	film.writeImage();
 
 	LOG_INFO << "k-d tree end!" << LOG_END;
+    fprintf(stderr,"\n");
 }
 
 //we read camera param,shape param,light param
 void Scene::readUserDefinedFile(RayTracer& raytrace, Camera& camera)
 {
 	ReadFile variables;
-	variables.readfile("..//model//scene7.test");
+	variables.readfile("../model/scene7.test");
 	camera = Camera(Vector3(variables.camera[0], variables.camera[1], variables.camera[2]), Vector3(variables.camera[3], variables.camera[4], variables.camera[5]), Vector3(variables.camera[6], variables.camera[7], variables.camera[8]), variables.camera[9],width,height);
 	addObject(raytrace,variables);
 //	auto bottom = std::make_shared<GeometricPrimitive>(new Sphere(1000, Point(0, 0, -1000)), new Material(DIFFUSE, Color(1, 1, 1)));
@@ -72,7 +73,7 @@ void Scene::readUserDefinedFile(RayTracer& raytrace, Camera& camera)
 void Scene::testObjectModel(RayTracer& raytrace, Camera& camera)
 {
 	camera = Camera(Vector3(0,-5,2.5),Vector3(0,0,1),Vector3(0,-5,5),60,width,height);
-	auto mesh = std::make_shared<Mesh>("..//model//dragon2.obj");
+	auto mesh = std::make_shared<Mesh>("../model/dragon2.obj");
 	addObject(raytrace, *mesh);
 
 	auto bottom = std::make_shared<GeometricPrimitive>(new Sphere(1000,Point(0,0,-1000)),new Material(DIFFUSE,Color(1,1,1)));

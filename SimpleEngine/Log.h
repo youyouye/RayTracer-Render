@@ -1,5 +1,7 @@
 #pragma once
 #include <string>
+#include <string.h>
+#include <stdio.h>
 template<int SIZE>
 class LogBuffer 
 {

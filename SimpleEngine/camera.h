@@ -6,7 +6,7 @@
 class Camera{
 public:
 	Camera();
-	Camera(Vector3 &eye, Vector3 &target, Vector3 &up,float fox,int width,int height){
+	Camera(const Vector3 &eye,const Vector3 &target,const Vector3 &up,float fox,int width,int height){
 		this->eye = eye;
 		this->target = target;
 		this->up = up;

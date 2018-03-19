@@ -3,23 +3,23 @@
 #include "BRDF.h"
 #include "vector.h"
 #include "texture.h"
+#include <string>
 
 enum MaterialType
 {
 	SEPCULAR = 1,
 	DIFFUSE,
-	EMIT,
+	EMIT
 };
 
 class Material
 {
 public:
 	Material();
-	Material(MaterialType type,Color default_color) : 
-		default_color_(default_color),empty_flag_(true),is_loaded_(false),material_type_(type)
-	{
-	}
+	Material(MaterialType type,Color default_color);
+
 	Material(std::string file_path);
+
 	Material(BRDF* brdf){
 		this->constantBRDF = *brdf;
 	}

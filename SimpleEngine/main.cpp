@@ -118,12 +118,18 @@ void test()
 	test.testBBox();
 }
 
-int main(int argc, char* args[]){
-#ifdef DEBUG 
-	test();
-#endif // _DEBUG
+int main(int argc, char* argv[]){
+//#ifdef DEBUG 
+//	test();
+//#endif // _DEBUG
+    int samples = 1;
+    if (argc == 2)
+    {
+        samples = atoi(argv[1]);
+    }
+
 	FreeImage_Initialise();
-	Scene::render(100);
+	Scene::render(samples);
 	FreeImage_DeInitialise();
 	return 0;
 };

@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 
-void Film::commit(Sample& sample, Color& color){
+void Film::commit(const Sample& sample,const Color& color){
 	int index = (sample.y*width + sample.x);
 	pixels[index] = color.uint32();
 }
@@ -29,7 +29,7 @@ void Film::writeImage(){
 			bits += bytespp;
 		}
 	}
-	std::string filename = "..//test.png";
+	std::string filename = "../test.png";
 	FreeImage_Save(FIF_PNG,bitmap,filename.c_str(),0);
 
 }

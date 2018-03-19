@@ -1,4 +1,5 @@
 #include "BBox.h"
+#include <math.h>
 
 BBox::BBox()
 {
@@ -67,7 +68,7 @@ bool BBox::hit(const Ray& ray,double& distance) const{
 			ty_max = (y0 - oy) / dy;
 		}
 	}
-	if (abs(dz) < 0.000001f)
+	if (std::abs(dz) < 0.000001f)
 	{
 		if (oz < z1 || oz > z0)
 			return false;
@@ -86,8 +87,8 @@ bool BBox::hit(const Ray& ray,double& distance) const{
 		}
 	}
 	double t0, t1;
-	t0 = std::fmax(tz_min, std::fmax(tx_min, ty_min));
-	t1 = std::fmin(tz_max, std::fmin(tx_max, ty_max));
+	t0 = fmax(tz_min, fmax(tx_min, ty_min));
+	t1 = fmin(tz_max, fmin(tx_max, ty_max));
 	
 	distance = t0;
 

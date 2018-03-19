@@ -13,7 +13,7 @@ public:
 	~Film(){
 		delete []pixels;
 	}
-	void commit(Sample& sample, Color& color);
+	void commit(const Sample& sample,const Color& color);
 	void writeImage();
 public:
 	int height, width;

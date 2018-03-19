@@ -1,4 +1,5 @@
 #include "kdtree.h"
+#include <climits>
 
 KDNode* KDNode::build(const std::vector<std::shared_ptr<Primitive>>& tris, int depth)
 {
@@ -75,31 +76,7 @@ KDNode* KDNode::build(const std::vector<std::shared_ptr<Primitive>>& tris, int d
 	return node;
 }
 
-bool KDNode::hit(Ray& ray, float& t, float& tmin, Intersection& in)
-{
-	double distance;
-	if (bbox.hit(ray, distance))
-	{
-		if (left->triangles.size() > 0 || right->triangles.size() > 0)
-		{
-			bool hitleft = left->hit(ray, t,tmin, in);
-			bool hitright = right->hit(ray,t, tmin,in);
-			return hitright || hitright;
-		}
-		else 
-		{
-			for (int i = 0;i < triangles.size();i++)
-			{
-				if (triangles[i]->interset(ray,&t,tmin,&in))
-					return true;
-			}
-		}
-		return false;
-	}
-	return false;
-}
-
-bool KDNode::hit(Ray& ray, float& t, float& tmin, std::vector<Intersection>& intersections)
+bool KDNode::hit(Ray& ray, float& t, float& tmin,Intersection& intersection)
 {
 	double distance;
 	if (bbox.hit(ray,distance))
@@ -110,8 +87,8 @@ bool KDNode::hit(Ray& ray, float& t, float& tmin, std::vector<Intersection>& int
 		bool hitright = false;
 		if (!this->leaf)
 		{
-			hitleft = left->hit(ray, t,tmin, intersections);
-			hitright = right->hit(ray, t,tmin, intersections);
+			hitleft = left->hit(ray, t,tmin,intersection);
+			hitright = right->hit(ray, t,tmin,intersection);
 			return hitleft || hitright;
 		}
 		else 
@@ -122,9 +99,12 @@ bool KDNode::hit(Ray& ray, float& t, float& tmin, std::vector<Intersection>& int
 				Intersection temp;
 				if (this->triangles[i]->interset(ray,&t,tmin, &temp))
 				{
-					tmin = temp.localGeo.t < tmin ? temp.localGeo.t : tmin;
-					hit_flag = true;
-					intersections.push_back(temp);
+                    if (temp.localGeo.t > 0 && temp.localGeo.t < INT_MAX && temp.localGeo.t < tmin)
+                    {
+                        tmin = temp.localGeo.t;
+                        intersection = temp;
+                        hit_flag = true;
+                    }
 				}
 			}
 			if (hit_flag)

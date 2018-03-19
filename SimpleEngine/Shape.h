@@ -20,7 +20,7 @@ private:
 class Sphere : public Shape{	
 public:
 	Sphere();
-	Sphere(float r,Point &center);
+	Sphere(float r,Point center);
 	~Sphere();
 	bool intersect(Ray& ray, float* thit,float& tmin, LocalGeo* local) override;
 	bool intersectP(Ray& ray) ;

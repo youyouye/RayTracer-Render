@@ -8,13 +8,13 @@ class BRDF
 {
 public:
 	BRDF();
-	BRDF(Color &d,Color &s,Color &a,Color &r){
+	BRDF(const Color &d,const Color &s,const Color &a,const Color &r){
 		this->kd = d;
 		this->ks = s;
 		this->kr = r;
 		this->ka = a;
 	};
-	BRDF(Color &d, Color &s, Color &a, Color &r,Color &emission,float shin){
+	BRDF(const Color &d,const Color &s,const Color &a,const Color &r,const Color &emission,float shin){
 		this->kd = d;
 		this->ks = s;
 		this->kr = r;

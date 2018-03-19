@@ -1,7 +1,7 @@
 #include "Point.h"
 #include "math.h"
 #include "vector.h"
-Point::Point(Vector3 &v){
+Point::Point(const Vector3 &v){
 	this->x = v.x;
 	this->y = v.y;
 	this->z = v.z;

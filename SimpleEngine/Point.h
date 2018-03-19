@@ -9,7 +9,7 @@ public:
 		this->y = y;
 		this->z = z;
 	}
-	Point(Vector3 &v);
+	Point(const Vector3 &v);
 	~Point(){}
 	float length() const;
 
