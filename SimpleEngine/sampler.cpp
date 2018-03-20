@@ -1,4 +1,5 @@
 #include "sampler.h"
+#include "Log.h"
 
 Sampler::~Sampler()
 {
@@ -13,8 +14,11 @@ bool Sampler::getSample(Sample& sample){
 	return true;
 }
 
-std::string Sampler::getExecPercent()
+void Sampler::getExecPercent()
 {
 	float percent = ((float)index/ (float)((h + 1)*(w + 1)) )*100;
-	return std::to_string(percent) + "%";
+	if (percent - last_percent_ >= 10)
+	{
+		LOG_INFO <<"percent:"<< std::to_string(percent) + "%" << LOG_END;
+	}
 }

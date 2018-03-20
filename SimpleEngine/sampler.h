@@ -17,16 +17,18 @@ public:
 class Sampler
 {
 public:
-	Sampler(int width,int height):index(0) {
+	Sampler(int width,int height):index(0), last_percent_(0) 
+	{
 		this->w = width;
 		this->h = height;
 	}
 	~Sampler();
 	bool getSample(Sample& sample);
-	std::string getExecPercent();
+	void getExecPercent();
 public:
 	int h, w;
 	int index;
+	float last_percent_;
 };
 
 #endif

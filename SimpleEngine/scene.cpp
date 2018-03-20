@@ -29,7 +29,7 @@ void Scene::render(int samples){
 
 	while (sample.getSample(sam))
 	{
-		fprintf(stderr, "\rRendering : %.2f%%", (double)sam.y / height * 100);
+		sample.getExecPercent();
 		Ray ray;		
 		Color cr;
 		for (int a = 0; a<samples; a++)
