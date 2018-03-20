@@ -72,8 +72,8 @@ void Scene::readUserDefinedFile(RayTracer& raytrace, Camera& camera)
 void Scene::testObjectModel(RayTracer& raytrace, Camera& camera)
 {
 	camera = Camera(Vector3(0,-5,2.5),Vector3(0,0,1),Vector3(0,-5,5),60,width,height);
-	auto mesh = std::make_shared<Mesh>("..//model//dragon2.obj");
-	addObject(raytrace, *mesh);
+//	auto mesh = std::make_shared<Mesh>("..//model//dragon2.obj");
+//	addObject(raytrace, *mesh);
 
 	auto bottom = std::make_shared<GeometricPrimitive>(new Sphere(1000,Point(0,0,-1000)),new Material(DIFFUSE,Color(1,1,1)));
 	auto left = std::make_shared<GeometricPrimitive>(new Sphere(1000, Point(-1004, 0, 0)), new Material(DIFFUSE,Color(0.85,0.4,0.4)));
