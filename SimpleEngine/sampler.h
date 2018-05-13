@@ -17,18 +17,19 @@ public:
 class Sampler
 {
 public:
-	Sampler(int width,int height):index(0), last_percent_(0) 
+	Sampler(int width,int height)
 	{
 		this->w = width;
 		this->h = height;
 	}
 	~Sampler();
 	bool getSample(Sample& sample);
+	bool getThreadSample(int thread_id,Sample& sample);
 	void getExecPercent();
 public:
 	int h, w;
-	int index;
-	float last_percent_;
+	static thread_local int index;
+	static thread_local float last_percent_;
 };
 
 #endif

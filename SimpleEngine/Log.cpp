@@ -1,6 +1,7 @@
 #include "Log.h"
 #include <fstream>
 #include <ctime>
+#include <windows.h>
 
 const char* LogLevelName[Logger::NUM_LOG_LEVELS] =
 {
@@ -160,6 +161,7 @@ Logger::Logger(SourceFile file, int line, LogLevel level, const char* func)
 		<< (now.tm_mon + 1) << '-'
 		<< now.tm_mday << ' '
 		<< now.tm_hour << ':' << now.tm_min << ':' << now.tm_sec << "  ";
+	stream_ << GetCurrentThreadId() << "   ";
 	stream_ << LogLevelName[level];
 	stream_ << func << ' ';
 }

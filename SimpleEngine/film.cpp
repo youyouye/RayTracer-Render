@@ -1,10 +1,12 @@
 #include "film.h"
 #include "FreeImage.h"
+#include <thread>
 #include <string>
 #include <iostream>
 using namespace std;
 
 void Film::commit(Sample& sample, Color& color){
+	std::lock_guard<std::mutex> lock(mutex_);
 	int index = (sample.y*width + sample.x);
 	pixels[index] = color.uint32();
 }

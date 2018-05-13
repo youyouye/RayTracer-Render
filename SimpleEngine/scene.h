@@ -2,10 +2,13 @@
 #define SCENE_H_
 #include "RayTracer.h"
 #include "camera.h"
+#include "film.h"
 
 class Scene{
 public:
 	static void render(int samples = 1);
+	static void thread_render(int samples = 1);
+	static void render_task(int n, int samples, Film& film);
 	static void readUserDefinedFile(RayTracer& raytrace, Camera& camera);
 	template<typename T>
 	static void addObject(RayTracer& raytrace,T& object)

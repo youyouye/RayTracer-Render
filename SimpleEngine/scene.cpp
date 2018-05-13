@@ -11,7 +11,9 @@
 #include "Shape.h"
 #include <stdlib.h>
 #include <iostream>
+#include <functional>
 #include <memory>
+#include <thread>
 
 void Scene::render(int samples){
 	width = 1280;
@@ -23,7 +25,7 @@ void Scene::render(int samples){
 	raytrace.generateKDTree();
 
 	Sampler sample =Sampler(width,height);
-	Film film = Film(width,height);
+	Film film(width,height);
 	Sample sam;
 	LOG_INFO << "k-d tree start!" << LOG_END;
 
@@ -50,6 +52,59 @@ void Scene::render(int samples){
 	LOG_INFO << "k-d tree end!" << LOG_END;
 }
 
+void Scene::thread_render(int samples)
+{
+	LOG_INFO << "start!" << LOG_END;
+	width = 1280;
+	height = 720;
+	Film film(width, height);
+	//
+	const int thread_num = 6;
+	std::thread threads[thread_num];
+	for (int i = 0; i < thread_num; i++)
+	{
+		auto func = [i, samples, &film](){
+			render_task(i, samples, film);
+		};
+		threads[i] = std::thread(func);
+	}
+	for (auto& t : threads)
+	{
+		t.join();
+	}
+	film.writeImage();
+	LOG_INFO << "end!" << LOG_END;
+}
+
+void Scene::render_task(int n, int samples, Film& film)
+{
+	RayTracer raytrace;
+	Camera camera;
+	//	readUserDefinedFile(raytrace, camera);
+	testObjectModel(raytrace, camera);
+	raytrace.generateKDTree();
+	Sampler sample = Sampler(width, height);
+	Sample sam;
+	while (sample.getThreadSample(n,sam))
+	{
+		sample.getExecPercent();
+		Ray ray;
+		Color cr;
+		for (int a = 0; a < samples; a++)
+		{
+			unsigned short X[3] = { 0,0,sam.y*sam.y*sam.x };
+			camera.generateRay(sam, &ray, a > 0, X);
+			Color temp_cr;
+			raytrace.kd_trace(ray, 0, temp_cr, X);
+			cr = cr + temp_cr;
+		}
+		cr = cr*(1.0 / samples);
+		//		raytrace.trace(ray, 1,cr);
+		film.commit(sam, cr * 255);
+	}
+	float how = raytrace.thit;
+}
+
 //we read camera param,shape param,light param
 void Scene::readUserDefinedFile(RayTracer& raytrace, Camera& camera)
 {
@@ -72,8 +127,8 @@ void Scene::readUserDefinedFile(RayTracer& raytrace, Camera& camera)
 void Scene::testObjectModel(RayTracer& raytrace, Camera& camera)
 {
 	camera = Camera(Vector3(0,-5,2.5),Vector3(0,0,1),Vector3(0,-5,5),60,width,height);
-//	auto mesh = std::make_shared<Mesh>("..//model//dragon2.obj");
-//	addObject(raytrace, *mesh);
+	auto mesh = std::make_shared<Mesh>("..//model//dragon2.obj");
+	addObject(raytrace, *mesh);
 
 	auto bottom = std::make_shared<GeometricPrimitive>(new Sphere(1000,Point(0,0,-1000)),new Material(DIFFUSE,Color(1,1,1)));
 	auto left = std::make_shared<GeometricPrimitive>(new Sphere(1000, Point(-1004, 0, 0)), new Material(DIFFUSE,Color(0.85,0.4,0.4)));

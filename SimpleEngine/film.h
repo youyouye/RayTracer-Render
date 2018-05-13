@@ -3,6 +3,8 @@
 #include "sampler.h"
 #include "color.h"
 #include "variables.h"
+#include <mutex>
+
 class Film{
 public:
 	Film(int w, int h){
@@ -18,6 +20,7 @@ public:
 public:
 	int height, width;
 	unsigned int* pixels;
+	std::mutex mutex_;
 };
 
 
