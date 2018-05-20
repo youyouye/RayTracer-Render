@@ -27,8 +27,8 @@ bool ReadFile::readvals(stringstream &s, const int numvals, float * values){
 }
 
 void ReadFile::readfile(const char *name){
-	width = 500;
-	height = 500;
+	width_ = 500;
+	height_ = 500;
 
 	ifstream in;
 	string str,cmd;
@@ -51,8 +51,8 @@ void ReadFile::readfile(const char *name){
 					validinput = readvals(s,2,values);
 					if (validinput)
 					{
-						width = values[0];
-						height = values[1];
+						width_ = values[0];
+						height_ = values[1];
 					}
 				}
 				else if (cmd == "maxdepth"){

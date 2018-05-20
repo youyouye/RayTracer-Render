@@ -2,6 +2,7 @@
 #include <fstream>
 #include <ctime>
 #include <windows.h>
+#include "variables.h"
 
 const char* LogLevelName[Logger::NUM_LOG_LEVELS] =
 {
@@ -146,6 +147,7 @@ void LogStream::flush()
 	log_file << buffer_.toString();
 	log_file << '\n';
 	log_file.close();
+	log_callback_(buffer_.toString()+"\n");
 }
 
 Logger::Logger(SourceFile file, int line, LogLevel level, const char* func)

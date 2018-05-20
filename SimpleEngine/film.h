@@ -17,10 +17,12 @@ public:
 	}
 	void commit(Sample& sample, Color& color);
 	void writeImage();
+	void SetCommitCallback(std::function<void(int, int, double,double,double)> callback);
 public:
 	int height, width;
 	unsigned int* pixels;
 	std::mutex mutex_;
+	std::function<void(int,int,double,double,double)> pixel_callback_;
 };
 
 

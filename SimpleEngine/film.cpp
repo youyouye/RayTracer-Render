@@ -9,6 +9,8 @@ void Film::commit(Sample& sample, Color& color){
 	std::lock_guard<std::mutex> lock(mutex_);
 	int index = (sample.y*width + sample.x);
 	pixels[index] = color.uint32();
+
+	pixel_callback_(sample.x,sample.y, color.r,color.b,color.g);
 }
 void Film::writeImage(){
 
@@ -34,4 +36,9 @@ void Film::writeImage(){
 	std::string filename = "..//test.png";
 	FreeImage_Save(FIF_PNG,bitmap,filename.c_str(),0);
 
+}
+
+void Film::SetCommitCallback(std::function<void(int, int, double,double,double)> callback)
+{
+	pixel_callback_ = callback;
 }

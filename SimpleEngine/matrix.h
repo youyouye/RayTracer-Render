@@ -1,6 +1,6 @@
 #ifndef MATRIX_H_
 #define MATRIX_H_
-#include "math.h"
+#include "mymath.h"
 #include "vector.h"
 class Matrix{
 public:

@@ -31,6 +31,9 @@
     <Filter Include="parse_model">
       <UniqueIdentifier>{55cd3767-1b8c-4ba7-8d06-71d1d87d1ada}</UniqueIdentifier>
     </Filter>
+    <Filter Include="export">
+      <UniqueIdentifier>{b9415595-2176-4a69-b5c3-a7a80a8af33f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="kdtree.cpp">
@@ -120,7 +123,10 @@
     <ClCompile Include="variables.cpp">
       <Filter>raytrace</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="TaskExecuter.cpp">
+      <Filter>raytrace</Filter>
+    </ClCompile>
+    <ClCompile Include="mainxxx.cpp">
       <Filter>raytrace</Filter>
     </ClCompile>
   </ItemGroup>
@@ -147,9 +153,6 @@
       <Filter>base</Filter>
     </ClInclude>
     <ClInclude Include="Point.h">
-      <Filter>base</Filter>
-    </ClInclude>
-    <ClInclude Include="math.h">
       <Filter>base</Filter>
     </ClInclude>
     <ClInclude Include="foundation.h">
@@ -220,6 +223,15 @@
     </ClInclude>
     <ClInclude Include="variables.h">
       <Filter>raytrace</Filter>
+    </ClInclude>
+    <ClInclude Include="ITaskExecuter.h">
+      <Filter>export</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskExecuter.h">
+      <Filter>raytrace</Filter>
+    </ClInclude>
+    <ClInclude Include="mymath.h">
+      <Filter>base</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

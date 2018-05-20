@@ -1,6 +1,6 @@
 #ifndef VECTOR_H_
 #define VECTOR_H_
-#include"math.h"
+#include"mymath.h"
 #include "Point.h"
 class Normal;
 class Vector2{

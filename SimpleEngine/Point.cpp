@@ -1,5 +1,5 @@
 #include "Point.h"
-#include "math.h"
+#include "mymath.h"
 #include "vector.h"
 Point::Point(Vector3 &v){
 	this->x = v.x;
