@@ -14,7 +14,7 @@ public:
 	void Start() override;
 	void Stop() override;
 	void SetPixelCallback(std::function<void(int,int,double,double,double)> callback) override;
-	void SetLogCallback(std::function<void(const std::string&)> callback) override;
+	void SetLogCallback(std::function<void(const char*, size_t)> callback) override;
 	void SetEndCallback(std::function<void()> callback) override;
 	void SetCameraParam(double pox_x, double pox_y, double pox_z,
 		double up_x, double up_y, double up_z,

@@ -13,7 +13,7 @@ public:
 		this->fox = fox;
 		width_recp = 1. / (float)width;
 		height_recp = 1. / (float)height;
-		ratio = (float)width / height;
+		ratio = (float)width /(float)height;
 		direction = (target - eye).normalize();
 		x_direction = Vector3(0, 0, 1).cross(direction * -1).normalize();
 		y_direction = x_direction.cross(direction).normalize();

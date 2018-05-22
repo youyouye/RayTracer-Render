@@ -12,7 +12,7 @@ public:
 	virtual void Start() {}
 	virtual void Stop() {}
 	virtual void SetPixelCallback(std::function<void(int, int, double,double,double)> callback) {}
-	virtual void SetLogCallback(std::function<void(const std::string&)> callback) {}
+	virtual void SetLogCallback(std::function<void(const char*, size_t)> callback) {}
 	virtual void SetEndCallback(std::function<void()> callback) {}
 	virtual void SetType(bool model_type) {}
 	virtual void SetCameraParam(double pox_x, double pox_y, double pox_z,

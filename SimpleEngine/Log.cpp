@@ -143,11 +143,13 @@ LogStream& LogStream::operator<<(double v)
 
 void LogStream::flush()
 {
-	std::ofstream log_file("..//log//log.txt",std::ios::app);
+	std::lock_guard<std::mutex> lock(log_mutex_);
+	std::ofstream log_file("D:\\project\\RayTracerPackage\\log\\log.txt",std::ios::app);
 	log_file << buffer_.toString();
 	log_file << '\n';
 	log_file.close();
-	log_callback_(buffer_.toString()+"\n");
+	std::string temp = buffer_.toString();
+	log_callback_(temp.c_str(),temp.size());
 }
 
 Logger::Logger(SourceFile file, int line, LogLevel level, const char* func)

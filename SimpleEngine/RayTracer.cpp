@@ -37,7 +37,7 @@ void RayTracer::trace(Ray& ray, int depth, Color& color){
 		if (!intersectP(lray))
 		{
 			thit++;
-			finalcolor = finalcolor+(*shading(in.localGeo,brdf,lray,lcolor));
+			finalcolor = finalcolor+(shading(in.localGeo,brdf,lray,lcolor));
 		}
 	}
 	color = color+brdf.ka+brdf.emission+finalcolor;
@@ -74,7 +74,7 @@ void RayTracer::kd_trace(Ray& ray, int depth, Color& color, unsigned short*X)
 	}
 	color = Color(0, 0, 0, 1);
 	in.primitive->getBRDF(in.localGeo, &brdf);
-	Color finalcolor(0, 0, 0, 0);
+	Color finalcolor(0, 0, 0, 1);
 	Ray lray;
 	Color lcolor;
 	for (auto i = lights.begin(); i != lights.end(); i++)
@@ -83,10 +83,17 @@ void RayTracer::kd_trace(Ray& ray, int depth, Color& color, unsigned short*X)
 		if (!kdTreeIntersetP(lray))
 		{
 			thit++;
-			finalcolor = finalcolor + (*shading(in.localGeo, brdf, lray, lcolor));
+			finalcolor = finalcolor + shading(in.localGeo, brdf, lray, lcolor);
 		}
 	}
-	color = color + in.primitive->getColor(in.localGeo.pos) + finalcolor;
+	if (module_type_)
+	{
+		color = color + in.primitive->getColor(in.localGeo.pos) + finalcolor;
+	}
+	else 
+	{
+		color = color + brdf.ka + brdf.emission + finalcolor;
+	}
 	color.r = std::min(color.r, 1.0f);	color.b = std::min(color.b, 1.0f);
 	color.g = std::min(color.g, 1.0f);	color.a = std::min(color.a, 1.0f);
 	double p = (color.r > color.g && color.r > color.b) ? color.r : (color.g > color.b ? color.g : color.b);
@@ -106,7 +113,7 @@ void RayTracer::kd_trace(Ray& ray, int depth, Color& color, unsigned short*X)
 			}
 			else 
 			{
-				color = Color(0,0,0);
+				color = Color(0,0,0,1);
 			}
 			return;
 		}
@@ -127,20 +134,26 @@ void RayTracer::kd_trace(Ray& ray, int depth, Color& color, unsigned short*X)
 		Ray reflected = in.getReflectedRay(ray, X);
 		Color temp_color;
 		kd_trace(reflected, depth + 1, temp_color, X);
-		color = color*temp_color;
-		color.r = std::min(color.r, 1.0f);	color.b = std::min(color.b, 1.0f);
-		color.g = std::min(color.g, 1.0f);	color.a = std::min(color.a, 1.0f);
+		if (temp_color.r == 0.0 && temp_color.g == 0.0 && temp_color.b == 0.0)
+		{
+		}
+		else 
+		{
+			color = color*temp_color;
+			color.r = std::min(color.r, 1.0f);	color.b = std::min(color.b, 1.0f);
+			color.g = std::min(color.g, 1.0f);	color.a = std::min(color.a, 1.0f);
+		}
 	}
 }
 
-Color* RayTracer::shading(LocalGeo local, BRDF brdf, Ray lray, Color lcolor){
+Color RayTracer::shading(LocalGeo local, BRDF brdf, Ray lray, Color lcolor){
 	Vector3 eyedirn = (Vector3(eye[0], eye[1], eye[2]) - Vector3(local.pos)).normalize();
 	float nDotL = Vector3(local.normal).normalize().dot(lray.dir);
 	Color lambert = brdf.kd*lcolor*std::max(nDotL, 0.0f);
 	Vector3 half = (lray.dir + eyedirn).normalize();
 	float nDotH = Vector3(local.normal).normalize().dot(half);
 	Color phong = brdf.ks*lcolor*std::pow(std::max(nDotH,0.0f),brdf.shininess);
-	return new Color(lambert+phong); //TODO:memory leak...
+	return Color(lambert+phong); 
 }
 
 void RayTracer::createReflectRay(LocalGeo local, Ray& ray){

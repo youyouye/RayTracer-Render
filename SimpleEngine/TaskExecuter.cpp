@@ -32,7 +32,7 @@ void TaskExecuter::SetPixelCallback(std::function<void(int,int,double,double,dou
 	Scene::SetPixmapCallback(callback);
 }
 
-void TaskExecuter::SetLogCallback(std::function<void(const std::string&)> callback)
+void TaskExecuter::SetLogCallback(std::function<void(const char*, size_t)> callback)
 {
 	log_callback_ = callback;
 }

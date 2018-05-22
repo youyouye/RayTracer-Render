@@ -64,7 +64,7 @@ void Scene::thread_render(int samples)
 	samples = sample_;
 	Film film(width_, height_);
 	film.SetCommitCallback(pixmap_callback_);
-	const int thread_num = 6;
+	const int thread_num = 6;		//control
 	std::thread threads[thread_num];
 	for (int i = 0; i < thread_num; i++)
 	{
@@ -102,15 +102,15 @@ void Scene::render_task(int n, int samples, Film& film)
 		sample.getExecPercent();
 		Ray ray;
 		Color cr;
+		unsigned short X[3] = { 0,0,sam.y*sam.y*sam.y };
 		for (int a = 0; a < samples; a++)
 		{
-			unsigned short X[3] = { 0,0,sam.y*sam.y*sam.x };
 			camera.generateRay(sam, &ray, a > 0, X);
 			Color temp_cr;
 			raytrace.kd_trace(ray, 0, temp_cr, X);
 			cr = cr + temp_cr;
 		}
-		cr = cr*(1.0 / samples);
+		cr = cr*(1.0 / (double)samples);
 		//		raytrace.trace(ray, 1,cr);
 		film.commit(sam, cr * 255);
 	}

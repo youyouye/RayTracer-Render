@@ -1,5 +1,7 @@
 #pragma once
 #include <string>
+#include <mutex>
+
 template<int SIZE>
 class LogBuffer 
 {
@@ -113,6 +115,7 @@ private:
 
 	Buffer buffer_;
 	static const int kMaxNumericSize = 32;
+	std::mutex log_mutex_;
 };
 
 class Logger 

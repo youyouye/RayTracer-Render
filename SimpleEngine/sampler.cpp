@@ -35,7 +35,7 @@ bool Sampler::getThreadSample(int thread_id, Sample& sample)
 void Sampler::getExecPercent()
 {
 	float percent = ((float)index/ (float)((h + 1)*(w + 1)) )*100;
-	if (percent - last_percent_ >= 10)
+	if (percent - last_percent_ >= 5)
 	{
 		LOG_INFO <<"percent:"<< std::to_string(percent) + "%" << LOG_END;
 		last_percent_ = percent;
